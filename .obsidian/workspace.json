@@ -1,0 +1,223 @@
+{
+  "main": {
+    "id": "0632f4fe5cec3885",
+    "type": "split",
+    "children": [
+      {
+        "id": "e96a334496d58a99",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "85fe4b18540c6d5f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AD/attacking AD/gain shell/msf.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "msf"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e4d3e928d191d2c6",
+    "type": "split",
+    "children": [
+      {
+        "id": "1c767d915c92eff4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0066d8cb34edd59b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "ca3c5f97a086ea3d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "13a2abd7e371dd65",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 227.5
+  },
+  "right": {
+    "id": "96a57f6907fc8f69",
+    "type": "split",
+    "children": [
+      {
+        "id": "281c1cebc57130e5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f8b37fda74d3507b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "recon/nmap/script--DNS_20.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for script--DNS_20"
+            }
+          },
+          {
+            "id": "15ca8c98faf4b380",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "recon/nmap/script--DNS_20.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from script--DNS_20"
+            }
+          },
+          {
+            "id": "ef9ce12954b60528",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "f1aa6895d2550f77",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "AD/exploitation/web/sqli/sqlmap red team.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of sqlmap red team"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-importer:Open Importer": false
+    }
+  },
+  "active": "85fe4b18540c6d5f",
+  "lastOpenFiles": [
+    "AD/exploitation/web/sqli/sqlmap red team.md",
+    "AD/attacking AD/IPv6 Attacks/mitm6.md",
+    "AD/attacking AD/msf.md",
+    "Pasted image 20250402230236.png",
+    "AD/attacking AD/token impersonation/token impersonate.md",
+    "AD/attacking AD/comp-comp attack/pass the has/hashcat.md",
+    "AD/attacking AD/token impersonation",
+    "Pasted image 20250402225916.png",
+    "AD/attacking AD/comp-comp attack/pass the has/xtract hashes.md",
+    "Pasted image 20250402225813.png",
+    "AD/attacking AD/comp-comp attack/pass the has/psexec.md",
+    "AD/attacking AD/comp-comp attack/pass the has/crackmapexec.md",
+    "Pasted image 20250402225610.png",
+    "Pasted image 20250402225443.png",
+    "AD/attacking AD/comp-comp attack/pass the has/pass the hash.md",
+    "AD/attacking AD/comp-comp attack/comp-.md",
+    "AD/attacking AD/comp-comp attack/pass the has",
+    "AD/attacking AD/comp-comp attack/Untitled.md",
+    "AD/attacking AD/comp-comp attack",
+    "AD/attacking AD/post-compromise/bloodhound.md",
+    "AD/attacking AD/post-compromise/powerview/group policy.md",
+    "AD/attacking AD/post-compromise/powerview/shares.md",
+    "AD/attacking AD/post-compromise/powerview/groups.md",
+    "AD/attacking AD/post-compromise/powerview/list computer count.md",
+    "AD/attacking AD/post-compromise/powerview/user property.md",
+    "AD/attacking AD/post-compromise/powerview/net users.md",
+    "AD/attacking AD/post-compromise/Untitled.md",
+    "AD/attacking AD/post-compromise/powerview/domain policy.md",
+    "AD/attacking AD/post-compromise/powerview/powerview.md",
+    "AD/attacking AD/post-compromise/powerview/DC enum.md",
+    "Pasted image 20250402223959.png",
+    "AD/attacking AD/post-compromise/powerview/domain info.md",
+    "AD/attacking AD/gain shell/psexec.md",
+    "AD/attacking AD/post-compromise/powerview",
+    "AD/attacking AD/post-compromise",
+    "AD/attacking AD/gain shell/wmiexec.md",
+    "AD/attacking AD/gain shell/gain shell.md",
+    "AD/attacking AD/gain shell",
+    "AD/attacking AD/IPv6 Attacks",
+    "AD/attacking AD/SMB Relay",
+    "AD/attacking AD/LLMNR poisoning",
+    "AD/attacking AD",
+    "Pasted image 20250402220235.png",
+    "Pasted image 20250402220153.png",
+    "Pasted image 20250402220130.png",
+    "Pasted image 20250402215927.png",
+    "Untitled 1.canvas",
+    "Untitled.canvas"
+  ]
+}

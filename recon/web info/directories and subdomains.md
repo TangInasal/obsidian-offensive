@@ -1,0 +1,39 @@
+**directory bruteforce using dirb**
+
+
+<h3>knockpy</h3>
+directory bruteforce w/ knockpy
+`knockpy target.com -w [/usr/share/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt](file:///usr/share/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt)`
+
+<h3>assetfinder</h3>
+subdomain finder passive
+`assetfinder target.com`
+OR
+subdomain finder and probe
+`assetfinder target.com > subs.txt | httpx -l subs.txt -o live.txt`
+
+<h3>dirbuster</h3>
+
+1. add ip address and port number (refer to nmap scan for port number)
+2. browse for wordlist (naa sa softies/SecLists or dirbuster directory)
+3. add file extension u look for sample: php, html, (txt, jar for credentials and robots), (asp, aspx for windows)
+
+preferred when u want recursive bruteforce
+`dirb [http://192.168.x.x](http://192.168.x.x)`
+
+===================================
+
+**directory bruteforce using** **ffuf**
+
+preferred when u want just surface directory
+`sudo ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt:FUZZ -u [http://10.10.154.15/FUZZ](http://10.10.154.15/FUZZ)`
+
+`sudo ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt:FUZZ -u [https://192.1.1.1/FUZZ](https://id.tfoe-pe.com/FUZZ) -mc 200,403,301,302,307,401,204
+`
+HTTP responses:
+
+200 OK
+
+301 REDIRECT/AUTHENTICATE
+
+403 RESTRICTED
