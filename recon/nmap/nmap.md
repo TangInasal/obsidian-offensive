@@ -5,7 +5,6 @@
   
 
 nmap scanning
-
 scan all/aggressive scan (too noisy, not ideal for real-world pentest)
 
 nmap -A 192.168.x.x
