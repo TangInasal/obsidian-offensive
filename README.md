@@ -12,7 +12,7 @@ This is divided in to 4 sections:
 | CTF writeups | `CTF writeups`              | My personal collection of writeups from previous CTF competitions i've participated                   |
 | SOC          | `SOC notes`                 | Security Operations Notes, this is my go to notes for Cyber Defense and Threat Hunting                |
 | Forensics    | `DFIR Notes`                | Digital Forensics and Incident Response (DFIR) Notes, some of these notes are from GIAC GCIH and GCFE |
-| Pentesting   | `Penetration Testing Notes` | Penetration Testing Notes from PEH, THM , HTB, CRTA cert prep, and eJPT cert prep                     |
+| Pentesting   | `Penetration Testing Notes` | Penetration Testing Notes from PEH, THM , HTB, Pentest+, CRTA cert prep, and eJPT cert prep           |
 
 
 
