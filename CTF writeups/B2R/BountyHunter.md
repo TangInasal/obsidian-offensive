@@ -52,7 +52,7 @@ data=@urlencode><@base64><?xml version-"1.0" encoding="ISO-8859-1"?>
 ![[Pasted image 20250505191530.png]]
 
 
-**getting admin creds thru XXE php filtering**
+**getting admin creds thru XXE php filtering wrapper**
 we can get the admin creds thru the ``db.php`` that we found on thru the directory bruteforce
 data:
 ```
@@ -71,5 +71,4 @@ data=@urlencode><@base64><?xml version-"1.0" encoding="ISO-8859-1"?>
 ![[Pasted image 20250505192735.png]]
 
 copy the td and go to terminal
-
 echo "the td data type shit" | base64 -d
