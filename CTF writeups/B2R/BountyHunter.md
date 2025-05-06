@@ -154,4 +154,4 @@ Line 3: `# Ticket Code`: indicates the next line is the ticket code.
 Line 4: ``**__import__('os').system('/bin/sh')**`` is the payload.  
 
 after that, it executes the `bin/sh` to spawn a root shell to the target machine
-**VOILA! BountyHunter  has been PWNED!**  
+**VOILA! BountyHunter  has been PWNED!**    
