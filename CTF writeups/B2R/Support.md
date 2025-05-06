@@ -53,12 +53,17 @@ check for passwords on user description
 it is important because some of the admins dont realize that other users can see user description and sometimes they put the user password there
 `nxc smb rhost -u 'ldap' -p 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' --users`
 
+shows nothing
+![[Pasted image 20250506185438.png]]
+
+
 **bloodhound**
 `nxc smb rhost -u 'ldap' -p pass.txt --bloudhound -c all --dns-server rhost`
 OR
 `bloodhound-python -c all -u ldap -p pass.txt -d support.htb -ns rhost`
 
-
+**LDAP**
+`ldapsearch -h support.htb -D 'ldap@support.htb' -w 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' `
 
 ---
 <h3>QUESTIONS</h3>
