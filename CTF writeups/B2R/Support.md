@@ -63,7 +63,17 @@ OR
 `bloodhound-python -c all -u ldap -p pass.txt -d support.htb -ns rhost`
 
 **LDAP**
-`ldapsearch -h support.htb -D 'ldap@support.htb' -w 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' `
+`ldapsearch -H ldap://support.htb -D 'ldap@support.htb' -w 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' -b "DC=support,DC=htb"`
+
+it's messy. you can output it to txt file and grep
+`ldapsearch -H ldap://support.htb -D 'ldap@support.htb' -w 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' -b "DC=support,DC=htb" > ldapsearch.txt`
+
+something's interesting in one of it's user bearing `info` tag
+`cat ldapsearch.txt | grep info`
+![[Pasted image 20250506190914.png]]
+
+
+
 
 ---
 <h3>QUESTIONS</h3>
