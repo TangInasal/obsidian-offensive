@@ -2,7 +2,7 @@ HTB - Support (Easy)
 AD/Windows
 
 **nmap**
-`sudo nmap -sVC -p- -Pn -T5 10.10.11.174 -oN nmap`
+`sudo nmap -p- -Pn -T5 10.10.11.174 -oN nmap`
 
 
 
