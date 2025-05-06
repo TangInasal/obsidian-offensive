@@ -49,6 +49,10 @@ check if other users uses the same password
 use netexec to check ldap permission on shares
 `nxc smb rhost -u 'ldap' -p 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' --shares`
 
+check for passwords on user description
+it is important because some of the admins dont realize that other users can see user description and sometimes they put the user password there
+`nxc smb rhost -u 'ldap' -p 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' --users`
+
 **bloodhound**
 `nxc smb rhost -u 'ldap' -p pass.txt --bloudhound -c all --dns-server rhost`
 OR
