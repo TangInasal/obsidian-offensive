@@ -1,4 +1,4 @@
-<h3>HTB - Bughunter (easy)</h3>  
+<h2>HTB - Bughunter (easy)</h2>  
 **bug**: xxe  
 
 **nmap**  
@@ -20,7 +20,7 @@ the data is base64 and url encoded
 ![[Pasted image 20250505191745.png]]
 
 ----
-**exploitation thru XXE**   
+<h3>exploitation thru XXE</h3>   
 capture POST request   
 https://rhost/tracker_diRPrOOf314.php  
 you can see XML format being rendered in frontend  
@@ -74,7 +74,7 @@ echo "the td data type shit" | base64 -d
 connect to the machine with SSH  
 
 ----
-**finding privesc path**  
+<h3>finding privesc path</h3>  
 
 the user ``development`` has user privilege  
 run ``sudo -l`` to check it  
@@ -154,4 +154,4 @@ Line 3: `# Ticket Code`: indicates the next line is the ticket code.
 Line 4: ``**__import__('os').system('/bin/sh')**`` is the payload.  
 
 after that, it executes the `bin/sh` to spawn a root shell to the target machine
-VOILA! BountyHunter PWNED!  
+**VOILA! BountyHunter  has been PWNED!**  
