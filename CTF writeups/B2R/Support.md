@@ -49,6 +49,13 @@ check if other users uses the same password
 use netexec to check ldap permission on shares
 `nxc smb rhost -u 'ldap' -p 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' --shares`
 
+**bloodhound**
+`nxc smb rhost -u 'ldap' -p pass.txt --bloudhound -c all --dns-server rhost`
+OR
+`bloodhound-python -c all -u ldap -p pass.txt -d support.htb -ns rhost`
+
+
+
 ---
 <h3>QUESTIONS</h3>
 Task 1: How many shares is Support showing on SMB?
