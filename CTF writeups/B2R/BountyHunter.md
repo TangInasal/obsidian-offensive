@@ -27,6 +27,7 @@ the data is base64 and url encoded
 capture POST request 
 https://rhost/tracker_diRPrOOf314.php
 you can see XML format being rendered in frontend
+the title (entity) including its values are reflected
 
 **(encoding)** use Hackverter ext on burp suite
 select Encode tab
@@ -72,3 +73,4 @@ data=@urlencode><@base64><?xml version-"1.0" encoding="ISO-8859-1"?>
 
 copy the td and go to terminal
 echo "the td data type shit" | base64 -d
+
