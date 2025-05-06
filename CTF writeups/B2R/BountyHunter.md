@@ -1,4 +1,4 @@
-HTB - Bughunter (easy)  
+<h3>HTB - Bughunter (easy)</h3>  
 **bug**: xxe  
 
 **nmap**  
