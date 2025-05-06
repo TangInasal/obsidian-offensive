@@ -83,6 +83,15 @@ the account `support` uses that password
 `evil-winrm -i support.htb -u support -p 'Ironside47pleasure40Watchful'`
 
 
+
+---
+**privilege escalation**
+you can  check the bloodhound data and you can see that user `support` is in the group `shared support account` and that group has `genericall` to the `Domain Controller`
+
+![[Pasted image 20250506195053.png]]
+
+
+
 ---
 <h3>QUESTIONS</h3>
 Task 1: How many shares is Support showing on SMB?
