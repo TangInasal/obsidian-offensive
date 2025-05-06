@@ -1,15 +1,15 @@
-HTB - Bughunter (easy) \\
-**bug**: xxe\\
+HTB - Bughunter (easy)  
+**bug**: xxe  
 
-**nmap**\\
+**nmap**  
 ``sudo nmap -sVC -p- -v -Pn -T5 rhost -oN nmap
 
-**dir enum**\\
+**dir enum**  
 ``ffuf -u https://rhost/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -ic -c -e .php,.html,.txt,.js
 
 ![[Pasted image 20250505192056.png]]
 
-go to https://rhost/portal.php \\
+go to https://rhost/portal.php    
 check sources
 click 
 https://rhost/log_submit.php
