@@ -10,18 +10,19 @@ NOTE: `.yar` is the standard file extension for ALL YARA RULES
 ---
 **Rule Writing**
 1. Create a file to scan
-		`touch myfile`
+		`touch somefile`
 2. Create a new file for yara
 		`touch 1stYara.yar`
 3. Open `1stYara.yar` using a text editor
 4. paste this
 ```
-	rule examplerule{
+	rule fileexists{
 		condition: true
 	}
 ```
 this rule simply checks if the  file exists
 if it doesnt see a file, it will print an error
 
+![[Pasted image 20250508184053.png]]
 
-![[Pasted image 20250508182814.png]]
+
