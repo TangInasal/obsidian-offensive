@@ -29,6 +29,11 @@ if it doesnt see a file, it will print an error
 ---
 **YARA Conditions**
 
+
+**Anatomy of Yara**
+![[Pasted image 20250508215552.png]]
+
+
 **Keywords**
 
 1. Desc 
@@ -120,9 +125,6 @@ rule hello_world_10kb{
 			$hello_world and filesize < 10KB
 }
 ```
-
-
-
 
 ****
 
