@@ -31,6 +31,10 @@ if it doesnt see a file, it will print an error
 
 
 **Anatomy of Yara**
+
+![[Pasted image 20250509204456.png]]
+
+
 ![[Pasted image 20250508215552.png]]
 
 
@@ -125,6 +129,10 @@ rule hello_world_10kb{
 			$hello_world and filesize < 10KB
 }
 ```
+
+
+
+
 
 ****
 
