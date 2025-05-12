@@ -2,16 +2,16 @@
 tuts: https://youtu.be/5Z4QXIDQVyE?si=UXykY_vxrarTooxw&t=646
 
 **RUN**
-docker run -it --rm -v ~/www/:/data quickscope:latest 
+`docker run -it --rm -v ~/www/:/data quickscope:latest
 
 **HELP**
-docker run -it --rm -v ~/www/:/data quickscope:latest -h
+`docker run -it --rm -v ~/www/:/data quickscope:latest -h`
 
 **UPDATE**
-docker run -it --rm -v ~/www/:/data quickscope:latest --db_update
+`docker run -it --rm -v ~/www/:/data quickscope:latest --db_update`
 
 **SCAN**
-docker run -it --rm -v ~/www/:/data quickscope:latest --file <file/to/scan.exe> --analyze
+`docker run -it --rm -v ~/www/:/data quickscope:latest --file <file/to/scan.exe> --analyze`
 
 ---
 
