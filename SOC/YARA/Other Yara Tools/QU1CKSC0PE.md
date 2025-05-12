@@ -18,7 +18,7 @@ tuts: https://youtu.be/5Z4QXIDQVyE?si=UXykY_vxrarTooxw&t=646
 **NOTE**
 IF YOU ADDED SOME MODIFICATIONS, 
 YOU HAVE TO REBUILD THE CONTAINER BEFORE USING IT
-`sudo docker build -t qu1cksc0pe`
+`sudo docker build -t qu1cksc0pe .`
 
 ---
 **TEST PAYLOADS (OPTIONAL)**
