@@ -12,3 +12,6 @@ Additional Checks:
 3. SWF decompressed scan (new since version v0.8)
 4. SAM dump check
 
+
+**directory scan**
+`suspicious/directory $ python3 ../directory/to/Loki.py -p .`
