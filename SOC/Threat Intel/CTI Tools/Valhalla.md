@@ -1,2 +1,2 @@
 refer to:
-[[remote-notes/SOC/YARA/Other Yara Tools/Valhalla|Valhalla]]
+[[remote-notes/SOC/Threat Intel/YARA/Other Yara Tools/Valhalla|Valhalla]]
