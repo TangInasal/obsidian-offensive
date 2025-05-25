@@ -19,3 +19,30 @@
 [[YAYA]]
 
 **Network Security & Traffic Analysis**
+[[Snort]]
+[[Brim]]
+[[Zeek]]
+[[Wireshark]]
+[[Network Miner]]
+
+**Endpoint Security Monitoring**
+[[Wazuh]]
+[[OSQuery]]
+[[SysMon]]
+[[Sysinternals]]
+[[Event Logs]]
+
+**SEIM**
+[[ELK]]
+[[SPLUNK]]
+
+**DFIR**
+**disk**
+[[Autopsy]]
+[[FTK Imager]]
+[[KAPE]]
+**memory**
+[[REDLine]]
+[[Volatility]]
+
+**Phishing Analysis**
