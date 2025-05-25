@@ -12,4 +12,10 @@ e.g: `files.log`
 `NetControl`- network control and flow logs
 eg: `netcontrol.log, netcontrol_drop.log`
 `detection` - detection and indicator logs
-e.g: ``
+e.g: `intel.log, notice.log, notice_alarm.log, signatures.log, traceroute.log`
+`network observations` - network flow logs
+e.g: `known_certs.log, known_hosts.log, etc`
+`miscellaneous` - additional logs, 
+`zeek diagnostic` - system messages, actions, and some statistics
+e.g: `broker.log, capture_lost.log, stdout,log, etc.`
+
