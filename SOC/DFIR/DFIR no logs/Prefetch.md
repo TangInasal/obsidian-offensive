@@ -11,3 +11,5 @@ show proof that the executable has been run
 
 **Tool:**
 WinPrefetchView
+parse:
+`C:\DFIR_Tools\ZimmermanTools\net6\PECmd.exe -q -d C:\Cases\Prefetch\ --csv "C:\Cases\Analysis\ --csvf prefetch.csv"`
