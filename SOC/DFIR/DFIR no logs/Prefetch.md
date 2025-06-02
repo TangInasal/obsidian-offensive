@@ -10,7 +10,10 @@ show proof that the executable has been run
 
 
 **Tool:**
-WinPrefetchView
+WinPrefetchView (current host view only)
+`WinPrefetchView.exe`
+
+PECemd`
 parse:
 `PECmd.exe -q -d C:\Cases\Prefetch\ --csv "C:\Users\Diox\Desktop\dfir\CASES --csvf prefetch.csv"`
 
