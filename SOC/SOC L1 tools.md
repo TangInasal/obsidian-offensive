@@ -20,7 +20,7 @@
 
 **Network Security & Traffic Analysis**
 [[Snort]]
-[[Brim]]
+[[Brim(Zui)]]
 [[Zeek]]
 [[Wireshark]]
 [[Network Miner]]
