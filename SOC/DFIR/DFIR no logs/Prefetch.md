@@ -12,4 +12,9 @@ show proof that the executable has been run
 **Tool:**
 WinPrefetchView
 parse:
-`C:\PECmd.exe -q -d C:\Cases\Prefetch\ --csv "C:\Users\Diox\Desktop\dfir\CASES --csvf prefetch.csv"`
+`PECmd.exe -q -d C:\Cases\Prefetch\ --csv "C:\Users\Diox\Desktop\dfir\CASES --csvf prefetch.csv"`
+
+Timeline Explorer
+sort timeline:
+Click on the `RunTime` column to sort the timeline in either ascending or descending order. This helps in creating a proper timeline of events.
+
