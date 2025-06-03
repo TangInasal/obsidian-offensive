@@ -7,6 +7,14 @@ Count by fields
 `right click on the log/packet`
 `click Count by fields`
 
+count how many alerts
+`alert | fuse | count() by event_type`
+
+filter and count each dest port
+`alert | count() by dest_port | fuse`
+
+filter hosts only
+`count() by host | fuse`
 
 identify city
 `_path=="conn"|cut geo.resp.country_code,geo.resp.region,geo.resp.city`
