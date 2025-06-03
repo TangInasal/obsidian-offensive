@@ -7,4 +7,6 @@ identify city
 known patterns
 `event_type="alert" or _path=="notice" or _path="signatures"`
 
+sorting
+`alert | sort alert.category=="Malware " | fuse`
 
