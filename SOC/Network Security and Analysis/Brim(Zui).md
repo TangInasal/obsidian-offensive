@@ -13,6 +13,11 @@ count how many alerts
 filter and count each dest port
 `alert | count() by dest_port | fuse`
 
+total bytes from a host
+`_path=="conn" | id.orig_h==10.3.10.101 | sum(orig_bytes)`
+OR
+`_path=="conn" | id.orig_h==10.3.10.101 | sum(orig_ip_bytes)`
+
 filter hosts only
 `count() by host | fuse`
 
