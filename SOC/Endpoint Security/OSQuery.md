@@ -34,3 +34,16 @@ e.g:
 4. list
 5. pretty (dafault)
 
+
+
+**programs**
+`SELECT * from programs;`
+OR
+`SELECT * from programs LIMIT 1;`
+![[Pasted image 20250606215653.png]]
+
+select specific columns only
+`select name, version, install_date from programs;`
+
+count all programs
+`select count(*) from programs;`
