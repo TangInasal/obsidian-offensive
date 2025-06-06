@@ -47,3 +47,8 @@ select specific columns only
 
 count all programs
 `select count(*) from programs;`
+
+
+WHERE
+`select * from programs where username="james";`
+
