@@ -34,7 +34,7 @@
 
 **SEIM**
 [[ELK investigation]]
-[[SPLUNK]]
+[[SPLUNK basics]]
 
 **DFIR**
 **disk**
