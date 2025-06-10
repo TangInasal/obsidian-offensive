@@ -33,7 +33,7 @@
 [[Event Logs]]
 
 **SEIM**
-[[ELK]]
+[[ELK investigation]]
 [[SPLUNK]]
 
 **DFIR**
