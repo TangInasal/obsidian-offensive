@@ -1,7 +1,8 @@
 
 Often used for quick triage and analysis
 
-Targets: artefacts to be collected
+**Targets**
+artefacts to be collected
 .tkape: contains information about the artefact e.g path
 
 **Compound Targets**
@@ -15,3 +16,5 @@ commands:
 `KAPE_triage`
 
 
+**modules**
+.mkape: modules
