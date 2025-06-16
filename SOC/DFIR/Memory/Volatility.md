@@ -30,9 +30,14 @@ PROCdump
 vol.py -f “/path/to/.vmem” -o “/path/to/dir” windows.dumpfiles ‑‑pid <PID
 ```
 
-Memdump
+Memdump / prints memory map
 ```
 vol.py -f “/path/to/.vmem” -o “/path/to/dir” windows.memmap ‑‑dump ‑‑pid <PID>
+```
+
+Handles
+```
+vol.py -f “/path/to/.vmem” windows.handles ‑‑pid <PID>
 ```
 
 show directories where process are executed
