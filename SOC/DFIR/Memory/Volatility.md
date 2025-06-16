@@ -1,5 +1,5 @@
 <h3>windows</h3>
-imageinfo:
+OS Information
 ```
 python vol.py -f file.vmem windows.info
 ```
@@ -8,10 +8,15 @@ scan for process
 ```
 python vol.py -f file.vmem windows.psscan
 ```
+`vol.py -f “-file.vmem” ‑‑profile <profile> pstree`
+`vol.py -f “-file.vmem” ‑‑profile <profile> psxview`
 
-list out process
+Process Information
 ```
 python vol.py -f file.vmem windows.pslist
+vol.py -f “-file.vmem” ‑‑profile <profile> pstree
+vol.py -f “-file.vmem” ‑‑profile <profile> psxview
+
 ```
 
 filter with PPID only
