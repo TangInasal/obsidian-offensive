@@ -8,15 +8,12 @@ scan for process
 ```
 python vol.py -f file.vmem windows.psscan
 ```
-`vol.py -f “-file.vmem” ‑‑profile <profile> pstree`
-`vol.py -f “-file.vmem” ‑‑profile <profile> psxview`
+
 
 Process Information
 ```
 python vol.py -f file.vmem windows.pslist
-vol.py -f “-file.vmem” ‑‑profile <profile> pstree
-vol.py -f “-file.vmem” ‑‑profile <profile> psxview
-
+vol.py -f “/path/to/vmem” windows.pstree
 ```
 
 filter with PPID only
@@ -25,9 +22,18 @@ python .\vol.py -f file.vmem windows.psscan | Select-String "PPID here"
 ```
 OR with --pid tag
 ```
-python vol.py -f file.vmem windows.psscan --pid PID_here
+python vol.py -f file.vmem windows.psscan --pid <PID
 ```
 
+PROCdump
+```
+vol.py -f “/path/to/.vmem” -o “/path/to/dir” windows.dumpfiles ‑‑pid <PID
+```
+
+Memdump
+```
+vol.py -f “/path/to/.vmem” -o “/path/to/dir” windows.memmap ‑‑dump ‑‑pid <PID>
+```
 
 show directories where process are executed
 ```
