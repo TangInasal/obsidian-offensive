@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 Often used for quick triage and analysis
 
@@ -18,3 +19,18 @@ commands:
 
 **modules**
 .mkape: modules
+=======
+NOTE: Turn off `flush` option
+
+Target: select target
+e.g: `KapeTriage`
+
+Module: select module
+e.g: `!EZParser`
+
+View results:
+`EZViewer`
+OR
+`TimelineExplorer`
+
+>>>>>>> origin/main
