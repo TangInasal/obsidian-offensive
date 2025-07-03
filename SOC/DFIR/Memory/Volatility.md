@@ -1,4 +1,4 @@
-<h3>windows</h3>
+<h3>WINDOWS</h3>
 [CHEATSHEET](https://blog.onfvp.com/post/volatility-cheatsheet/)
 
 OS Information
@@ -27,21 +27,6 @@ OR with --pid tag
 python vol.py -f file.vmem windows.psscan --pid <PID
 ```
 
-PROCdump
-```
-vol.py -f “/path/to/.vmem” -o “/path/to/dir” windows.dumpfiles ‑‑pid <PID
-```
-
-Memdump / prints memory map
-```
-vol.py -f “/path/to/.vmem” -o “/path/to/dir” windows.memmap ‑‑dump ‑‑pid <PID>
-```
-
-Handles
-```
-vol.py -f “/path/to/.vmem” windows.handles ‑‑pid <PID>
-```
-
 show directories where process are executed
 ```
 python vol.py -f file.vmem windows.cmdline
@@ -60,4 +45,20 @@ show handles (what type the process is executed - e.g file, directory... etc)
 ```
 python vol.py -f file.vmem windows.handles
 ```
+OR w/ PID
+```
+vol.py -f “/path/to/.vmem” windows.handles ‑‑pid <PID>
+```
 
+PROCdump
+```
+vol.py -f “/path/to/.vmem” -o “/path/to/dir” windows.dumpfiles ‑‑pid <PID
+```
+
+Memdump / prints memory map
+```
+vol.py -f “/path/to/.vmem” -o “/path/to/dir” windows.memmap ‑‑dump ‑‑pid <PID>
+```
+
+---
+<h3>NETWORK</h3>
