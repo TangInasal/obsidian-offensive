@@ -1,3 +1,5 @@
+**CASE: hunt for emails that use PHP mailer**
+
 go to mail server
 check open ports and its process
 `sudo netstat -lntp`
@@ -15,3 +17,19 @@ check raw emails in the mail server
 <h2>email header analysis</h2>
 check email header
 `sudo less <filename>` 
+![[Pasted image 20250703155945.png]]
+
+filter files with grep
+`sudo grep "PHP" *`
+OR
+`sudo grep "keyword_here" *`
+![[Pasted image 20250703160109.png]]
+
+search all X-Mailer from all files
+`sudo grep "X-Mailer:" *`
+OR cleaner results and count each
+`sudo grep "X-Mailer:" * | sort | uniq -c | sort -n`
+![[Pasted image 20250703160407.png]]
+
+check suspicious email contents and its first 20 lines
+`sudo cat <filename> | grep "X-Mailer:PHPMailer" -B 20`
