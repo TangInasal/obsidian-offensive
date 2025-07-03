@@ -31,5 +31,12 @@ OR cleaner results and count each
 `sudo grep "X-Mailer:" * | sort | uniq -c | sort -n`
 ![[Pasted image 20250703160407.png]]
 
-check suspicious email contents and its first 20 lines
+check suspicious email contents and its FIRST 20 lines
 `sudo cat <filename> | grep "X-Mailer:PHPMailer" -B 20`
+![[Pasted image 20250703160901.png]]
+
+
+check suspicious email contents and its NEXT 20 lines
+`sudo cat <filename> | grep "X-Mailer:PHPMailer" -A 20`
+![[Pasted image 20250703161210.png]]
+
