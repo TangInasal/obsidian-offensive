@@ -1,4 +1,6 @@
 **Threat Hunt Report Writing**
+**SAMPLE REPORT:** [[CASE 43 - Snuggly Alpaca]]
+
 
 **Report Contents**
 1. Original Hypothesis - state your original hypothesis
