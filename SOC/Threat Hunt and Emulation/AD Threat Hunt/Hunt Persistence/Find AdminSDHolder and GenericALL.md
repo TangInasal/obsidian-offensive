@@ -10,3 +10,7 @@ go to analysis tab
 go to shortest paths
 select `Shortest Path to Domain Admins`
 select domain admin group
+
+sample
+![[Pasted image 20250706180227.png]]
+
