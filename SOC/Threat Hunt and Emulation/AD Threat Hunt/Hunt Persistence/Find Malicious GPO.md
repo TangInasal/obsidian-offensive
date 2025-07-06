@@ -20,3 +20,11 @@ Show all GPOs inside domain
 
 check specific GPO permission
 `Get-GPPermission "GPO-name -all"`
+![[Pasted image 20250706181551.png]]
+**NOTE: Being able to modify GPO
+has an ADMIN PRIVILEGE to any system that it applies**
+
+In the photo
+all authenticated users CAN EDIT GPO
+user domain dom CAN EDIT-DELETE-MODIFY GPO
+
