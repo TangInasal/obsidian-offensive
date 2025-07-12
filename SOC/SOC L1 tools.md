@@ -7,6 +7,7 @@
 [[TheHive]]
 [[urlscan]]
 [[remote-notes/SOC/Threat Intel/CTI Tools/Valhalla|Valhalla]]
+[uncoder.io](https://uncoder.io/)
 
 **Yara**
 [[FENRIR]]
