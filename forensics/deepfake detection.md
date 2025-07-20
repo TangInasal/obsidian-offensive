@@ -3,7 +3,7 @@
 triage - ExifTool, MediaInfo, FFmpeg
 	`exiftool video.mp4`
 	mediainfo - Extracts technical and tag data (codecs, frame rates, software used
-	ffmpeg - nspect stream-level metadata
+	ffmpeg - inspect stream-level metadata
 	`ffprobe -show_format -show_streams video.mp4`
 		
 reverse search - InVID (extension)
