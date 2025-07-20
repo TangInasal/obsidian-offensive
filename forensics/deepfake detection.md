@@ -1,10 +1,12 @@
 **deepfake detection tools**
 
 triage - ExifTool, MediaInfo, FFmpeg
-	`exiftool video.mp4`
+	`exiftool -a -G video_file.mp4`
 	mediainfo - Extracts technical and tag data (codecs, frame rates, software used
 	ffmpeg - inspect stream-level metadata
 	`ffprobe -show_format -show_streams video.mp4`
+	OR
+	`ffprobe -v quiet -show_streams -show_format -print_format json video_file.mp4`
 		
 reverse search - InVID (extension)
 
