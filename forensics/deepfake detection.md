@@ -11,7 +11,7 @@ triage - ExifTool, MediaInfo, FFmpeg
 reverse search - InVID (extension)
 
 deepfake detection - Deepware, DFDNet
-	Deepware scanner ([website](https://scanner.deepware.ai/)) -   scans deepfake fingerprints
+	Deepware scanner ([website](https://scanner.deepware.ai/))  ([CLI](https://github.com/Hook35/deepfake-scanner))-   scans deepfake fingerprints
 	DFDNet ([github](https://github.com/csxmli2016/DFDNet)) - facial reconstructions
 
 manual inspection - Zoom frames, look for jitter, lip sync inconsistency, blinking rate, etc.
