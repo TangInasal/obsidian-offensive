@@ -16,3 +16,4 @@ deepfake detection - Deepware, DFDNet
 	Oculi  ([github](https://github.com/yuezunli/WIFS2018_In_Ictu_Oculi)) -  eye blinking
 	DeepReal ([website](https://deepfakes.real-ai.cn/)) - 
 manual inspection - Zoom frames, look for jitter, lip sync inconsistency, blinking rate, etc.
+
