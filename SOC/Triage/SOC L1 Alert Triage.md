@@ -15,4 +15,20 @@
 2. Sort by severity - sort alerts by severity
 3. Sort by time - start with the oldest alerts and end with the latest ones. 
 
+**ALERT TRIAGE**
+
 ![[Pasted image 20250903213700.png]]
+
+**Initial Actions**
+1. Filter Alerts - refer to **"Picking the right alert"**
+2. Assign the alert to yourself
+3. Change status to "In-progress"
+4. Familiarize with the alert's details like name, description and Fields
+
+ **Investigation**
+1. Check if there is a workbook/playbook to investigate the alert
+2. IF NO PLAYBOOK 
+ - Understand who is under threat, like the affected user, hostname, cloud, network, or website
+* Note the action described in the alert, like whether it was a suspicious login, malware, or phishing
+* Look for suspicious actions shortly after or before the alert
+* Use threat intelligence platforms or other available resources for verification.
