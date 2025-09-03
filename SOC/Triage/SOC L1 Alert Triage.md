@@ -15,4 +15,4 @@
 2. Sort by severity - sort alerts by severity
 3. Sort by time - start with the oldest alerts and end with the latest ones. 
 
-
+![[Pasted image 20250903213700.png]]
