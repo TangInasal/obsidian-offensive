@@ -22,5 +22,8 @@ To escalate the alert, in most cases, all you have to do is to **reassign the a
 
 No matter what the agreements are, L2 will eventually receive the ticket from you, read your report, and contact you in case of any questions. Once everything is clear, the L2 analyst will typically research the alert details further, validate if the alert is indeed a True Positive, communicate with other departments if needed, and, for major incidents, start a formal Incident Response process.
 
+**SOC Dashboard Escalation Procedure**
 
+1. Write an alert report and provide your verdict; move the alert to In Progress status
+2. Assign the alert to your L2 on shift. L2 will receive a notification and start from your report
 
