@@ -27,3 +27,8 @@ No matter what the agreements are, L2 will eventually receive the ticket from yo
 1. Write an alert report and provide your verdict; move the alert to In Progress status
 2. Assign the alert to your L2 on shift. L2 will receive a notification and start from your report
 
+![[Pasted image 20250904230648.png]]
+
+![[Pasted image 20250904230831.png]]
+
+
