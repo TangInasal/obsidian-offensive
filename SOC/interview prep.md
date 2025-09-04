@@ -6,7 +6,7 @@ some of the recent CTF competitions that i stand out was
 i was hack4gov champion last year and my team went to the nationals finals
 i was also the 1st runner up on the recent ASEAN Virtual CTF
 and just days ago, i made it to the top 21 out of 780+ teams on Asia pacific region on  kaspersky CTF.
-currently i've been diving into malware analysis and reverse engineering, DFIR, and Threat Hunting
+currently i've been diving into malware analysis and reverse engineering, DFIR, and Threat Hunting. I am also currently documenting my malware analysis reports on my personal blog which you could absolutely read and review.
 
 
 refer to a playboook on investagating a specific category of alert
