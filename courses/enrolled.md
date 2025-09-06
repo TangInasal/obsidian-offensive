@@ -8,3 +8,8 @@
 [SOC L1]([https://youtube.com/playlist?list=PLKJGe-yb9iQb_RY1-IRCMFUmMGU_xlNsp&si=ammZABUUnKJjHbtY](https://youtube.com/playlist?list=PLKJGe-yb9iQb_RY1-IRCMFUmMGU_xlNsp&si=ammZABUUnKJjHbtY))
 [SOC L2](https://youtube.com/playlist?list=PLKJGe-yb9iQbKM5yJIdphU4cg5MN341LT&si=xtaC-8NsaD4tDXtH)
 
+
+**Pentest**
+[CPTS]()
+
+
