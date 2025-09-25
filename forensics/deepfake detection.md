@@ -17,3 +17,4 @@ deepfake detection - Deepware, DFDNet
 	DeepReal ([website](https://deepfakes.real-ai.cn/)) - 
 manual inspection - Zoom frames, look for jitter, lip sync inconsistency, blinking rate, etc.
 
+https://github.com/SCLBD/DeepfakeBench?tab=readme-ov-file
