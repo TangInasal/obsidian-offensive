@@ -1,0 +1,12 @@
+Aperisolve
+exiftool
+file
+strings
+stegdetect
+xxd
+pngcheck
+binwalk
+foremost
+steghide
+stegsolve
+stegosaurus
