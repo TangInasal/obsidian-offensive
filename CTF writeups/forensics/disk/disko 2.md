@@ -10,3 +10,6 @@ sudo mkdir /mnt/part1
 sudo mount -o loop part1.img /mnt/part1/
 ```
 
+filter
+`strings part1.img | grep -r flag`
+
