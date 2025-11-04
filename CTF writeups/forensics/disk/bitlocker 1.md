@@ -27,6 +27,9 @@ create hash
 dictionary attack
 `hashcat -m 22100 -a 0 bitlocker_hash.txt /usr/share/wordlist/rockyou.txt -w 3`
 
-open
+recover
 `mkdir bitlocker1`
 `sudo dislocker bitlocker-1.dd -ujacqueline dislocker`
+
+open
+`sudo mount -o loop disk/dislocker-file mounted`
