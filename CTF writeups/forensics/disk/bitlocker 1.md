@@ -25,5 +25,8 @@ create hash
 `bitlocker2john -i bitlocker-1.dd > bitlocker_hash.txt`
 
 dictionary attack
-`hashcat -m 22100 -a 0 bitlocker_hash.txt top2k.txt -w 3`
+`hashcat -m 22100 -a 0 bitlocker_hash.txt /usr/share/wordlist/rockyou.txt -w 3`
 
+open
+`mkdir bitlocker1`
+`sudo dislocker bitlocker-1.dd -ujacqueline dislocker`
