@@ -12,4 +12,7 @@ view results in RITA
 `rita view <database_name>`
 ![[Pasted image 20251224150841.png]]
 
+**search bar**
+to search, type `/` 
+for help, type `/?`
 
