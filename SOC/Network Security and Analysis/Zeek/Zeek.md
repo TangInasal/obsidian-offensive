@@ -19,3 +19,9 @@ zeek automatically creates log files in current directory
 `-r` - pcap to read
 `zeekctl` - ZeekControl module
 
+
+**pcap to zeek**
+convert pcap files to zeek for analysis
+`zeek readpcap <traffic.pcap> <output/directory>`
+
+
