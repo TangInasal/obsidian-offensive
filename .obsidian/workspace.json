@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pentesting/AI/2 PromptInjection/DirectInjection/Obfuscation and Encoding.md",
+                "file": "pentesting/AI/2 PromptInjection/Scripts/PromptTester.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Obfuscation and Encoding"
+              "title": "PromptTester"
             }
           }
         ]
@@ -172,8 +172,9 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
-    "pentesting/AI/2 PromptInjection/DirectInjection/Narrative Injection.md",
     "pentesting/AI/2 PromptInjection/DirectInjection/Obfuscation and Encoding.md",
+    "pentesting/AI/2 PromptInjection/Scripts/PromptTester.md",
+    "pentesting/AI/2 PromptInjection/DirectInjection/Narrative Injection.md",
     "pentesting/AI/2 PromptInjection/DirectInjection/Direct Injection.md",
     "Untitled.md",
     "pentesting/AI/2 PromptInjection/DirectInjection/Context Overflow.md",
@@ -214,7 +215,6 @@
     "AD/attacking AD/comp-comp attack",
     "AD/attacking AD/post-compromise/bloodhound.md",
     "AD/attacking AD/post-compromise/powerview/group policy.md",
-    "AD/attacking AD/post-compromise/powerview/shares.md",
     "Pasted image 20250402223959.png",
     "AD/attacking AD/post-compromise/powerview",
     "Pasted image 20250402220235.png",
