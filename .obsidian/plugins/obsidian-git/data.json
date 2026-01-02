@@ -1,5 +1,5 @@
 {
-  "commitMessage": "vault backup: {{date}}",
+  "commitMessage": "\t\nvault backup-windows-auto: {{date}}",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
   "autoSaveInterval": 0,
   "autoPushInterval": 0,
@@ -28,7 +28,7 @@
   "gitDir": "",
   "showFileMenu": true,
   "authorInHistoryView": "hide",
-  "dateInHistoryView": false,
+  "dateInHistoryView": true,
   "diffStyle": "split",
   "lineAuthor": {
     "show": false,
@@ -51,7 +51,9 @@
     },
     "textColorCss": "var(--text-muted)",
     "ignoreWhitespace": false,
-    "gutterSpacingFallbackLength": 5
+    "gutterSpacingFallbackLength": 5,
+    "lastShownAuthorDisplay": "initials",
+    "lastShownDateTimeFormatOptions": "date"
   },
-  "autoCommitMessage": "vault backup: {{date}}"
+  "autoCommitMessage": "\t\nvault backup-windows-auto: {{date}}"
 }

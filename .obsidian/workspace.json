@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e96a334496d58a99",
+        "id": "4fe1190240ebd933",
         "type": "tabs",
         "children": [
           {
-            "id": "85fe4b18540c6d5f",
+            "id": "12cee157871bdd60",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AD/attacking AD/gain shell/msf.md",
+                "file": "pentesting/AI/1 Recon/DetectModel.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "msf"
+              "title": "DetectModel"
             }
           }
         ]
@@ -159,18 +159,29 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "obsidian-importer:Open Importer": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "85fe4b18540c6d5f",
+  "active": "12cee157871bdd60",
   "lastOpenFiles": [
+    "2026-01-02.md",
+    "Untitled.base",
+    "README.md",
+    "pentesting/AI/1 Recon/DetectModel.md",
+    "pentesting/AI/1 Recon/ManualProbe.md",
+    "pentesting/AI/1 Recon/ReconNotes.md",
+    "Untitled 2.base",
+    "Untitled 3.base",
+    "Untitled.canvas",
+    "Untitled 1.base",
+    "Untitled 2.canvas",
+    "Untitled 1.canvas",
     "AD/exploitation/web/sqli/sqlmap red team.md",
     "AD/attacking AD/IPv6 Attacks/mitm6.md",
     "AD/attacking AD/msf.md",
@@ -199,25 +210,13 @@
     "AD/attacking AD/post-compromise/powerview/net users.md",
     "AD/attacking AD/post-compromise/Untitled.md",
     "AD/attacking AD/post-compromise/powerview/domain policy.md",
-    "AD/attacking AD/post-compromise/powerview/powerview.md",
-    "AD/attacking AD/post-compromise/powerview/DC enum.md",
     "Pasted image 20250402223959.png",
-    "AD/attacking AD/post-compromise/powerview/domain info.md",
-    "AD/attacking AD/gain shell/psexec.md",
     "AD/attacking AD/post-compromise/powerview",
     "AD/attacking AD/post-compromise",
-    "AD/attacking AD/gain shell/wmiexec.md",
-    "AD/attacking AD/gain shell/gain shell.md",
     "AD/attacking AD/gain shell",
-    "AD/attacking AD/IPv6 Attacks",
-    "AD/attacking AD/SMB Relay",
-    "AD/attacking AD/LLMNR poisoning",
-    "AD/attacking AD",
     "Pasted image 20250402220235.png",
     "Pasted image 20250402220153.png",
     "Pasted image 20250402220130.png",
-    "Pasted image 20250402215927.png",
-    "Untitled 1.canvas",
-    "Untitled.canvas"
+    "Pasted image 20250402215927.png"
   ]
 }
