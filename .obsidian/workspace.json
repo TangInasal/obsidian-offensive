@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pentesting/AI/2 PromptInjection/Harmful&OffTopic/Off-topicPrompts.md",
+                "file": "pentesting/AI/RAG Leakage/RAG Fishing Prompts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Off-topicPrompts"
+              "title": "RAG Fishing Prompts"
             }
           }
         ]
@@ -172,7 +172,12 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
+    "pentesting/AI/RAG Leakage/DirectLeakagePrompts.md",
+    "pentesting/AI/RAG Leakage/RAG Fishing Prompts.md",
+    "Untitled 1.md",
     "pentesting/AI/2 PromptInjection/Harmful&OffTopic/HarmfulPrompts.md",
+    "pentesting/AI/RAG Leakage",
+    "pentesting/AI/2 PromptInjection/Harmful&OffTopic/ContextOverflow.md",
     "pentesting/AI/2 PromptInjection/Harmful&OffTopic/Off-topicPrompts.md",
     "pentesting/AI/2 PromptInjection/Harmful&OffTopic",
     "pentesting/AI/2 PromptInjection/PromptInjection2Jailbreak/MultiTurn.md",
@@ -206,16 +211,11 @@
     "AD/attacking AD/msf.md",
     "Pasted image 20250402230236.png",
     "AD/attacking AD/token impersonation/token impersonate.md",
-    "AD/attacking AD/comp-comp attack/pass the has/hashcat.md",
     "AD/attacking AD/token impersonation",
     "Pasted image 20250402225916.png",
-    "AD/attacking AD/comp-comp attack/pass the has/xtract hashes.md",
     "Pasted image 20250402225813.png",
-    "AD/attacking AD/comp-comp attack/pass the has/psexec.md",
-    "AD/attacking AD/comp-comp attack/pass the has/crackmapexec.md",
     "Pasted image 20250402225610.png",
     "Pasted image 20250402225443.png",
-    "AD/attacking AD/comp-comp attack/pass the has",
     "Pasted image 20250402223959.png",
     "Pasted image 20250402220235.png",
     "Pasted image 20250402220153.png",
