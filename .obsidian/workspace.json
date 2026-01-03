@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pentesting/AI/2 PromptInjection/Scripts/PromptTester.md",
+                "file": "pentesting/AI/2 PromptInjection/Harmful&OffTopic/Off-topicPrompts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PromptTester"
+              "title": "Off-topicPrompts"
             }
           }
         ]
@@ -172,12 +172,19 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
+    "pentesting/AI/2 PromptInjection/Harmful&OffTopic/HarmfulPrompts.md",
+    "pentesting/AI/2 PromptInjection/Harmful&OffTopic/Off-topicPrompts.md",
+    "pentesting/AI/2 PromptInjection/Harmful&OffTopic",
+    "pentesting/AI/2 PromptInjection/PromptInjection2Jailbreak/MultiTurn.md",
     "pentesting/AI/2 PromptInjection/DirectInjection/Obfuscation and Encoding.md",
-    "pentesting/AI/2 PromptInjection/Scripts/PromptTester.md",
     "pentesting/AI/2 PromptInjection/DirectInjection/Narrative Injection.md",
+    "pentesting/AI/2 PromptInjection/DirectInjection/Injection Response Judge.md",
+    "pentesting/AI/2 PromptInjection/PromptInjection2Jailbreak",
+    "pentesting/AI/2 PromptInjection/Scripts/InjectionJudge.md",
+    "pentesting/AI/2 PromptInjection/Scripts/PromptTester.md",
     "pentesting/AI/2 PromptInjection/DirectInjection/Direct Injection.md",
-    "Untitled.md",
     "pentesting/AI/2 PromptInjection/DirectInjection/Context Overflow.md",
+    "Untitled.md",
     "pentesting/AI/1 Recon/DetectModel.md",
     "pentesting/AI/2 PromptInjection/DirectInjection",
     "pentesting/AI/2 PromptInjection/Scripts",
@@ -208,15 +215,8 @@
     "AD/attacking AD/comp-comp attack/pass the has/crackmapexec.md",
     "Pasted image 20250402225610.png",
     "Pasted image 20250402225443.png",
-    "AD/attacking AD/comp-comp attack/pass the has/pass the hash.md",
-    "AD/attacking AD/comp-comp attack/comp-.md",
     "AD/attacking AD/comp-comp attack/pass the has",
-    "AD/attacking AD/comp-comp attack/Untitled.md",
-    "AD/attacking AD/comp-comp attack",
-    "AD/attacking AD/post-compromise/bloodhound.md",
-    "AD/attacking AD/post-compromise/powerview/group policy.md",
     "Pasted image 20250402223959.png",
-    "AD/attacking AD/post-compromise/powerview",
     "Pasted image 20250402220235.png",
     "Pasted image 20250402220153.png",
     "Pasted image 20250402220130.png",
