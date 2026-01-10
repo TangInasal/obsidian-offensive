@@ -44,4 +44,28 @@ ftp> exit
 
 #### SMB
 Server Message Block
+```
+smbclient -N -L \\\\<rhost>
+```
 
+#### SNMP
+**snmpwalk** (if we know the strings)
+```shell-session
+d1ox@htb[/htb]$ snmpwalk -v 2c -c public 10.129.42.253 1.3.6.1.2.1.1.5.0
+
+iso.3.6.1.2.1.1.5.0 = STRING: "gs-svcscan"
+```
+OR
+```shell-session
+d1ox@htb[/htb]$ snmpwalk -v 2c -c private  10.129.42.253 
+
+Timeout: No Response from 10.129.42.253
+```
+
+BRUTEFORCE STRING
+```shell-session
+d1ox@htb[/htb]$ onesixtyone -c dict.txt 10.129.42.254
+
+Scanning 1 hosts, 51 communities
+10.129.42.254 [public] Linux gs-svcscan 5.4.0-66-generic #74-Ubuntu SMP Wed Jan 27 22:54:38 UTC 2021 x86_64
+```
