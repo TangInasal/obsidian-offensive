@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CPTS/Staying Organized.md",
+                "file": "CPTS/Getting Started/Service Scanning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Staying Organized"
+              "title": "Service Scanning"
             }
           }
         ]
@@ -172,9 +172,17 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
+    "CPTS/Services/Connecting-to-Services.md",
+    "CPTS/Getting Started/Service Scanning.md",
+    "Services/Connecting-to-Services.md",
+    "Services",
+    "Connecting-to-Services.md",
+    "CPTS/Staying Organized.md",
+    "().md",
+    "CPTS/Services",
+    "CPTS/Getting Started",
     "Pasted image 20260110154134.png",
     "pentesting/AI/RAG Leakage/RAG Fishing Prompts.md",
-    "CPTS/Staying Organized.md",
     "CPTS",
     "pentesting/AI/RAG Leakage/DirectLeakagePrompts.md",
     "Untitled 1.md",
@@ -202,15 +210,8 @@
     "README.md",
     "Untitled.base",
     "Untitled.canvas",
-    "pentesting/resources.md",
-    "pentesting/android/intro.md",
-    "Untitled 2.base",
-    "Untitled 3.base",
-    "Untitled 1.base",
     "Untitled 2.canvas",
     "Untitled 1.canvas",
-    "AD/exploitation/web/sqli/sqlmap red team.md",
-    "AD/attacking AD/IPv6 Attacks/mitm6.md",
     "Pasted image 20250402230236.png",
     "Pasted image 20250402225916.png",
     "Pasted image 20250402225813.png",
@@ -219,7 +220,6 @@
     "Pasted image 20250402223959.png",
     "Pasted image 20250402220235.png",
     "Pasted image 20250402220153.png",
-    "Pasted image 20250402220130.png",
-    "Pasted image 20250402215927.png"
+    "Pasted image 20250402220130.png"
   ]
 }
