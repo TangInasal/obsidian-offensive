@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CPTS/Getting-Started/Shells.md",
+                "file": "CPTS/Getting-Started/Privilege Escalation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Shells"
+              "title": "Privilege Escalation"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CPTS/Getting-Started/Shells.md",
+                "file": "CPTS/Getting-Started/Privilege Escalation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Shells"
+              "title": "Backlinks for Privilege Escalation"
             }
           },
           {
@@ -170,9 +170,10 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
+    "CPTS/Getting-Started/Shells.md",
+    "CPTS/Getting-Started/Privilege Escalation.md",
     "Pasted image 20260111004013.png",
     "CPTS/Getting-Started/Web Enumeration.md",
-    "CPTS/Getting-Started/Shells.md",
     "CPTS/Services/Attacking-Network-Services.md",
     "CPTS/Services/Connecting-to-Services.md",
     "CPTS/Getting-Started/Service Scanning.md",
@@ -217,7 +218,6 @@
     "Pasted image 20250402225443.png",
     "Pasted image 20250402223959.png",
     "Pasted image 20250402220235.png",
-    "Pasted image 20250402220153.png",
-    "Pasted image 20250402220130.png"
+    "Pasted image 20250402220153.png"
   ]
 }
