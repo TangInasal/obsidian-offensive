@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pentesting/AI/RAG Leakage/RAG Fishing Prompts.md",
+                "file": "CPTS/Staying Organized.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RAG Fishing Prompts"
+              "title": "Staying Organized"
             }
           }
         ]
@@ -172,8 +172,11 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
-    "pentesting/AI/RAG Leakage/DirectLeakagePrompts.md",
+    "Pasted image 20260110154134.png",
     "pentesting/AI/RAG Leakage/RAG Fishing Prompts.md",
+    "CPTS/Staying Organized.md",
+    "CPTS",
+    "pentesting/AI/RAG Leakage/DirectLeakagePrompts.md",
     "Untitled 1.md",
     "pentesting/AI/2 PromptInjection/Harmful&OffTopic/HarmfulPrompts.md",
     "pentesting/AI/RAG Leakage",
@@ -208,10 +211,7 @@
     "Untitled 1.canvas",
     "AD/exploitation/web/sqli/sqlmap red team.md",
     "AD/attacking AD/IPv6 Attacks/mitm6.md",
-    "AD/attacking AD/msf.md",
     "Pasted image 20250402230236.png",
-    "AD/attacking AD/token impersonation/token impersonate.md",
-    "AD/attacking AD/token impersonation",
     "Pasted image 20250402225916.png",
     "Pasted image 20250402225813.png",
     "Pasted image 20250402225610.png",
