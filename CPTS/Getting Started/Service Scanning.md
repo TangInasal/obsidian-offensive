@@ -32,7 +32,22 @@ nmap -sV --script=banner -p21 10.10.10.0/24
 
 #### SMB
 Enumerating SMB with NMAP
+Can also reveal OS version
 ```
 nmap --script smb-os-discovery.nse -p445 <rhost>
+```
+
+Enumerating SMB service version
+```shell-session
+nmap -A -p445 <rhost>
+```
+
+Enumerating SMB Share
+```shell-session
+smbclient -N -L \\\\<rhost>
+```
+OR
+```shell-session
+smbclient -N -L \\\\10.129.42.253
 ```
 

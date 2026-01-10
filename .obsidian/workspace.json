@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "ftp",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "recon/nmap/script--DNS_20.md",
+                "file": "CPTS/Getting Started/Service Scanning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for script--DNS_20"
+              "title": "Backlinks for Service Scanning"
             }
           },
           {
@@ -149,13 +149,11 @@
               "title": "Outline of sqlmap red team"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -170,7 +168,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "12cee157871bdd60",
+  "active": "f8b37fda74d3507b",
   "lastOpenFiles": [
     "CPTS/Services/Connecting-to-Services.md",
     "CPTS/Getting Started/Service Scanning.md",
