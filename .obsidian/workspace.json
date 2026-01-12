@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CPTS/Getting-Started/Privilege Escalation.md",
+                "file": "CPTS/Getting-Started/Privilege Escalation/PrivEsc via SSH.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Privilege Escalation"
+              "title": "PrivEsc via SSH"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CPTS/Getting-Started/Privilege Escalation.md",
+                "file": "CPTS/Getting-Started/Privilege Escalation/PrivEsc via SSH.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Privilege Escalation"
+              "title": "Backlinks for PrivEsc via SSH"
             }
           },
           {
@@ -170,8 +170,12 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
+    "CPTS/Getting-Started/Privilege Escalation/Untitled.md",
+    "CPTS/Getting-Started/Privilege Escalation/PrivEsc via SSH.md",
+    "CPTS/Getting-Started/Privilege Escalation/Automation Scripts.md",
+    "CPTS/Getting-Started/Privilege Escalation",
     "pentesting/post-exploitation/PRIVESC/Linux/cronjob/cronjob.md",
-    "CPTS/Getting-Started/Privilege Escalation.md",
+    "pentesting/post-exploitation/PRIVESC/Linux/cronjob/file cronjob.md",
     "CPTS/Getting-Started/Shells.md",
     "Pasted image 20260111004013.png",
     "CPTS/Getting-Started/Web Enumeration.md",
@@ -202,12 +206,8 @@
     "pentesting/AI/2 PromptInjection/DirectInjection/Narrative Injection.md",
     "pentesting/AI/2 PromptInjection/DirectInjection/Injection Response Judge.md",
     "pentesting/AI/2 PromptInjection/PromptInjection2Jailbreak",
-    "pentesting/AI/2 PromptInjection/Scripts/InjectionJudge.md",
-    "pentesting/AI/2 PromptInjection/Scripts/PromptTester.md",
-    "pentesting/AI/2 PromptInjection/DirectInjection/Direct Injection.md",
     "pentesting/AI/2 PromptInjection/DirectInjection",
     "pentesting/AI/2 PromptInjection/Scripts",
-    "Untitled.base",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas",
