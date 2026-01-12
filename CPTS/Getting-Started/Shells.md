@@ -35,6 +35,17 @@ $ fg
 ```
 Once we hit `fg`, it will bring back our `netcat` shell to the foreground. At this point, the terminal will show a blank line. We can hit `enter` again to get back to our shell or input `reset` and hit enter to bring it back.
 
+**OR**
+
+``` rhost
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+export TERM=xterm
+(CTRL Z)
+```
+``` lhost
+stty raw -echo; fg
+reset + enter
+```
 ##### FIX SHELL DOESNT COVER ENTIRE TERMINAL
 
 We may notice that our shell does not cover the entire terminal. To fix this, we need to figure out a few variables. We can open another terminal window on our system, maximize the windows or use any size we want.
