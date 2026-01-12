@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CPTS/Getting-Started/Service Scanning.md",
+                "file": "CPTS/Getting-Started/File Transfer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Service Scanning"
+              "title": "File Transfer"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ftp",
+                "query": "vulners",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CPTS/Getting-Started/Service Scanning.md",
+                "file": "CPTS/Getting-Started/File Transfer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Service Scanning"
+              "title": "Backlinks for File Transfer"
             }
           },
           {
@@ -170,9 +170,11 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
+    "pentesting/web-pentest/web info/scanning/nmap.md",
+    "pentesting/recon/nmap/vulners.md",
+    "CPTS/Getting-Started/Service Scanning.md",
     "CPTS/Getting-Started/File Transfer.md",
     "CPTS/Getting-Started/Web Enumeration.md",
-    "CPTS/Getting-Started/Service Scanning.md",
     "CPTS/Getting-Started/Privilege Escalation/PrivEsc via SSH.md",
     "CPTS/Getting-Started/Transfering Files",
     "CPTS/Getting-Started/Privilege Escalation/Untitled.md",
@@ -204,8 +206,6 @@
     "pentesting/AI/2 PromptInjection/Harmful&OffTopic/Off-topicPrompts.md",
     "pentesting/AI/2 PromptInjection/Harmful&OffTopic",
     "pentesting/AI/2 PromptInjection/PromptInjection2Jailbreak/MultiTurn.md",
-    "pentesting/AI/2 PromptInjection/DirectInjection/Obfuscation and Encoding.md",
-    "pentesting/AI/2 PromptInjection/DirectInjection/Narrative Injection.md",
     "pentesting/AI/2 PromptInjection/PromptInjection2Jailbreak",
     "pentesting/AI/2 PromptInjection/DirectInjection",
     "Untitled.canvas",
