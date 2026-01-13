@@ -54,3 +54,8 @@ Ncat: Version 7.80 ( https://nmap.org/ncat )
 Ncat: Connected to 10.129.2.28:50000.
 220 ProFTPd
 ```
+
+
+```
+nmap 10.129.135.191 -p53 -sU -Pn --disable-arp-ping --packet-trace --source-port 53 --script banner -sV
+```
