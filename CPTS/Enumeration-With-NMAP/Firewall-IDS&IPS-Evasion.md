@@ -44,4 +44,13 @@ PORT      STATE SERVICE
 50000/tcp open  ibm-db2
 MAC Address: DE:AD:00:00:BE:EF (Intel Corporate)
 ```
-
+If you found out that the firewall accepts `TCP port 53`, it is very likely that IDS/IPS filters might also be configured weaker than others. We can test this by trying to connect to this port by using `Netcat`.
+#### Connect To The Filtered Port via Netcat
+```shell-session
+ncat -nv --source-port 53 10.129.2.28 50000
+```
+```output
+Ncat: Version 7.80 ( https://nmap.org/ncat )
+Ncat: Connected to 10.129.2.28:50000.
+220 ProFTPd
+```
