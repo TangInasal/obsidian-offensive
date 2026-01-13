@@ -1,0 +1,5 @@
+- `-T` - Threads = how fast
+- `--min-parallelism <number>` - which frequence
+- `--max-rtt-timeout <time>` - which timeouts  the test packets should have
+- `--min-rate <number>` -  how many packets should be sent simultaneously
+- `--max-retries <number>` - number of retries
