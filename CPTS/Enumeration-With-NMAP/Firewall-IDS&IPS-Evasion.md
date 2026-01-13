@@ -71,6 +71,3 @@ ncat -nv 10.129.135.92 50000 --source-port 53
 ```
 yatis naguba
 ```
-```
-check yow
-```
