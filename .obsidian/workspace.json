@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CPTS/Enumeration-With-NMAP/Firewall-IDS&IPS-Evasion.md",
+                "file": "CPTS/Footprinting/Enumeration Methodology.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Firewall-IDS&IPS-Evasion"
+              "title": "Enumeration Methodology"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CPTS/Enumeration-With-NMAP/Firewall-IDS&IPS-Evasion.md",
+                "file": "CPTS/Footprinting/Enumeration Methodology.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Firewall-IDS&IPS-Evasion"
+              "title": "Backlinks for Enumeration Methodology"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CPTS/Enumeration-With-NMAP/Firewall-IDS&IPS-Evasion.md",
+                "file": "CPTS/Footprinting/Enumeration Methodology.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Firewall-IDS&IPS-Evasion"
+              "title": "Outgoing links from Enumeration Methodology"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CPTS/Enumeration-With-NMAP/Firewall-IDS&IPS-Evasion.md",
+                "file": "CPTS/Footprinting/Enumeration Methodology.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Firewall-IDS&IPS-Evasion"
+              "title": "Outline of Enumeration Methodology"
             }
           }
         ],
@@ -171,11 +171,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ef9ce12954b60528",
+  "active": "12cee157871bdd60",
   "lastOpenFiles": [
+    "CPTS/Footprinting/Enumeration Principles.md",
+    "CPTS/Footprinting/Enumeration Methodology.md",
+    "CPTS/Enumeration-With-NMAP/Firewall-IDS&IPS-Evasion.md",
     "CPTS/Enumeration-With-NMAP/Service Enumeration.md",
     "CPTS/Staying Organized.md",
-    "CPTS/Enumeration-With-NMAP/Firewall-IDS&IPS-Evasion.md",
     "CPTS/Footprinting",
     "Pasted image 20260113180709.png",
     "Pasted image 20260113180659.png",
@@ -210,8 +212,6 @@
     "CPTS/Enumeration-With-NMAP",
     "CPTS/Getting-Started/Service Scanning.md",
     "CPTS/Getting-Started/Web Enumeration.md",
-    "CPTS/Getting-Started/File Transfer.md",
-    "CPTS/Getting-Started/Privilege Escalation/sudoer script.md",
     "CPTS/Getting-Started/Transfering Files",
     "CPTS/Getting-Started/Privilege Escalation",
     "Services",
