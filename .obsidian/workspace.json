@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CPTS/Footprinting/Domain Information.md",
+                "file": "CPTS/Footprinting/Cloud Resources.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Domain Information"
+              "title": "Cloud Resources"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CPTS/Footprinting/Domain Information.md",
+                "file": "CPTS/Footprinting/Cloud Resources.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Domain Information"
+              "title": "Backlinks for Cloud Resources"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CPTS/Footprinting/Domain Information.md",
+                "file": "CPTS/Footprinting/Cloud Resources.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Domain Information"
+              "title": "Outgoing links from Cloud Resources"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CPTS/Footprinting/Domain Information.md",
+                "file": "CPTS/Footprinting/Cloud Resources.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Domain Information"
+              "title": "Outline of Cloud Resources"
             }
           }
         ],
@@ -173,8 +173,9 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
-    "CPTS/Footprinting/Enumeration Methodology.md",
     "CPTS/Footprinting/Domain Information.md",
+    "CPTS/Footprinting/Cloud Resources.md",
+    "CPTS/Footprinting/Enumeration Methodology.md",
     "Pasted image 20260113203521.png",
     "CPTS/Footprinting/Enumeration Principles.md",
     "CPTS/Enumeration-With-NMAP/Firewall-IDS&IPS-Evasion.md",
@@ -211,7 +212,6 @@
     "pentesting/web-pentest/web info/SMB/SMB.md",
     "CPTS/Getting-Started/Shells.md",
     "CPTS/Enumeration-With-NMAP",
-    "CPTS/Getting-Started/Service Scanning.md",
     "CPTS/Getting-Started/Transfering Files",
     "CPTS/Getting-Started/Privilege Escalation",
     "Services",
