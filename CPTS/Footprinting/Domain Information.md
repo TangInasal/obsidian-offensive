@@ -18,6 +18,15 @@ curl -s https://crt.sh/\?q\=example.com\&output\=json | jq . | grep name | cut -
 ```shell-session
 for i in $(cat subdomainlist);do host $i | grep "has address" | grep inlanefreight.com | cut -d" " -f1,4;done
 ```
-
 #### Running IP list thru Shodan
+```shell-session
+ for i in $(cat subdomainlist);do host $i | grep "has address" | grep inlanefreight.com | cut -d" " -f4 >> ip-addresses.txt;done
+```
+```shell-session
+for i in $(cat ip-addresses.txt);do shodan host $i;done
+```
 
+#### DNS Records
+```shell-session
+dig any example.com
+```
