@@ -13,4 +13,9 @@ The whole enumeration process is divided into three different levels:
 | `4. Processes`           | Identify the internal processes, sources, and destinations associated with the services.               | PID, Processed Data, Tasks, Source, Destination                                                    |
 | `5. Privileges`          | Identification of the internal permissions and privileges to the accessible services.                  | Groups, Users, Permissions, Restrictions, Environment                                              |
 | `6. OS Setup`            | Identification of the internal components and systems setup.                                           | OS Type, Patch Level, Network config, OS Environment, Configuration files, sensitive private files |
-## Layer No.1: Internet Presence
+#### Layer No.1: Internet Presence
+- The goal of this layer is to identify all possible target systems and interfaces that can be tested.`
+#### Layer No.2: Gateway
+- The goal is to understand what we are dealing with and what we have to watch out for.
+#### Layer No.3: Accessible Services
+- This layer aims to understand the reason and functionality of the target system and gain the necessary knowledge to communicate with it and exploit it for our purposes effectively.
