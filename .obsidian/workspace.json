@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CPTS/Getting-Started/Privilege Escalation/sudoer script.md",
+                "file": "CPTS/Getting-Started/Shells.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "sudoer script"
+              "title": "Shells"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CPTS/Getting-Started/Privilege Escalation/sudoer script.md",
+                "file": "CPTS/Getting-Started/Shells.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for sudoer script"
+              "title": "Backlinks for Shells"
             }
           },
           {
@@ -168,14 +168,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "12cee157871bdd60",
+  "active": "0066d8cb34edd59b",
   "lastOpenFiles": [
-    "CPTS/Getting-Started/Privilege Escalation/PrivEsc via SSH.md",
-    "CPTS/Getting-Started/Privilege Escalation/sudoer script.md",
-    "CPTS/Getting-Started/Privilege Escalation/Automation Scripts.md",
+    "CPTS/Enumeration-With-NMAP",
     "CPTS/Getting-Started/Service Scanning.md",
+    "CPTS/Getting-Started/Web Enumeration.md",
     "CPTS/Getting-Started/File Transfer.md",
     "CPTS/Getting-Started/Shells.md",
+    "CPTS/Getting-Started/Privilege Escalation/sudoer script.md",
+    "CPTS/Getting-Started/Privilege Escalation/PrivEsc via SSH.md",
+    "CPTS/Getting-Started/Privilege Escalation/Automation Scripts.md",
     "pentesting/AD/attacking AD/AD exploitation/shells/TTY spawn.md",
     "pentesting/web-pentest/exploitation/shells/TTY.md",
     "pentesting/web-pentest/exploitation/shells/socat/socat.md",
@@ -185,7 +187,6 @@
     "pentesting/web-pentest/exploitation/shells/listener/msfvenom payload.md",
     "pentesting/web-pentest/web info/scanning/nmap.md",
     "pentesting/recon/nmap/vulners.md",
-    "CPTS/Getting-Started/Web Enumeration.md",
     "CPTS/Getting-Started/Transfering Files",
     "CPTS/Getting-Started/Privilege Escalation",
     "pentesting/post-exploitation/PRIVESC/Linux/cronjob/cronjob.md",
@@ -199,7 +200,6 @@
     "Services",
     "Connecting-to-Services.md",
     "CPTS/Staying Organized.md",
-    "().md",
     "CPTS/Services",
     "CPTS/Getting-Started",
     "Pasted image 20260110154134.png",

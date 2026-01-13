@@ -2,13 +2,13 @@
 
 Simple gobuster directory and file scan
 ```shell-session
- gobuster dir -u http://10.10.10.121/ -w /usr/share/seclists/Discovery/Web-Content/common.txt
+ gobuster dir -u http://10.10.10.121/ -w /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt
 ```
 
 Simple DNS Subdomain scan
 **NOTE :** Add the ip and domain on `/etc/resolv.conf` first before scanning
 ```shell-session
- gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt
+ gobuster dns -d inlanefreight.com -w /usr/share/wordlists/SecLists/Discovery/DNS/namelist.txt
 ```
 
 ---
