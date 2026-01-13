@@ -27,4 +27,3 @@ Sometimes when employees are overworked or under high pressure, mistakes can be 
 
 ![[Pasted image 20260113212418.png]]
 
-goodnight
