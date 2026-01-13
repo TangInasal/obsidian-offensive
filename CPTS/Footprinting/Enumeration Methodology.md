@@ -1,3 +1,5 @@
+**The enumeration methodology is the systematic approach to explore a given target.**
+
 The whole enumeration process is divided into three different levels:
 - Infrastructure-based enumeration
 - Host-based enumeration
@@ -19,3 +21,10 @@ The whole enumeration process is divided into three different levels:
 - The goal is to understand what we are dealing with and what we have to watch out for.
 #### Layer No.3: Accessible Services
 - This layer aims to understand the reason and functionality of the target system and gain the necessary knowledge to communicate with it and exploit it for our purposes effectively.
+#### Layer No.4: Processes
+- The goal here is to understand these factors and identify the dependencies between them.
+#### Layer No.5: Privileges
+- It is crucial to identify these and understand what is and is not possible with these privileges.
+#### Layer No.6: OS Setup
+- The goal here is to see how the administrators manage the systems and what sensitive internal information we can glean from them.
+
