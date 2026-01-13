@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CPTS/Footprinting/Enumeration Methodology.md",
+                "file": "CPTS/Footprinting/Domain Information.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Enumeration Methodology"
+              "title": "Domain Information"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CPTS/Footprinting/Enumeration Methodology.md",
+                "file": "CPTS/Footprinting/Domain Information.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Enumeration Methodology"
+              "title": "Backlinks for Domain Information"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CPTS/Footprinting/Enumeration Methodology.md",
+                "file": "CPTS/Footprinting/Domain Information.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Enumeration Methodology"
+              "title": "Outgoing links from Domain Information"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CPTS/Footprinting/Enumeration Methodology.md",
+                "file": "CPTS/Footprinting/Domain Information.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Enumeration Methodology"
+              "title": "Outline of Domain Information"
             }
           }
         ],
@@ -173,9 +173,10 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
+    "CPTS/Footprinting/Enumeration Methodology.md",
+    "CPTS/Footprinting/Domain Information.md",
     "Pasted image 20260113203521.png",
     "CPTS/Footprinting/Enumeration Principles.md",
-    "CPTS/Footprinting/Enumeration Methodology.md",
     "CPTS/Enumeration-With-NMAP/Firewall-IDS&IPS-Evasion.md",
     "CPTS/Enumeration-With-NMAP/Service Enumeration.md",
     "CPTS/Staying Organized.md",
@@ -206,7 +207,6 @@
     "CPTS/Enumeration-With-NMAP/Performance.md",
     "CPTS/Enumeration-With-NMAP/Saving-Results.md",
     "Pasted image 20260113144222.png",
-    "Pasted image 20260113144221.png",
     "Untitled 1.base",
     "pentesting/web-pentest/web info/SMB/SMB.md",
     "CPTS/Getting-Started/Shells.md",
