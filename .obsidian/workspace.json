@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "recon/nmap/script--DNS_20.md",
+                "file": "CPTS/Enumeration-With-NMAP/Firewall-IDS&IPS-Evasion.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from script--DNS_20"
+              "title": "Outgoing links from Firewall-IDS&IPS-Evasion"
             }
           },
           {
@@ -128,7 +128,9 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Tags"
@@ -140,16 +142,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AD/exploitation/web/sqli/sqlmap red team.md",
+                "file": "CPTS/Enumeration-With-NMAP/Firewall-IDS&IPS-Evasion.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of sqlmap red team"
+              "title": "Outline of Firewall-IDS&IPS-Evasion"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -168,7 +171,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "12cee157871bdd60",
+  "active": "ef9ce12954b60528",
   "lastOpenFiles": [
     "CPTS/Enumeration-With-NMAP/Service Enumeration.md",
     "CPTS/Staying Organized.md",
