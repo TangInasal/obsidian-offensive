@@ -67,5 +67,3 @@ nmap 10.129.135.191 -p53 -sU -Pn --disable-arp-ping --packet-trace --source-port
 nmap 10.129.135.92 -p- -Pn --min-rate=500 --source-port 53
 ncat -nv 10.129.135.92 50000 --source-port 53
 ```
-
-hala nailiwit
