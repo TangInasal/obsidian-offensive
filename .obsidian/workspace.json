@@ -173,6 +173,7 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
+    "Pasted image 20260113203521.png",
     "CPTS/Footprinting/Enumeration Principles.md",
     "CPTS/Footprinting/Enumeration Methodology.md",
     "CPTS/Enumeration-With-NMAP/Firewall-IDS&IPS-Evasion.md",
@@ -211,7 +212,6 @@
     "CPTS/Getting-Started/Shells.md",
     "CPTS/Enumeration-With-NMAP",
     "CPTS/Getting-Started/Service Scanning.md",
-    "CPTS/Getting-Started/Web Enumeration.md",
     "CPTS/Getting-Started/Transfering Files",
     "CPTS/Getting-Started/Privilege Escalation",
     "Services",
