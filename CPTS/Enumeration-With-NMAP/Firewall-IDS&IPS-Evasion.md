@@ -68,3 +68,4 @@ nmap 10.129.135.92 -p- -Pn --min-rate=500 --source-port 53
 ncat -nv 10.129.135.92 50000 --source-port 53
 ```
 
+p
