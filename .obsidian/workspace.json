@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CPTS/Footprinting/Cloud Resources.md",
+                "file": "CPTS/Footprinting/FTP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cloud Resources"
+              "title": "FTP"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "FTP"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -186,12 +185,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3ffb09bd8d230d44",
+  "active": "12cee157871bdd60",
   "lastOpenFiles": [
-    "CPTS/Footprinting/Domain Information.md",
-    "CPTS/Footprinting/FTP.md",
-    "CPTS/Footprinting/Staff.md",
     "CPTS/Footprinting/Cloud Resources.md",
+    "CPTS/Footprinting/FTP.md",
+    "CPTS/Footprinting/Domain Information.md",
+    "CPTS/Footprinting/Staff.md",
     "Pasted image 20260113212418.png",
     "CPTS/Footprinting/Enumeration Methodology.md",
     "Pasted image 20260113203521.png",
