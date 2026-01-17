@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CPTS/Footprinting/SMB.md",
+                "file": "CPTS/Footprinting/NFS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SMB"
+              "title": "NFS"
             }
           },
           {
@@ -187,8 +187,9 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
-    "BBP/Information-Disclosure/wayback.md",
     "CPTS/Footprinting/SMB.md",
+    "CPTS/Footprinting/NFS.md",
+    "BBP/Information-Disclosure/wayback.md",
     "BBP/ATO/0 Click ATO via Punycode.md",
     "BBP/Information-Disclosure",
     "BBP/ATO",
@@ -227,7 +228,6 @@
     "pentesting/recon/nmap/nmap--OS_detection_4.md",
     "pentesting/recon/nmap/nmap--no_probe_5.md",
     "pentesting/recon/nmap/index.md",
-    "CPTS/Enumeration-With-NMAP/Host-Enumeration.md",
     "Untitled 1.base",
     "CPTS/Enumeration-With-NMAP",
     "CPTS/Getting-Started/Transfering Files",
