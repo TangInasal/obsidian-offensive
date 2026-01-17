@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BBP/Information-Disclosure/wayback.md",
+                "file": "CPTS/Footprinting/SMB.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "wayback"
+              "title": "SMB"
             }
           },
           {
@@ -187,8 +187,9 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
-    "BBP/ATO/0 Click ATO via Punycode.md",
     "BBP/Information-Disclosure/wayback.md",
+    "CPTS/Footprinting/SMB.md",
+    "BBP/ATO/0 Click ATO via Punycode.md",
     "BBP/Information-Disclosure",
     "BBP/ATO",
     "CPTS/Footprinting/FTP.md",
@@ -227,7 +228,6 @@
     "pentesting/recon/nmap/nmap--no_probe_5.md",
     "pentesting/recon/nmap/index.md",
     "CPTS/Enumeration-With-NMAP/Host-Enumeration.md",
-    "CPTS/Enumeration-With-NMAP/Host-and-Port-Scanning.md",
     "Untitled 1.base",
     "CPTS/Enumeration-With-NMAP",
     "CPTS/Getting-Started/Transfering Files",
