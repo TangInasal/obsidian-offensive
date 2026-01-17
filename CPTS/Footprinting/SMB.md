@@ -165,3 +165,505 @@ From the administrative point of view, we can check these connections using `sm
 Apart from the Samba version, we can also see who, from which host, and which share the client is connected. This is especially important once we have entered a subnet (perhaps even an isolated one) that the others can still access.
 
 For example, with domain-level security, the samba server acts as a member of a Windows domain. Each domain has at least one domain controller, usually a Windows NT server providing password authentication. This domain controller provides the workgroup with a definitive password server. The domain controllers keep track of users and passwords in their own `NTDS.dit` and `Security Authentication Module` (`SAM`) and authenticate each user when they log in for the first time and wish to access another machine's share.
+
+---
+## Footprinting the Service
+Let us go back to one of our enumeration tools. Nmap also has many options and NSE scripts that can help us examine the target's SMB service more closely and get more information. The downside, however, is that these scans can take a long time. Therefore, it is also recommended to look at the service manually, mainly because we can find much more details than Nmap could show us. First, however, let us see what Nmap can find on our target Samba server, where we created the `[notes]` share for testing purposes.
+#### Nmap
+```shell-session
+sudo nmap 10.129.14.128 -sV -sC -p139,445
+```
+```output
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-09-19 15:15 CEST
+Nmap scan report for sharing.inlanefreight.htb (10.129.14.128)
+Host is up (0.00024s latency).
+
+PORT    STATE SERVICE     VERSION
+139/tcp open  netbios-ssn Samba smbd 4.6.2
+445/tcp open  netbios-ssn Samba smbd 4.6.2
+MAC Address: 00:00:00:00:00:00 (VMware)
+
+Host script results:
+|_nbstat: NetBIOS name: HTB, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-09-19T13:16:04
+|_  start_date: N/A
+```
+
+#### RPCclient
+```shell-session
+ rpcclient -U "" 10.129.14.128
+```
+```output
+Enter WORKGROUP\'s password:
+rpcclient $> 
+```
+The `rpcclient` offers us many different requests with which we can execute specific functions on the SMB server to get information. 
+A complete list of all these functions can be found on the [man page](https://www.samba.org/samba/docs/current/man-html/rpcclient.1.html) of the rpcclient.
+
+|**Query**|**Description**|
+|---|---|
+|`srvinfo`|Server information.|
+|`enumdomains`|Enumerate all domains that are deployed in the network.|
+|`querydominfo`|Provides domain, server, and user information of deployed domains.|
+|`netshareenumall`|Enumerates all available shares.|
+|`netsharegetinfo <share>`|Provides information about a specific share.|
+|`enumdomusers`|Enumerates all domain users.|
+|`queryuser <RID>`|Provides information about a specific user.|
+
+#### RPCclient - Enumeration
+```shell-session
+srvinfo
+```
+```output
+		DEVSMB         Wk Sv PrQ Unx NT SNT DEVSM
+        platform_id     :       500
+        os version      :       6.1
+        server type     :       0x809a03
+```
+
+```shell-session
+enumdomains
+```
+```output
+name:[DEVSMB] idx:[0x0]
+name:[Builtin] idx:[0x1]
+```
+
+```shell-session
+querydominfo
+```
+```output
+Domain:         DEVOPS
+Server:         DEVSMB
+Comment:        DEVSM
+Total Users:    2
+Total Groups:   0
+Total Aliases:  0
+Sequence No:    1632361158
+Force Logoff:   -1
+Domain Server State:    0x1
+Server Role:    ROLE_DOMAIN_PDC
+Unknown 3:      0x1
+```
+
+```shell-session
+netshareenumall
+```
+```output
+netname: print$
+        remark: Printer Drivers
+        path:   C:\var\lib\samba\printers
+        password:
+netname: home
+        remark: INFREIGHT Samba
+        path:   C:\home\
+        password:
+netname: dev
+        remark: DEVenv
+        path:   C:\home\sambauser\dev\
+        password:
+netname: notes
+        remark: CheckIT
+        path:   C:\mnt\notes\
+        password:
+netname: IPC$
+        remark: IPC Service (DEVSM)
+        path:   C:\tmp
+        password:
+```
+
+```shell-session
+netsharegetinfo notes
+```
+```output
+netname: notes
+        remark: CheckIT
+        path:   C:\mnt\notes\
+        password:
+        type:   0x0
+        perms:  0
+        max_uses:       -1
+        num_uses:       1
+revision: 1
+type: 0x8004: SEC_DESC_DACL_PRESENT SEC_DESC_SELF_RELATIVE 
+DACL
+        ACL     Num ACEs:       1       revision:       2
+        ---
+        ACE
+                type: ACCESS ALLOWED (0) flags: 0x00 
+                Specific bits: 0x1ff
+                Permissions: 0x101f01ff: Generic all access SYNCHRONIZE_ACCESS WRITE_OWNER_ACCESS WRITE_DAC_ACCESS READ_CONTROL_ACCESS DELETE_ACCESS 
+                SID: S-1-1-0
+```
+
+These examples show us what information can be leaked to anonymous users. Once an `anonymous` user has access to a network service, it only takes one mistake to give them too many permissions or too much visibility to put the entire network at significant risk.
+
+#### Rpcclient - User Enumeration
+```shell-session
+enumdomusers
+```
+```output
+user:[mrb3n] rid:[0x3e8]
+user:[cry0l1t3] rid:[0x3e9]
+```
+
+```shell-session
+queryuser 0x3e9
+```
+```output
+        User Name   :   cry0l1t3
+        Full Name   :   cry0l1t3
+        Home Drive  :   \\devsmb\cry0l1t3
+        Dir Drive   :
+        Profile Path:   \\devsmb\cry0l1t3\profile
+        Logon Script:
+        Description :
+        Workstations:
+        Comment     :
+        Remote Dial :
+        Logon Time               :      Do, 01 Jan 1970 01:00:00 CET
+        Logoff Time              :      Mi, 06 Feb 2036 16:06:39 CET
+        Kickoff Time             :      Mi, 06 Feb 2036 16:06:39 CET
+        Password last set Time   :      Mi, 22 Sep 2021 17:50:56 CEST
+        Password can change Time :      Mi, 22 Sep 2021 17:50:56 CEST
+        Password must change Time:      Do, 14 Sep 30828 04:48:05 CEST
+        unknown_2[0..31]...
+        user_rid :      0x3e9
+        group_rid:      0x201
+        acb_info :      0x00000014
+        fields_present: 0x00ffffff
+        logon_divs:     168
+        bad_password_count:     0x00000000
+        logon_count:    0x00000000
+        padding1[0..7]...
+        logon_hrs[0..21]...
+```
+
+```shell-session
+queryuser 0x3e8
+```
+```output
+        User Name   :   mrb3n
+        Full Name   :
+        Home Drive  :   \\devsmb\mrb3n
+        Dir Drive   :
+        Profile Path:   \\devsmb\mrb3n\profile
+        Logon Script:
+        Description :
+        Workstations:
+        Comment     :
+        Remote Dial :
+        Logon Time               :      Do, 01 Jan 1970 01:00:00 CET
+        Logoff Time              :      Mi, 06 Feb 2036 16:06:39 CET
+        Kickoff Time             :      Mi, 06 Feb 2036 16:06:39 CET
+        Password last set Time   :      Mi, 22 Sep 2021 17:47:59 CEST
+        Password can change Time :      Mi, 22 Sep 2021 17:47:59 CEST
+        Password must change Time:      Do, 14 Sep 30828 04:48:05 CEST
+        unknown_2[0..31]...
+        user_rid :      0x3e8
+        group_rid:      0x201
+        acb_info :      0x00000010
+        fields_present: 0x00ffffff
+        logon_divs:     168
+        bad_password_count:     0x00000000
+        logon_count:    0x00000000
+        padding1[0..7]...
+        logon_hrs[0..21]...
+```
+
+
+#### Rpcclient - Group Information
+```shell-session
+ querygroup 0x201
+```
+```output
+        Group Name:     None
+        Description:    Ordinary Users
+        Group Attribute:7
+        Num Members:2
+```
+
+However, it can also happen that not all commands are available to us, and we have certain restrictions based on the user. However, the query `queryuser <RID>` is mostly allowed based on the RID. So we can use the rpcclient to brute force the RIDs to get information. Because we may not know who has been assigned which RID, we know that we will get information about it as soon as we query an assigned RID.
+
+#### Brute Forcing User RIDs
+```bash-one-liner
+for i in $(seq 500 1100);do rpcclient -N -U "" 10.129.14.128 -c "queryuser 0x$(printf '%x\n' $i)" | grep "User Name\|user_rid\|group_rid" && echo "";done
+```
+```output
+        User Name   :   sambauser
+        user_rid :      0x1f5
+        group_rid:      0x201
+		
+        User Name   :   mrb3n
+        user_rid :      0x3e8
+        group_rid:      0x201
+		
+        User Name   :   cry0l1t3
+        user_rid :      0x3e9
+        group_rid:      0x201
+```
+
+Alternative to this would be a Python script from [Impacket](https://github.com/SecureAuthCorp/impacket) called [samrdump.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/samrdump.py).
+#### Impacket - Samrdump.py
+```shell-session-impacket
+samrdump.py 10.129.14.128
+```
+```output
+Impacket v0.9.22 - Copyright 2020 SecureAuth Corporation
+
+[*] Retrieving endpoint list from 10.129.14.128
+Found domain(s):
+ . DEVSMB
+ . Builtin
+[*] Looking up users in domain DEVSMB
+Found user: mrb3n, uid = 1000
+Found user: cry0l1t3, uid = 1001
+mrb3n (1000)/FullName: 
+mrb3n (1000)/UserComment: 
+mrb3n (1000)/PrimaryGroupId: 513
+mrb3n (1000)/BadPasswordCount: 0
+mrb3n (1000)/LogonCount: 0
+mrb3n (1000)/PasswordLastSet: 2021-09-22 17:47:59
+mrb3n (1000)/PasswordDoesNotExpire: False
+mrb3n (1000)/AccountIsDisabled: False
+mrb3n (1000)/ScriptPath: 
+cry0l1t3 (1001)/FullName: cry0l1t3
+cry0l1t3 (1001)/UserComment: 
+cry0l1t3 (1001)/PrimaryGroupId: 513
+cry0l1t3 (1001)/BadPasswordCount: 0
+cry0l1t3 (1001)/LogonCount: 0
+cry0l1t3 (1001)/PasswordLastSet: 2021-09-22 17:50:56
+cry0l1t3 (1001)/PasswordDoesNotExpire: False
+cry0l1t3 (1001)/AccountIsDisabled: False
+cry0l1t3 (1001)/ScriptPath: 
+[*] Received 2 entries.
+```
+
+The information we have already obtained with `rpcclient` can also be obtained using other tools. For example, the [SMBMap](https://github.com/ShawnDEvans/smbmap) and [CrackMapExec](https://github.com/byt3bl33d3r/CrackMapExec) tools are also widely used and helpful for the enumeration of SMB services.
+#### SMBmap
+```shell-session
+smbmap -H 10.129.14.128
+```
+```output
+[+] Finding open SMB ports....
+[+] User SMB session established on 10.129.14.128...
+[+] IP: 10.129.14.128:445       Name: 10.129.14.128                                     
+        Disk                                                    Permissions     Comment
+        ----                                                    -----------     -------
+        print$                                                  NO ACCESS       Printer Drivers
+        home                                                    NO ACCESS       INFREIGHT Samba
+        dev                                                     NO ACCESS       DEVenv
+        notes                                                   NO ACCESS       CheckIT
+        IPC$                                                    NO ACCESS       IPC Service (DEVSM)
+```
+
+#### CrackMapExec
+```shell-session
+crackmapexec smb 10.129.14.128 --shares -u '' -p ''
+```
+```output
+SMB         10.129.14.128   445    DEVSMB           [*] Windows 6.1 Build 0 (name:DEVSMB) (domain:) (signing:False) (SMBv1:False)
+SMB         10.129.14.128   445    DEVSMB           [+] \: 
+SMB         10.129.14.128   445    DEVSMB           [+] Enumerated shares
+SMB         10.129.14.128   445    DEVSMB           Share           Permissions     Remark
+SMB         10.129.14.128   445    DEVSMB           -----           -----------     ------
+SMB         10.129.14.128   445    DEVSMB           print$                          Printer Drivers
+SMB         10.129.14.128   445    DEVSMB           home                            INFREIGHT Samba
+SMB         10.129.14.128   445    DEVSMB           dev                             DEVenv
+SMB         10.129.14.128   445    DEVSMB           notes           READ,WRITE      CheckIT
+SMB         10.129.14.128   445    DEVSMB           IPC$                            IPC Service (DEVSM)
+```
+
+#### Enum4Linux-ng - Enumeration
+**NOTE: clone repo first**
+```shell-session
+./enum4linux-ng.py 10.129.14.128 -A
+```
+```output
+ENUM4LINUX - next generation
+
+ ==========================
+|    Target Information    |
+ ==========================
+[*] Target ........... 10.129.14.128
+[*] Username ......... ''
+[*] Random Username .. 'juzgtcsu'
+[*] Password ......... ''
+[*] Timeout .......... 5 second(s)
+
+ =====================================
+|    Service Scan on 10.129.14.128    |
+ =====================================
+[*] Checking LDAP
+[-] Could not connect to LDAP on 389/tcp: connection refused
+[*] Checking LDAPS
+[-] Could not connect to LDAPS on 636/tcp: connection refused
+[*] Checking SMB
+[+] SMB is accessible on 445/tcp
+[*] Checking SMB over NetBIOS
+[+] SMB over NetBIOS is accessible on 139/tcp
+
+ =====================================================
+|    NetBIOS Names and Workgroup for 10.129.14.128    |
+ =====================================================
+[+] Got domain/workgroup name: DEVOPS
+[+] Full NetBIOS names information:
+- DEVSMB          <00> -         H <ACTIVE>  Workstation Service
+- DEVSMB          <03> -         H <ACTIVE>  Messenger Service
+- DEVSMB          <20> -         H <ACTIVE>  File Server Service
+- ..__MSBROWSE__. <01> - <GROUP> H <ACTIVE>  Master Browser
+- DEVOPS          <00> - <GROUP> H <ACTIVE>  Domain/Workgroup Name
+- DEVOPS          <1d> -         H <ACTIVE>  Master Browser
+- DEVOPS          <1e> - <GROUP> H <ACTIVE>  Browser Service Elections
+- MAC Address = 00-00-00-00-00-00
+
+ ==========================================
+|    SMB Dialect Check on 10.129.14.128    |
+ ==========================================
+[*] Trying on 445/tcp
+[+] Supported dialects and settings:
+SMB 1.0: false
+SMB 2.02: true
+SMB 2.1: true
+SMB 3.0: true
+SMB1 only: false
+Preferred dialect: SMB 3.0
+SMB signing required: false
+
+ ==========================================
+|    RPC Session Check on 10.129.14.128    |
+ ==========================================
+[*] Check for null session
+[+] Server allows session using username '', password ''
+[*] Check for random user session
+[+] Server allows session using username 'juzgtcsu', password ''
+[H] Rerunning enumeration with user 'juzgtcsu' might give more results
+
+ ====================================================
+|    Domain Information via RPC for 10.129.14.128    |
+ ====================================================
+[+] Domain: DEVOPS
+[+] SID: NULL SID
+[+] Host is part of a workgroup (not a domain)
+
+ ============================================================
+|    Domain Information via SMB session for 10.129.14.128    |
+ ============================================================
+[*] Enumerating via unauthenticated SMB session on 445/tcp
+[+] Found domain information via SMB
+NetBIOS computer name: DEVSMB
+NetBIOS domain name: ''
+DNS domain: ''
+FQDN: htb
+
+ ================================================
+|    OS Information via RPC for 10.129.14.128    |
+ ================================================
+[*] Enumerating via unauthenticated SMB session on 445/tcp
+[+] Found OS information via SMB
+[*] Enumerating via 'srvinfo'
+[+] Found OS information via 'srvinfo'
+[+] After merging OS information we have the following result:
+OS: Windows 7, Windows Server 2008 R2
+OS version: '6.1'
+OS release: ''
+OS build: '0'
+Native OS: not supported
+Native LAN manager: not supported
+Platform id: '500'
+Server type: '0x809a03'
+Server type string: Wk Sv PrQ Unx NT SNT DEVSM
+
+ ======================================
+|    Users via RPC on 10.129.14.128    |
+ ======================================
+[*] Enumerating users via 'querydispinfo'
+[+] Found 2 users via 'querydispinfo'
+[*] Enumerating users via 'enumdomusers'
+[+] Found 2 users via 'enumdomusers'
+[+] After merging user results we have 2 users total:
+'1000':
+  username: mrb3n
+  name: ''
+  acb: '0x00000010'
+  description: ''
+'1001':
+  username: cry0l1t3
+  name: cry0l1t3
+  acb: '0x00000014'
+  description: ''
+
+ =======================================
+|    Groups via RPC on 10.129.14.128    |
+ =======================================
+[*] Enumerating local groups
+[+] Found 0 group(s) via 'enumalsgroups domain'
+[*] Enumerating builtin groups
+[+] Found 0 group(s) via 'enumalsgroups builtin'
+[*] Enumerating domain groups
+[+] Found 0 group(s) via 'enumdomgroups'
+
+ =======================================
+|    Shares via RPC on 10.129.14.128    |
+ =======================================
+[*] Enumerating shares
+[+] Found 5 share(s):
+IPC$:
+  comment: IPC Service (DEVSM)
+  type: IPC
+dev:
+  comment: DEVenv
+  type: Disk
+home:
+  comment: INFREIGHT Samba
+  type: Disk
+notes:
+  comment: CheckIT
+  type: Disk
+print$:
+  comment: Printer Drivers
+  type: Disk
+[*] Testing share IPC$
+[-] Could not check share: STATUS_OBJECT_NAME_NOT_FOUND
+[*] Testing share dev
+[-] Share doesn't exist
+[*] Testing share home
+[+] Mapping: OK, Listing: OK
+[*] Testing share notes
+[+] Mapping: OK, Listing: OK
+[*] Testing share print$
+[+] Mapping: DENIED, Listing: N/A
+
+ ==========================================
+|    Policies via RPC for 10.129.14.128    |
+ ==========================================
+[*] Trying port 445/tcp
+[+] Found policy:
+domain_password_information:
+  pw_history_length: None
+  min_pw_length: 5
+  min_pw_age: none
+  max_pw_age: 49710 days 6 hours 21 minutes
+  pw_properties:
+  - DOMAIN_PASSWORD_COMPLEX: false
+  - DOMAIN_PASSWORD_NO_ANON_CHANGE: false
+  - DOMAIN_PASSWORD_NO_CLEAR_CHANGE: false
+  - DOMAIN_PASSWORD_LOCKOUT_ADMINS: false
+  - DOMAIN_PASSWORD_PASSWORD_STORE_CLEARTEXT: false
+  - DOMAIN_PASSWORD_REFUSE_PASSWORD_CHANGE: false
+domain_lockout_information:
+  lockout_observation_window: 30 minutes
+  lockout_duration: 30 minutes
+  lockout_threshold: None
+domain_logoff_information:
+  force_logoff_time: 49710 days 6 hours 21 minutes
+
+ ==========================================
+|    Printers via RPC for 10.129.14.128    |
+ ==========================================
+[+] No printers returned (this is not an error)
+```
