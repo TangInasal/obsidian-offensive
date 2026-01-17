@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BBP/wayback.md",
+                "file": "BBP/Information-Disclosure/wayback.md",
                 "mode": "source",
                 "source": false
               },
@@ -187,8 +187,11 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
+    "BBP/ATO/0 Click ATO via Punycode.md",
+    "BBP/Information-Disclosure/wayback.md",
+    "BBP/Information-Disclosure",
+    "BBP/ATO",
     "CPTS/Footprinting/FTP.md",
-    "BBP/wayback.md",
     "BBP",
     "courses/Untitled",
     "CPTS/Footprinting/Cloud Resources.md",
@@ -225,14 +228,11 @@
     "pentesting/recon/nmap/index.md",
     "CPTS/Enumeration-With-NMAP/Host-Enumeration.md",
     "CPTS/Enumeration-With-NMAP/Host-and-Port-Scanning.md",
-    "CPTS/Enumeration-With-NMAP/Performance.md",
     "Untitled 1.base",
     "CPTS/Enumeration-With-NMAP",
     "CPTS/Getting-Started/Transfering Files",
     "CPTS/Getting-Started/Privilege Escalation",
     "Services",
-    "CPTS/Services",
-    "CPTS/Getting-Started",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
