@@ -62,18 +62,78 @@ d1ox@htb[/htb]$ cat /etc/samba/smb.conf | grep -v "#\|\;"
 |`read only = yes`|Allow users to read files only?|
 |`create mask = 0700`|What permissions need to be set for newly created files?|
 
-## Dangerous Settings
+#### Dangerous Settings
 Let us take the setting `browseable = yes` as an example. If we as administrators adopt this setting, the company's employees will have the comfort of being able to look at the individual folders with the contents. Many folders are eventually used for better organization and structure. If the employee can browse through the shares, the attacker will also be able to do so after successful access.
 
-|**Setting**|**Description**|
-|---|---|
-|`browseable = yes`|Allow listing available shares in the current share?|
-|`read only = no`|Forbid the creation and modification of files?|
-|`writable = yes`|Allow users to create and modify files?|
-|`guest ok = yes`|Allow connecting to the service without using a password?|
-|`enable privileges = yes`|Honor privileges assigned to specific SID?|
-|`create mask = 0777`|What permissions must be assigned to the newly created files?|
-|`directory mask = 0777`|What permissions must be assigned to the newly created directories?|
-|`logon script = script.sh`|What script needs to be executed on the user's login?|
-|`magic script = script.sh`|Which script should be executed when the script gets closed?|
-|`magic output = script.out`|Where the output of the magic script needs to be stored?|
+| **Setting**                 | **Description**                                                     |
+| --------------------------- | ------------------------------------------------------------------- |
+| `browseable = yes`          | Allow listing available shares in the current share?                |
+| `read only = no`            | Forbid the creation and modification of files?                      |
+| `writable = yes`            | Allow users to create and modify files?                             |
+| `guest ok = yes`            | Allow connecting to the service without using a password?           |
+| `enable privileges = yes`   | Honor privileges assigned to specific SID?                          |
+| `create mask = 0777`        | What permissions must be assigned to the newly created files?       |
+| `directory mask = 0777`     | What permissions must be assigned to the newly created directories? |
+| `logon script = script.sh`  | What script needs to be executed on the user's login?               |
+| `magic script = script.sh`  | Which script should be executed when the script gets closed?        |
+| `magic output = script.out` | Where the output of the magic script needs to be stored?            |
+
+---
+## SMBclient - Connecting to the Share
+
+```shell-session
+smbclient -N -L //10.129.14.128
+```
+```output
+        Sharename       Type      Comment
+        ---------       ----      -------
+        print$          Disk      Printer Drivers
+        home            Disk      INFREIGHT Samba
+        dev             Disk      DEVenv
+        notes           Disk      CheckIT
+        IPC$            IPC       IPC Service (DEVSM)
+SMB1 disabled -- no workgroup available
+```
+We can see that we now have five different shares on the Samba server from the result. Thereby `print$` and an `IPC$` are already included by default in the basic setting, as we have already seen. Since we deal with the `[notes]` share, let us log in and inspect it using the same client program. If we are not familiar with the client program, we can use the `help` command on successful login, listing all the possible commands we can execute.
+
+#### Open sharename
+```shell-session
+smbclient //10.129.14.128/notes
+```
+```output
+Enter WORKGROUP\<username>'s password: 
+Anonymous login successful
+Try "help" to get a list of possible commands.
+
+
+smb: \> help
+
+?              allinfo        altname        archive        backup         
+blocksize      cancel         case_sensitive cd             chmod          
+chown          close          del            deltree        dir            
+du             echo           exit           get            getfacl        
+geteas         hardlink       help           history        iosize         
+lcd            link           lock           lowercase      ls             
+l              mask           md             mget           mkdir          
+more           mput           newer          notify         open           
+posix          posix_encrypt  posix_open     posix_mkdir    posix_rmdir    
+posix_unlink   posix_whoami   print          prompt         put            
+pwd            q              queue          quit           readlink       
+rd             recurse        reget          rename         reput          
+rm             rmdir          showacls       setea          setmode        
+scopy          stat           symlink        tar            tarmode        
+timeout        translate      unlock         volume         vuid           
+wdel           logon          listconnect    showconnect    tcon           
+tdis           tid            utimes         logoff         ..             
+!            
+
+
+smb: \> ls
+
+  .                                   D        0  Wed Sep 22 18:17:51 2021
+  ..                                  D        0  Wed Sep 22 12:03:59 2021
+  prep-prod.txt                       N       71  Sun Sep 19 15:45:21 2021
+```
+
+Once we have discovered interesting files or folders, we can download them using the `get` command. 
+Smbclient also allows us to execute local system commands using an exclamation mark at the beginning (`!<cmd>`) without interrupting the connection.
