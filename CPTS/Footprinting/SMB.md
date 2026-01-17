@@ -137,3 +137,31 @@ smb: \> ls
 
 Once we have discovered interesting files or folders, we can download them using the `get` command. 
 Smbclient also allows us to execute local system commands using an exclamation mark at the beginning (`!<cmd>`) without interrupting the connection.
+
+#### Download Files from SMB
+```shell-session
+smb: \>  get prep-prod.txt 
+```
+```output
+getting file \prep-prod.txt of size 71 as prep-prod.txt (8,7 KiloBytes/sec) 
+(average 8,7 KiloBytes/sec)
+```
+```shell-session
+smb: \> !ls
+```
+``` output
+prep-prod.txt
+```
+```shell-session
+smb: \> !cat prep-prod.txt
+```
+```output
+[] check your code with the templates
+[] run code-assessment.py
+[] …	
+```
+
+From the administrative point of view, we can check these connections using `smbstatus`. 
+Apart from the Samba version, we can also see who, from which host, and which share the client is connected. This is especially important once we have entered a subnet (perhaps even an isolated one) that the others can still access.
+
+For example, with domain-level security, the samba server acts as a member of a Windows domain. Each domain has at least one domain controller, usually a Windows NT server providing password authentication. This domain controller provides the workgroup with a definitive password server. The domain controllers keep track of users and passwords in their own `NTDS.dit` and `Security Authentication Module` (`SAM`) and authenticate each user when they log in for the first time and wish to access another machine's share.
