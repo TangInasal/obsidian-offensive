@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CPTS/Footprinting/SMTP.md",
+                "file": "CPTS/Footprinting/IMAP & POP3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SMTP"
+              "title": "IMAP & POP3"
             }
           },
           {
@@ -187,8 +187,9 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
-    "CPTS/Footprinting/DNS.md",
     "CPTS/Footprinting/SMTP.md",
+    "CPTS/Footprinting/IMAP & POP3.md",
+    "CPTS/Footprinting/DNS.md",
     "CPTS/Footprinting/NFS.md",
     "CPTS/Footprinting/FTP.md",
     "CPTS/Footprinting/SMB.md",
@@ -227,7 +228,6 @@
     "pentesting/recon/nmap/nmap--service_discovery_3.md",
     "pentesting/recon/nmap/nmap--quick_map_2.md",
     "pentesting/recon/nmap/nmap--ping_15.md",
-    "pentesting/recon/nmap/nmap--OS_detection_4.md",
     "Untitled 1.base",
     "CPTS/Enumeration-With-NMAP",
     "CPTS/Getting-Started/Transfering Files",

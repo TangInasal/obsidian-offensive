@@ -178,7 +178,7 @@ However, we can also use the [smtp-open-relay](https://nmap.org/nsedoc/scripts/
 If we also print out the output of the scan in detail, we will also be able to see which tests the script is running.
 #### Nmap - Open Relay
 ```shell-session
-sudo nmap 10.129.14.128 -p25 --script smtp-open-relay -v
+sudo nmap 10.129.14.128 -p25 --script=smtp-open-relay -v
 ```
 ```output
 Starting Nmap 7.80 ( https://nmap.org ) at 2021-09-30 02:29 CEST
@@ -223,3 +223,16 @@ PORT   STATE SERVICE
 MAC Address: 00:00:00:00:00:00 (VMware
 ```
 
+#### NMAP enumerate SMB users
+```
+sudo nmap 10.129.104.79 -p25 --script=smtp-enum-users 
+```
+
+```
+nmap -p 25 --script smtp-enum-users --script-args smtp-enum-users.userdb=Footprinting-enumeration.txt 10.129.104.79
+```
+
+#### Enumerate SMB users
+```
+smtp-user-enum -M VRFY -U footprinting-wordlist.txt -t 10.129.104.79 -w20 
+```
