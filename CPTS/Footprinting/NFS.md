@@ -119,3 +119,67 @@ MAC Address: 00:00:00:00:00:00 (VMware)
 Once we have discovered an NFS service, **we can mount it on our local machine**. 
 For this, we can create a new empty folder to which the NFS share will be mounted. 
 Once mounted, we can navigate it and view the contents just like our local system.
+#### Show Available NFS Shares
+```shell-session
+showmount -e 10.129.14.128
+```
+```output
+Export list for 10.129.14.128:
+/mnt/nfs 10.129.14.0/24
+```
+#### Mounting NFS Share
+```shell-session
+mkdir target-NFS
+sudo mount -t nfs 10.129.14.128:/ ./target-NFS/ -o nolock
+cd target-NFS
+tree .
+```
+```output
+.
+└── mnt
+    └── nfs
+        ├── id_rsa
+        ├── id_rsa.pub
+        └── nfs.share
+
+2 directories, 3 files
+```
+There we will have the opportunity to access the rights and the usernames and groups to whom the shown and viewable files belong. 
+Because once we have the usernames, group names, UIDs, and GUIDs, we can create them on our system and adapt them to the NFS share to view and modify the files.
+#### List Contents with Usernames & Group Names
+```shell-session
+ls -l mnt/nfs/
+```
+```output
+total 16
+-rw-r--r-- 1 cry0l1t3 cry0l1t3 1872 Sep 25 00:55 cry0l1t3.priv
+-rw-r--r-- 1 cry0l1t3 cry0l1t3  348 Sep 25 00:55 cry0l1t3.pub
+-rw-r--r-- 1 root     root     1872 Sep 19 17:27 id_rsa
+-rw-r--r-- 1 root     root      348 Sep 19 17:28 id_rsa.pub
+-rw-r--r-- 1 root     root        0 Sep 19 17:22 nfs.share
+```
+#### List Contents with UIDs & GUIDs
+```shell-session
+ls -n mnt/nfs/
+```
+```output
+total 16
+-rw-r--r-- 1 1000 1000 1872 Sep 25 00:55 cry0l1t3.priv
+-rw-r--r-- 1 1000 1000  348 Sep 25 00:55 cry0l1t3.pub
+-rw-r--r-- 1    0 1000 1221 Sep 19 18:21 backup.sh
+-rw-r--r-- 1    0    0 1872 Sep 19 17:27 id_rsa
+-rw-r--r-- 1    0    0  348 Sep 19 17:28 id_rsa.pub
+-rw-r--r-- 1    0    0    0 Sep 19 17:22 nfs.share
+```
+It is important to note that if the `root_squash` option is set, we cannot edit the `backup.sh` file even as `root`.
+
+#### Escalation via NFS and SSH
+We can also use NFS for further escalation. 
+For example, if we have access to the system via SSH and want to read files from another folder that a specific user can read, we would need to upload a shell to the NFS share that has the `SUID` of that user and then run the shell via the SSH user.
+
+#### Unmounting
+After we have done all the necessary steps and obtained the information we need, we can unmount the NFS share.
+```shell-session
+ cd ..
+ sudo umount ./target-NFS
+```
