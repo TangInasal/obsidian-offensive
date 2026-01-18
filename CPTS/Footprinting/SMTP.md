@@ -152,4 +152,9 @@ Did you make any changes there?
 ```shell-session
 QUIT
 ```
+---
+## Dangerous Settings
+Often, administrators have no overview of which IP ranges they have to allow. This results in a misconfiguration of the SMTP server that we will still often find in external and internal penetration tests. Therefore, they allow all IP addresses not to cause errors in the email traffic and thus not to disturb or unintentionally interrupt the communication with potential and current customers.
+#### Open Relay Configuration
+
 
