@@ -132,3 +132,113 @@ ns.inlanefreight.htb.   604800  IN      A       10.129.34.136
 ```
 
 `Zone transfer` refers to the transfer of zones to another server in DNS, which generally happens over TCP port 53. This procedure is abbreviated `Asynchronous Full Transfer Zone` (`AXFR`). Since a DNS failure usually has severe consequences for a company, the zone file is almost invariably kept identical on several name servers. When changes are made, it must be ensured that all servers have the same data. Synchronization between the servers involved is realized by zone transfer. Using a secret key `rndc-key`, which we have seen initially in the default configuration, the servers make sure that they communicate with their own master or slave.
+
+#### DIG - AXFR Zone Transfer
+dig AXFR query
+```shell-session
+dig axfr inlanefreight.htb @10.129.14.128
+```
+```output
+; <<>> DiG 9.16.1-Ubuntu <<>> axfr inlanefreight.htb @10.129.14.128
+;; global options: +cmd
+inlanefreight.htb.      604800  IN      SOA     inlanefreight.htb. root.inlanefreight.htb. 2 604800 86400 2419200 604800
+inlanefreight.htb.      604800  IN      TXT     "MS=ms97310371"
+inlanefreight.htb.      604800  IN      TXT     "atlassian-domain-verification=t1rKCy68JFszSdCKVpw64A1QksWdXuYFUeSXKU"
+inlanefreight.htb.      604800  IN      TXT     "v=spf1 include:mailgun.org include:_spf.google.com include:spf.protection.outlook.com include:_spf.atlassian.net ip4:10.129.124.8 ip4:10.129.127.2 ip4:10.129.42.106 ~all"
+inlanefreight.htb.      604800  IN      NS      ns.inlanefreight.htb.
+app.inlanefreight.htb.  604800  IN      A       10.129.18.15
+internal.inlanefreight.htb. 604800 IN   A       10.129.1.6
+mail1.inlanefreight.htb. 604800 IN      A       10.129.18.201
+ns.inlanefreight.htb.   604800  IN      A       10.129.34.136
+inlanefreight.htb.      604800  IN      SOA     inlanefreight.htb. root.inlanefreight.htb. 2 604800 86400 2419200 604800
+;; Query time: 4 msec
+;; SERVER: 10.129.14.128#53(10.129.14.128)
+;; WHEN: So Sep 19 18:51:19 CEST 2021
+;; XFR size: 9 records (messages 1, bytes 520)
+```
+
+If the administrator used a subnet for the `allow-transfer` option for testing purposes or as a workaround solution or set it to `any`, everyone would query the entire zone file at the DNS server. In addition, other zones can be queried, which may even show internal IP addresses and hostnames.
+
+#### DIG - AXFR Zone Transfer - Internal
+dig AXFR internal
+
+```shell-session
+dig axfr internal.inlanefreight.htb @10.129.14.128
+```
+```output
+; <<>> DiG 9.16.1-Ubuntu <<>> axfr internal.inlanefreight.htb @10.129.14.128
+;; global options: +cmd
+internal.inlanefreight.htb. 604800 IN   SOA     inlanefreight.htb. root.inlanefreight.htb. 2 604800 86400 2419200 604800
+internal.inlanefreight.htb. 604800 IN   TXT     "MS=ms97310371"
+internal.inlanefreight.htb. 604800 IN   TXT     "atlassian-domain-verification=t1rKCy68JFszSdCKVpw64A1QksWdXuYFUeSXKU"
+internal.inlanefreight.htb. 604800 IN   TXT     "v=spf1 include:mailgun.org include:_spf.google.com include:spf.protection.outlook.com include:_spf.atlassian.net ip4:10.129.124.8 ip4:10.129.127.2 ip4:10.129.42.106 ~all"
+internal.inlanefreight.htb. 604800 IN   NS      ns.inlanefreight.htb.
+dc1.internal.inlanefreight.htb. 604800 IN A     10.129.34.16
+dc2.internal.inlanefreight.htb. 604800 IN A     10.129.34.11
+mail1.internal.inlanefreight.htb. 604800 IN A   10.129.18.200
+ns.internal.inlanefreight.htb. 604800 IN A      10.129.34.136
+vpn.internal.inlanefreight.htb. 604800 IN A     10.129.1.6
+ws1.internal.inlanefreight.htb. 604800 IN A     10.129.1.34
+ws2.internal.inlanefreight.htb. 604800 IN A     10.129.1.35
+wsus.internal.inlanefreight.htb. 604800 IN A    10.129.18.2
+internal.inlanefreight.htb. 604800 IN   SOA     inlanefreight.htb. root.inlanefreight.htb. 2 604800 86400 2419200 604800
+;; Query time: 0 msec
+;; SERVER: 10.129.14.128#53(10.129.14.128)
+;; WHEN: So Sep 19 18:53:11 CEST 2021
+;; XFR size: 15 records (messages 1, bytes 664)
+```
+
+#### Subdomain Brute Forcing
+The individual `A` records with the hostnames can also be found out with the help of a brute-force attack. To do this, we need a list of possible hostnames, which we use to send the requests in order. Such lists are provided, for example, by [SecLists](https://github.com/danielmiessler/SecLists/blob/master/Discovery/DNS/subdomains-top1million-5000.txt).
+
+An option would be to execute a `for-loop` in Bash that lists these entries and sends the corresponding query to the desired DNS server.
+```shell-one-liner
+for sub in $(cat /opt/useful/seclists/Discovery/DNS/subdomains-top1million-110000.txt);do dig $sub.inlanefreight.htb @10.129.14.128 | grep -v ';\|SOA' | sed -r '/^\s*$/d' | grep $sub | tee -a subdomains.txt;done
+```
+
+**DNSenum**
+```shell-session
+dnsenum --dnsserver 10.129.14.128 --enum -p 0 -s 0 -o subdomains.txt -f /opt/useful/seclists/Discovery/DNS/subdomains-top1million-110000.txt inlanefreight.htb
+```
+```output
+dnsenum VERSION:1.2.6
+
+-----   inlanefreight.htb   -----
+
+
+Host's addresses:
+__________________
+
+
+
+Name Servers:
+______________
+
+ns.inlanefreight.htb.                    604800   IN    A        10.129.34.136
+
+
+Mail (MX) Servers:
+___________________
+
+
+
+Trying Zone Transfers and getting Bind Versions:
+_________________________________________________
+
+unresolvable name: ns.inlanefreight.htb at /usr/bin/dnsenum line 900 thread 1.
+
+Trying Zone Transfer for inlanefreight.htb on ns.inlanefreight.htb ...
+AXFR record query failed: no nameservers
+
+
+Brute forcing with /home/cry0l1t3/Pentesting/SecLists/Discovery/DNS/subdomains-top1million-110000.txt:
+_______________________________________________________________________________________________________
+
+ns.inlanefreight.htb.                    604800   IN    A        10.129.34.136
+mail1.inlanefreight.htb.                 604800   IN    A        10.129.18.201
+app.inlanefreight.htb.                   604800   IN    A        10.129.18.15
+ns.inlanefreight.htb.                    604800   IN    A        10.129.34.136
+
+...SNIP...
+```
+
