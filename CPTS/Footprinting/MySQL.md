@@ -12,7 +12,7 @@
 ## Footprinting the Service
 #### Scanning MySQL Server
 ```shell-session
-sudo nmap 10.129.14.128 -sV -sC -p3306 --script mysql*
+sudo nmap 10.129.104.107 -sVC -p3306 --script="mysql*"
 ```
 ```output
 PORT     STATE SERVICE     VERSION
