@@ -57,6 +57,16 @@ MAC Address: 00:00:00:00:00:00 (VMware)
 As with all our scans, we must be careful with the results and manually confirm the information obtained because some of the information might turn out to be a false-positive. 
 This scan above is an excellent example of this, as we know for a fact that the target MySQL server does not use an empty password for the user `root`, but a fixed password.
 
+| **Command**                                          | **Description**                                                                                       |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `mysql -u <user> -p<password> -h <IP address>`       | Connect to the MySQL server. There should **not** be a space between the '-p' flag, and the password. |
+| `show databases;`                                    | Show all databases.                                                                                   |
+| `use <database>;`                                    | Select one of the existing databases.                                                                 |
+| `show tables;`                                       | Show all available tables in the selected database.                                                   |
+| `show columns from <table>;`                         | Show all columns in the selected table.                                                               |
+| `select * from <table>;`                             | Show everything in the desired table.                                                                 |
+| `select * from <table> where <column> = "<string>";` | Search for needed `string` in the desired table.                                                      |
+
 ```shell-session
 mysql -u root -h 10.129.14.132
 ```
@@ -131,3 +141,37 @@ MySQL [mysql]> show tables;
 ```
 The most important databases for the MySQL server are the `system schema` (`sys`) and `information schema` (`information_schema`). 
 The system schema contains tables, information, and metadata necessary for management.
+
+```shell-session
+mysql> use sys;
+mysql> show tables;  
+```
+```output
++-----------------------------------------------+
+| Tables_in_sys                                 |
++-----------------------------------------------+
+| host_summary                                  |
+| host_summary_by_file_io                       |
+| host_summary_by_file_io_type                  |
+| host_summary_by_stages                        |
+| host_summary_by_statement_latency             |
+| host_summary_by_statement_type                |
+| innodb_buffer_stats_by_schema                 |
+| innodb_buffer_stats_by_table                  |
+| innodb_lock_waits                             |
+| io_by_thread_by_latency                       |
+...SNIP...
+| x$waits_global_by_latency                     |
++-----------------------------------------------+
+```
+```shell-session
+mysql> select host, unique_users from host_summary;
+```
+```output
++-------------+--------------+                   
+| host        | unique_users |                   
++-------------+--------------+                   
+| 10.129.14.1 |            1 |                   
+| localhost   |            2 |                   
++-------------+--------------+         
+```
