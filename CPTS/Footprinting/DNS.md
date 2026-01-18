@@ -1,3 +1,5 @@
+[mas wow](https://medium.com/@simonghostriley/htb-academy-footprinting-module-dns-c49ce2e213b5)
+
 There are several types of DNS servers that are used worldwide:
 - DNS root server
 - Authoritative name server
