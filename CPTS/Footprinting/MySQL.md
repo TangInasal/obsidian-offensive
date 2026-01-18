@@ -129,4 +129,5 @@ MySQL [mysql]> show tables;
 +------------------------------------------------------+
 37 rows in set (0.002 sec)
 ```
-
+The most important databases for the MySQL server are the `system schema` (`sys`) and `information schema` (`information_schema`). 
+The system schema contains tables, information, and metadata necessary for management.
