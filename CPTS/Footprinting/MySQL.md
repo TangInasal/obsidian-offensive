@@ -73,6 +73,10 @@ mysql -u root -h 10.129.14.132
 ```output
 ERROR 1045 (28000): Access denied for user 'root'@'10.129.14.1' (using password: NO)
 ```
+OR
+```
+mysql -urobin -probin -h 10.129.104.107 --skip-ssl
+```
 if we use a password that we have guessed or found through our research, we will be able to log in to the MySQL server and execute some commands.
 ```shell-session
 mysql -u root -pP4SSw0rd -h 10.129.14.128
