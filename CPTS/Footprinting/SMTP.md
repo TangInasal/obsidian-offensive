@@ -34,15 +34,19 @@ Trying 10.129.14.128...
 Connected to 10.129.14.128.
 Escape character is '^]'.
 220 ESMTP Server 
+```
 
-
+```shell-session
 HELO mail1.inlanefreight.htb
-
+```
+```output
 250 mail1.inlanefreight.htb
+```
 
-
+```shell-session
 EHLO mail1
-
+```
+```output
 250-mail1.inlanefreight.htb
 250-PIPELINING
 250-SIZE 10240000
@@ -57,4 +61,43 @@ EHLO mail1
 The command `VRFY` can be used to enumerate existing users on the system. 
 However, this does not always work. Depending on how the SMTP server is configured.
 The SMTP server may issue `code 252` and confirm the existence of a user that does not exist on the system. A list of all SMTP response codes can be found [here](https://serversmtp.com/smtp-error/).
+
+#### Telnet - VRFY
+```shell-session
+telnet 10.129.14.128 25
+```
+```output
+Trying 10.129.14.128...
+Connected to 10.129.14.128.
+Escape character is '^]'.
+220 ESMTP Server 
+```
+
+```shell-session
+VRFY root
+```
+```output
+252 2.0.0 root
+```
+
+```shell-session
+VRFY cry0l1t3
+```
+```output
+252 2.0.0 cry0l1t3
+```
+
+```shell-session
+VRFY testuser
+```
+```output
+252 2.0.0 testuser
+```
+
+```shell-session
+VRFY aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+```
+```output
+252 2.0.0 aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+```
 
