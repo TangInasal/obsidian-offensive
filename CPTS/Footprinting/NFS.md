@@ -1,0 +1,71 @@
+## Default Configuration
+** `/etc/exports`**
+
+|**Option**|**Description**|
+|---|---|
+|`rw`|Read and write permissions.|
+|`ro`|Read only permissions.|
+|`sync`|Synchronous data transfer. (A bit slower)|
+|`async`|Asynchronous data transfer. (A bit faster)|
+|`secure`|Ports above 1024 will not be used.|
+|`insecure`|Ports above 1024 will be used.|
+|`no_subtree_check`|This option disables the checking of subdirectory trees.|
+|`root_squash`|Assigns all permissions to files of root UID/GID 0 to the UID/GID of anonymous, which prevents `root` from accessing files on an NFS mount.|
+
+#### ExportFS
+```shell-session
+root@nfs:~# echo '/mnt/nfs  10.129.14.0/24(sync,no_subtree_check)' >> /etc/exports
+root@nfs:~# systemctl restart nfs-kernel-server 
+root@nfs:~# exportfs
+```
+We have shared the folder `/mnt/nfs` to the subnet `10.129.14.0/24` with the setting shown above. This means that all hosts on the network will be able to mount this NFS share and inspect the contents of this folder.
+
+---
+## Dangerous Settings
+
+| **Option**       | **Description**                                                                                                      |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `rw`             | Read and write permissions.                                                                                          |
+| `insecure`       | Ports above 1024 will be used.                                                                                       |
+| `nohide`         | If another file system was mounted below an exported directory, this directory is exported by its own exports entry. |
+| `no_root_squash` | All files created by root are kept with the UID/GID 0.                                                               |
+
+We can take a look at the `insecure` option. This is dangerous because users can use ports above 1024. The first 1024 ports can only be used by root. This prevents the fact that no users can use sockets above port 1024 for the NFS service and interact with it.
+
+---
+## Footprinting the Service
+When footprinting NFS, the TCP ports `111` and `2049` are essential. 
+We can also get information about the NFS service and the host via RPC
+#### Nmap
+```shell-session
+sudo nmap 10.129.14.128 -p111,2049 -sV -sC
+```
+```output
+PORT    STATE SERVICE VERSION
+111/tcp open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100003  3           2049/udp   nfs
+|   100003  3           2049/udp6  nfs
+|   100003  3,4         2049/tcp   nfs
+|   100003  3,4         2049/tcp6  nfs
+|   100005  1,2,3      41982/udp6  mountd
+|   100005  1,2,3      45837/tcp   mountd
+|   100005  1,2,3      47217/tcp6  mountd
+|   100005  1,2,3      58830/udp   mountd
+|   100021  1,3,4      39542/udp   nlockmgr
+|   100021  1,3,4      44629/tcp   nlockmgr
+|   100021  1,3,4      45273/tcp6  nlockmgr
+|   100021  1,3,4      47524/udp6  nlockmgr
+|   100227  3           2049/tcp   nfs_acl
+|   100227  3           2049/tcp6  nfs_acl
+|   100227  3           2049/udp   nfs_acl
+|_  100227  3           2049/udp6  nfs_acl
+2049/tcp open  nfs_acl 3 (RPC #100227)
+```
+The `rpcinfo` NSE script retrieves a list of all currently running RPC services, their names and descriptions, and the ports they use. This lets us check whether the target share is connected to the network on all required ports. 
+Also, for NFS, Nmap has some NSE scripts that can be used for the scans. These can then show us, for example, the `contents` of the share and its `stats`.
