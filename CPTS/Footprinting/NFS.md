@@ -115,3 +115,7 @@ PORT     STATE SERVICE VERSION
 2049/tcp open  nfs_acl 3 (RPC #100227)
 MAC Address: 00:00:00:00:00:00 (VMware)
 ```
+
+Once we have discovered an NFS service, **we can mount it on our local machine**. 
+For this, we can create a new empty folder to which the NFS share will be mounted. 
+Once mounted, we can navigate it and view the contents just like our local system.
