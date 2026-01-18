@@ -1,0 +1,60 @@
+By default, SMTP servers accept connection requests on port `25`. However, newer SMTP servers also use other ports such as TCP port `587`.
+
+|Client (`MUA`)|`➞`|Submission Agent (`MSA`)|`➞`|Open Relay (`MTA`)|`➞`|Mail Delivery Agent (`MDA`)|`➞`|Mailbox (`POP3`/`IMAP`)|
+|---|---|---|---|---|---|---|---|---|
+
+But SMTP has two disadvantages inherent to the network protocol.
+
+1. The first is that sending an email using SMTP does not return a usable delivery confirmation. Although the specifications of the protocol provide for this type of notification, its formatting is not specified by default, so that usually only an English-language error message, including the header of the undelivered message, is returned.
+    
+2. Users are not authenticated when a connection is established, and the sender of an email is therefore unreliable. As a result, open SMTP relays are often misused to send spam en masse. The originators use arbitrary fake sender addresses for this purpose to not be traced (mail spoofing). Today, many different security techniques are used to prevent the misuse of SMTP servers. For example, suspicious emails are rejected or moved to quarantine (spam folder). For example, responsible for this are the identification protocol [DomainKeys](http://dkim.org/) (`DKIM`), the [Sender Policy Framework](https://dmarcian.com/what-is-spf/) (`SPF`).
+---
+## Default Configuration
+
+| **Command**  | **Description**                                                                                  |
+| ------------ | ------------------------------------------------------------------------------------------------ |
+| `AUTH PLAIN` | AUTH is a service extension used to authenticate the client.                                     |
+| `HELO`       | The client logs in with its computer name and thus starts the session.                           |
+| `MAIL FROM`  | The client names the email sender.                                                               |
+| `RCPT TO`    | The client names the email recipient.                                                            |
+| `DATA`       | The client initiates the transmission of the email.                                              |
+| `RSET`       | The client aborts the initiated transmission but keeps the connection between client and server. |
+| `VRFY`       | The client checks if a mailbox is available for message transfer.                                |
+| `EXPN`       | The client also checks if a mailbox is available for messaging with this command.                |
+| `NOOP`       | The client requests a response from the server to prevent disconnection due to time-out.         |
+| `QUIT`       | The client terminates the session.                                                               |
+
+#### Telnet - HELO/EHLO
+To interact with the SMTP server, we can use the `telnet` tool to initialize a TCP connection with the SMTP server. The actual initialization of the session is done with the command mentioned above, `HELO` or `EHLO`.
+```shell-session
+telnet 10.129.14.128 25
+```
+```output
+Trying 10.129.14.128...
+Connected to 10.129.14.128.
+Escape character is '^]'.
+220 ESMTP Server 
+
+
+HELO mail1.inlanefreight.htb
+
+250 mail1.inlanefreight.htb
+
+
+EHLO mail1
+
+250-mail1.inlanefreight.htb
+250-PIPELINING
+250-SIZE 10240000
+250-ETRN
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-SMTPUTF8
+250 CHUNKING
+```
+
+The command `VRFY` can be used to enumerate existing users on the system. 
+However, this does not always work. Depending on how the SMTP server is configured.
+The SMTP server may issue `code 252` and confirm the existence of a user that does not exist on the system. A list of all SMTP response codes can be found [here](https://serversmtp.com/smtp-error/).
+
