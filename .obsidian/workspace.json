@@ -67,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "OS detec",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -185,7 +185,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "12cee157871bdd60",
+  "active": "0066d8cb34edd59b",
   "lastOpenFiles": [
     "CPTS/Footprinting/SMB.md",
     "CPTS/Footprinting/NFS.md",
