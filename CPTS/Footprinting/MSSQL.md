@@ -68,3 +68,24 @@ Host script results:
 |_    Clustered: false
 ```
 
+#### MSSQL Ping in Metasploit
+We can also use Metasploit to run an auxiliary scanner called `mssql_ping` that will scan the MSSQL service and provide helpful information in our footprinting process.
+```shell-session
+msf6 auxiliary(scanner/mssql/mssql_ping) > set rhosts 10.129.201.248
+```
+```shell-session
+msf6 auxiliary(scanner/mssql/mssql_ping) > run
+```
+```output
+[*] 10.129.201.248:       - SQL Server information for 10.129.201.248:
+[+] 10.129.201.248:       -    ServerName      = SQL-01
+[+] 10.129.201.248:       -    InstanceName    = MSSQLSERVER
+[+] 10.129.201.248:       -    IsClustered     = No
+[+] 10.129.201.248:       -    Version         = 15.0.2000.5
+[+] 10.129.201.248:       -    tcp             = 1433
+[+] 10.129.201.248:       -    np              = \\SQL-01\pipe\sql\query
+[*] 10.129.201.248:       - Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+```
+
+#### Connecting with Mssqlclient.py
