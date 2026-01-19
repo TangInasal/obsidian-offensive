@@ -1,5 +1,6 @@
 `Oracle Transparent Network Substrate` (`TNS`) server is a communication protocol that facilitates communication between Oracle databases and applications over networks.
 
+---
 ## Footprinting the Service
 
 #### Nmap
@@ -29,7 +30,7 @@ Those scans can retrieve database names, versions, running processes, user accou
 Let us use the `all` option and try all modules of the `odat.py` tool.
 
 ```shell-session
- ./odat.py all -s 10.129.204.235
+odat all -s 10.129.204.235
 ```
 ```output
 [+] Checking if target 10.129.204.235:1521 is well configured for a connection...
@@ -43,3 +44,6 @@ Let us use the `all` option and try all modules of the `odat.py` tool.
 [+] Valid credentials found: scott/tiger. Continue...
 ```
 
+In this example, we found valid credentials for the user `scott` and his password `tiger`. 
+After that, we can use the tool `sqlplus` to connect to the Oracle database and interact with it.
+#### SQLplus - Log In
