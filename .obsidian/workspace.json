@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CPTS/Footprinting/MSSQL.md",
+                "file": "CPTS/Footprinting/Oracle-TNS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MSSQL"
+              "title": "Oracle-TNS"
             }
           },
           {
@@ -187,9 +187,10 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
+    "CPTS/Footprinting/MSSQL.md",
+    "CPTS/Footprinting/Oracle-TNS.md",
     "Pasted image 20260119191840.png",
     "CPTS/Footprinting/MySQL.md",
-    "CPTS/Footprinting/MSSQL.md",
     "CPTS/Footprinting/SNMP.md",
     "CPTS/Footprinting/IMAP & POP3.md",
     "CPTS/Footprinting/SMTP.md",
@@ -221,7 +222,6 @@
     "Pasted image 20260113180647.png",
     "Pasted image 20260113180640.png",
     "Pasted image 20260113180635.png",
-    "Pasted image 20260113180620.png",
     "pentesting/recon/nmap/nmap--stealth--decoys_14.md",
     "pentesting/recon/nmap/nmap--stealth--source_port_13.md",
     "pentesting/recon/nmap/nmap--stealth--proxychains_12.md",
