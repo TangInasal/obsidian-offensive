@@ -5,7 +5,7 @@
 
 #### Nmap
 ```shell-session
- sudo nmap -p1521 -sV 10.129.204.235 --open
+sudo nmap -p1521 -sV 10.129.204.235 --open
 ```
 ```output
 PORT     STATE SERVICE    VERSION
