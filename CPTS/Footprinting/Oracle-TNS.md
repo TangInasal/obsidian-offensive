@@ -28,3 +28,18 @@ We can use the `odat.py` tool to perform a variety of scans to enumerate and g
 Those scans can retrieve database names, versions, running processes, user accounts, vulnerabilities, misconfigurations, etc. 
 Let us use the `all` option and try all modules of the `odat.py` tool.
 
+```shell-session
+ ./odat.py all -s 10.129.204.235
+```
+```output
+[+] Checking if target 10.129.204.235:1521 is well configured for a connection...
+[+] According to a test, the TNS listener 10.129.204.235:1521 is well configured. Continue...
+
+...SNIP...
+
+[!] Notice: 'mdsys' account is locked, so skipping this username for password           #####################| ETA:  00:01:16 
+[!] Notice: 'oracle_ocm' account is locked, so skipping this username for password       #####################| ETA:  00:01:05 
+[!] Notice: 'outln' account is locked, so skipping this username for password           #####################| ETA:  00:00:59
+[+] Valid credentials found: scott/tiger. Continue...
+```
+
