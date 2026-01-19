@@ -66,3 +66,38 @@ Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
 
 SQL> 
 ```
+**NOTE: ** If you come across the following error `sqlplus: error while loading shared libraries: libsqlplus.so: cannot open shared object file: No such file or directory`, please execute the below, taken from [here](https://stackoverflow.com/questions/27717312/sqlplus-error-while-loading-shared-libraries-libsqlplus-so-cannot-open-shared).
+
+```shell-session
+sudo sh -c "echo /usr/lib/oracle/12.2/client64/lib > /etc/ld.so.conf.d/oracle-instantclient.conf";sudo ldconfig
+```
+#### (SQLplus) Oracle RDBMS - Interaction
+```shell-session
+SQL> select table_name from all_tables;
+```
+```output
+TABLE_NAME
+------------------------------
+DUAL
+SYSTEM_PRIVILEGE_MAP
+TABLE_PRIVILEGE_MAP
+STMT_AUDIT_OPTION_MAP
+AUDIT_ACTIONS
+WRR$_REPLAY_CALL_FILTER
+HS_BULKLOAD_VIEW_OBJ
+HS$_PARALLEL_METADATA
+HS_PARTITION_COL_NAME
+HS_PARTITION_COL_TYPE
+HELP
+
+...SNIP...
+```
+```shell-session
+SQL> select * from user_role_privs;
+```
+```output
+USERNAME                       GRANTED_ROLE                   ADM DEF OS_
+------------------------------ ------------------------------ --- --- ---
+SCOTT                          CONNECT                        NO  YES NO
+SCOTT                          RESOURCE                       NO  YES NO
+```
