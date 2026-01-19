@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CPTS/Footprinting/MySQL.md",
+                "file": "CPTS/Footprinting/MSSQL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MySQL"
+              "title": "MSSQL"
             }
           },
           {
@@ -187,8 +187,10 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
-    "CPTS/Footprinting/SNMP.md",
+    "Pasted image 20260119191840.png",
     "CPTS/Footprinting/MySQL.md",
+    "CPTS/Footprinting/MSSQL.md",
+    "CPTS/Footprinting/SNMP.md",
     "CPTS/Footprinting/IMAP & POP3.md",
     "CPTS/Footprinting/SMTP.md",
     "CPTS/Footprinting/DNS.md",
@@ -226,8 +228,6 @@
     "pentesting/recon/nmap/nmap--stealth--inverse_16.md",
     "pentesting/recon/nmap/nmap--stealth--fragment_11.md",
     "pentesting/recon/nmap/nmap--stealth--external_DNS_18.md",
-    "pentesting/recon/nmap/nmap--stealth_10.md",
-    "pentesting/recon/nmap/nmap--service_discovery_3.md",
     "Untitled 1.base",
     "CPTS/Enumeration-With-NMAP",
     "CPTS/Getting-Started/Transfering Files",
