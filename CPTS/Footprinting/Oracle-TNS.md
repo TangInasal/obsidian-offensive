@@ -47,3 +47,22 @@ odat all -s 10.129.204.235
 In this example, we found valid credentials for the user `scott` and his password `tiger`. 
 After that, we can use the tool `sqlplus` to connect to the Oracle database and interact with it.
 #### SQLplus - Log In
+```shell-session
+sqlplus scott/tiger@10.129.204.235/XE
+```
+```shell-session
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Mar 6 11:19:21 2023
+Version 21.4.0.0.0
+
+Copyright (c) 1982, 2021, Oracle. All rights reserved.
+
+ERROR:
+ORA-28002: the password will expire within 7 days
+
+
+
+Connected to:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL> 
+```
