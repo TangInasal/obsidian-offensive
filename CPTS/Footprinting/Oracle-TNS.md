@@ -101,3 +101,6 @@ USERNAME                       GRANTED_ROLE                   ADM DEF OS_
 SCOTT                          CONNECT                        NO  YES NO
 SCOTT                          RESOURCE                       NO  YES NO
 ```
+Here, the user `scott` has no administrative privileges. However, we can try using this account to log in as the System Database Admin (`sysdba`), giving us higher privileges. 
+This is possible when the user `scott` has the appropriate privileges typically granted by the database administrator or used by the administrator him/herself.
+#### (SQLplus) Oracle RDBMS - Database Enumeration
