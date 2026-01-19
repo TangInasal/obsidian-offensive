@@ -30,4 +30,41 @@ This is not an extensive list because there are countless ways MSSQL databases c
 - The use of self-signed certificates when encryption is being used. It is possible to spoof self-signed certificates
 - The use of [named pipes](https://docs.microsoft.com/en-us/sql/tools/configuration-manager/named-pipes-properties?view=sql-server-ver15)
 - Weak & default `sa` credentials. Admins may forget to disable this account
+---
+## Footprinting the Service
+NMAP has default mssql scripts that can be used to target the default tcp port `1433` that MSSQL listens on.
+
+We can see the `hostname`, `database instance name`, `software version of MSSQL` and `named pipes are enabled`. We will benefit from adding these discoveries to our notes.
+
+```shell-session
+sudo nmap --script ms-sql-info,ms-sql-empty-password,ms-sql-xp-cmdshell,ms-sql-config,ms-sql-ntlm-info,ms-sql-tables,ms-sql-hasdbaccess,ms-sql-dac,ms-sql-dump-hashes --script-args mssql.instance-port=1433,mssql.username=sa,mssql.password=,mssql.instance-name=MSSQLSERVER -sV -p 1433 10.129.201.248
+```
+```output
+PORT     STATE SERVICE  VERSION
+1433/tcp open  ms-sql-s Microsoft SQL Server 2019 15.00.2000.00; RTM
+| ms-sql-ntlm-info: 
+|   Target_Name: SQL-01
+|   NetBIOS_Domain_Name: SQL-01
+|   NetBIOS_Computer_Name: SQL-01
+|   DNS_Domain_Name: SQL-01
+|   DNS_Computer_Name: SQL-01
+|_  Product_Version: 10.0.17763
+
+Host script results:
+| ms-sql-dac: 
+|_  Instance: MSSQLSERVER; DAC port: 1434 (connection failed)
+| ms-sql-info: 
+|   Windows server name: SQL-01
+|   10.129.201.248\MSSQLSERVER: 
+|     Instance name: MSSQLSERVER
+|     Version: 
+|       name: Microsoft SQL Server 2019 RTM
+|       number: 15.00.2000.00
+|       Product: Microsoft SQL Server 2019
+|       Service pack level: RTM
+|       Post-SP patches applied: false
+|     TCP port: 1433
+|     Named pipe: \\10.129.201.248\pipe\sql\query
+|_    Clustered: false
+```
 
