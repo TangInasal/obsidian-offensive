@@ -3,3 +3,6 @@ The main components used for remote management of Windows and Windows servers ar
 - Windows Remote Management (`WinRM`)
 - Windows Management Instrumentation (`WMI`)
 
+---
+## Footprinting the Service
+#### Nmap
