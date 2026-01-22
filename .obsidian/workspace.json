@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CPTS/Footprinting/Linux Remote Management Protocols.md",
+                "file": "CPTS/Footprinting/Windows Remote Management Protocols.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux Remote Management Protocols"
+              "title": "Windows Remote Management Protocols"
             }
           },
           {
@@ -187,8 +187,9 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
-    "CPTS/Footprinting/IPMI.md",
     "CPTS/Footprinting/Linux Remote Management Protocols.md",
+    "CPTS/Footprinting/Windows Remote Management Protocols.md",
+    "CPTS/Footprinting/IPMI.md",
     "CPTS/Footprinting/MySQL.md",
     "CPTS/Footprinting/Oracle-TNS.md",
     "CPTS/Footprinting/MSSQL.md",
@@ -227,7 +228,6 @@
     "pentesting/recon/nmap/nmap--stealth--decoys_14.md",
     "pentesting/recon/nmap/nmap--stealth--source_port_13.md",
     "pentesting/recon/nmap/nmap--stealth--proxychains_12.md",
-    "pentesting/recon/nmap/nmap--stealth--inverse_16.md",
     "Untitled 1.base",
     "CPTS/Enumeration-With-NMAP",
     "CPTS/Getting-Started/Transfering Files",
