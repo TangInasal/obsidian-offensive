@@ -70,3 +70,18 @@ debug1: Reading configuration data /etc/ssh/ssh_config
 ...SNIP...
 debug1: Authentications that can continue: publickey,password,keyboard-interactive
 ```
+For potential brute-force attacks, we can specify the authentication method with the SSH client option `PreferredAuthentications`.
+
+```shell-session
+ssh -v cry0l1t3@10.129.14.132 -o PreferredAuthentications=password
+```
+```output
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.3, OpenSSL 1.1.1f  31 Mar 2020
+debug1: Reading configuration data /etc/ssh/ssh_config
+...SNIP...
+debug1: Authentications that can continue: publickey,password,keyboard-interactive
+debug1: Next authentication method: password
+
+cry0l1t3@10.129.14.132's password:
+```
+
