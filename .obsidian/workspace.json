@@ -67,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "-oa",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -187,8 +187,9 @@
   },
   "active": "12cee157871bdd60",
   "lastOpenFiles": [
-    "CPTS/Footprinting/Linux Remote Management Protocols.md",
+    "CPTS/Enumeration-With-NMAP/Saving-Results.md",
     "CPTS/Footprinting/Windows Remote Management Protocols.md",
+    "CPTS/Footprinting/Linux Remote Management Protocols.md",
     "CPTS/Footprinting/IPMI.md",
     "CPTS/Footprinting/MySQL.md",
     "CPTS/Footprinting/Oracle-TNS.md",
@@ -227,7 +228,6 @@
     "Pasted image 20260113180635.png",
     "pentesting/recon/nmap/nmap--stealth--decoys_14.md",
     "pentesting/recon/nmap/nmap--stealth--source_port_13.md",
-    "pentesting/recon/nmap/nmap--stealth--proxychains_12.md",
     "Untitled 1.base",
     "CPTS/Enumeration-With-NMAP",
     "CPTS/Getting-Started/Transfering Files",
