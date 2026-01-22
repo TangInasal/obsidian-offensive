@@ -92,4 +92,64 @@ It uses port `873` and can be configured to use SSH for secure file transfers 
 This [guide](https://book.hacktricks.xyz/network-services-pentesting/873-pentesting-rsync) covers some of the ways Rsync can be abused, 
 e.g. by listing the contents of a shared folder on a target server and retrieving files. 
 This can sometimes be done without authentication. Other times we will need credentials. 
-If you find credentials during a pentest and run into Rsync on an internal (or external) host,
+If you find credentials during a pentest and run into Rsync on an internal (or external) host.
+
+#### Scanning for Rsync
+```shell-session
+sudo nmap -sV -p 873 127.0.0.1
+```
+```output
+PORT    STATE SERVICE VERSION
+873/tcp open  rsync   (protocol version 31)
+```
+#### Probing for Accessible Shares
+```shell-session
+nc -nv 127.0.0.1 873
+```
+```output
+(UNKNOWN) [127.0.0.1] 873 (rsync) open
+@RSYNCD: 31.0
+@RSYNCD: 31.0
+#list
+dev            	Dev Tools
+@RSYNCD: EXIT
+```
+#### Enumerating an Open Share
+```shell-session
+rsync -av --list-only rsync://127.0.0.1/dev
+```
+```output
+receiving incremental file list
+drwxr-xr-x             48 2022/09/19 09:43:10 .
+-rw-r--r--              0 2022/09/19 09:34:50 build.sh
+-rw-r--r--              0 2022/09/19 09:36:02 secrets.yaml
+drwx------             54 2022/09/19 09:43:10 .ssh
+```
+
+From here, we could sync all files to our attack host with the command 
+`rsync -av rsync://127.0.0.1/dev`. 
+If Rsync is configured to use SSH to transfer files, we could modify our commands to include the 
+`-e ssh` flag, or `-e "ssh -p2222"` 
+if a non-standard port is in use for SSH. This [guide](https://phoenixnap.com/kb/how-to-rsync-over-ssh) is helpful for understanding the syntax for using Rsync over SSH.
+
+---
+## R-Services
+`R-services` span across the ports `512`, `513`, and `514` and are only accessible through a suite of programs known as `r-commands`. 
+They are most commonly used by commercial operating systems such as Solaris, HP-UX, and AIX.
+
+The [R-commands](https://en.wikipedia.org/wiki/Berkeley_r-commands) suite consists of the following programs:
+- rcp (`remote copy`)
+- rexec (`remote execution`)
+- rlogin (`remote login`)
+- rsh (`remote shell`)
+- rstat
+- ruptime
+- rwho (`remote who`)
+
+| **Command** | **Service Daemon** | **Port** | **Transport Protocol** | **Description**                                                                                                                                                                                                                                                            |
+| ----------- | ------------------ | -------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `rcp`       | `rshd`             | 514      | TCP                    | Copy a file or directory bidirectionally from the local system to the remote system (or vice versa) or from one remote system to another. It works like the `cp` command on Linux but provides `no warning to the user for overwriting existing files on a system`.        |
+| `rsh`       | `rshd`             | 514      | TCP                    | Opens a shell on a remote machine without a login procedure. Relies upon the trusted entries in the `/etc/hosts.equiv` and `.rhosts` files for validation.                                                                                                                 |
+| `rexec`     | `rexecd`           | 512      | TCP                    | Enables a user to run shell commands on a remote machine. Requires authentication through the use of a `username` and `password` through an unencrypted network socket. Authentication is overridden by the trusted entries in the `/etc/hosts.equiv` and `.rhosts` files. |
+| `rlogin`    | `rlogind`          | 513      | TCP                    | Enables a user to log in to a remote host over the network. It works similarly to `telnet` but can only connect to Unix-like hosts. Authentication is overridden by the trusted entries in the `/etc/hosts.equiv` and `.rhosts` files.                                     |
+The /etc/hosts.equiv file contains a list of trusted hosts and is used to grant access to other systems on the network. When users on one of these hosts attempt to access the system, they are automatically granted access without further authentication.
