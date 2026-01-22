@@ -84,4 +84,12 @@ debug1: Next authentication method: password
 
 cry0l1t3@10.129.14.132's password:
 ```
+---
+## Rsync
+[Rsync](https://linux.die.net/man/1/rsync) is a fast and efficient tool for locally and remotely copying files
+It uses port `873` and can be configured to use SSH for secure file transfers by piggybacking on top of an established SSH server connection.
 
+This [guide](https://book.hacktricks.xyz/network-services-pentesting/873-pentesting-rsync) covers some of the ways Rsync can be abused, 
+e.g. by listing the contents of a shared folder on a target server and retrieving files. 
+This can sometimes be done without authentication. Other times we will need credentials. 
+If you find credentials during a pentest and run into Rsync on an internal (or external) host,
