@@ -78,3 +78,13 @@ Port:      3389
 ```
 Authentication and connection to such RDP servers can be made in several ways. 
 We can connect to RDP servers on Linux using `xfreerdp`, `rdesktop`, or `Remmina` and interact with the GUI of the server accordingly.
+
+#### Initiate an RDP Session
+```shell-session
+xfreerdp /u:cry0l1t3 /p:"P455w0rd!" /v:10.129.201.248
+```
+
+## WinRM
+WinRM relies on `TCP` ports `5985` and `5986` for communication, 
+The last port `5986 using HTTPS`,
+
