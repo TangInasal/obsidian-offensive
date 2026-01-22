@@ -6,3 +6,6 @@ The main components used for remote management of Windows and Windows servers ar
 ---
 ## Footprinting the Service
 #### Nmap
+```shell-session
+nmap -sV -sC 10.129.201.248 -p3389 --script="rdp*"
+```
