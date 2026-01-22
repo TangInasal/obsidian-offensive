@@ -153,6 +153,7 @@ The [R-commands](https://en.wikipedia.org/wiki/Berkeley_r-commands) suite cons
 | `rexec`     | `rexecd`           | 512      | TCP                    | Enables a user to run shell commands on a remote machine. Requires authentication through the use of a `username` and `password` through an unencrypted network socket. Authentication is overridden by the trusted entries in the `/etc/hosts.equiv` and `.rhosts` files. |
 | `rlogin`    | `rlogind`          | 513      | TCP                    | Enables a user to log in to a remote host over the network. It works similarly to `telnet` but can only connect to Unix-like hosts. Authentication is overridden by the trusted entries in the `/etc/hosts.equiv` and `.rhosts` files.                                     |
 The /etc/hosts.equiv file contains a list of trusted hosts and is used to grant access to other systems on the network. When users on one of these hosts attempt to access the system, they are automatically granted access without further authentication.
+
 #### Scanning for R-Services
 ```shell-session
 sudo nmap -sV -p 512,513,514 10.0.17.2
@@ -163,6 +164,7 @@ PORT    STATE SERVICE    VERSION
 513/tcp open  login?
 514/tcp open  tcpwrapped
 ```
+
 #### Access Control & Trusted Relationships
 **MISCONFIG :**
 ```.rhosts
@@ -170,6 +172,7 @@ htb-student     10.0.17.5
 +               10.0.17.10
 +               +
 ```
+
 #### Logging in Using Rlogin
 ```shell-session
 rlogin 10.0.17.2 -l htb-student
@@ -177,6 +180,7 @@ rlogin 10.0.17.2 -l htb-student
 ```output
 Last login: Fri Dec  2 16:11:21 from localhost
 ```
+
 #### Listing Authenticated Users Using Rwho
 ```shell-session
 rwho
@@ -185,6 +189,7 @@ rwho
 root     web01:pts/0 Dec  2 21:34
 htb-student     workstn01:tty1  Dec  2 19:57  2:25       
 ```
+
 #### Listing Authenticated Users Using Rusers
 ```shell-session
 rusers -al 10.0.17.5
