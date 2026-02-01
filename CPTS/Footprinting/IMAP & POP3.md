@@ -17,7 +17,7 @@ The encrypted connection uses the standard port `143` or an alternative port s
 | `1 FETCH <ID> all`              | Retrieves data associated with a message in the mailbox.                                                      |
 | `1 CLOSE`                       | Removes all messages with the `Deleted` flag set.                                                             |
 | `1 LOGOUT`                      | Closes the connection with the IMAP server.                                                                   |
-| `2 FETCH 1 BODY [] `            |                                                                                                               |
+| `2 FETCH 1 BODY[] `             |                                                                                                               |
 | `1 LIST INBOX`                  |                                                                                                               |
 |                                 |                                                                                                               |
 

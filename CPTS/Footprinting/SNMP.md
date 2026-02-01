@@ -14,6 +14,12 @@ The current version is `SNMPv3`,
 ---
 ## Footprinting the Service
 For footprinting SNMP, we can use tools like `snmpwalk`, `onesixtyone`, and `braa`. `Snmpwalk` is used to query the OIDs with their information. `Onesixtyone` can be used to brute-force the names of the community strings since they can be named arbitrarily by the administrator. Since these community strings can be bound to any source, identifying the existing community strings can take quite some time.
+
+#### NMAP Script
+```
+```sudo nmap -sU 10.129.19.122 -p 161 --script=snmp-brute -Pn --script-args snmp-brute.communitiesdb=/home/kali/Downloads/htb/academy/resources/snmpcommunities.txt
+```
+
 #### SNMPwalk
 ```shell-session
 snmpwalk -v2c -c public 10.129.14.128
