@@ -478,6 +478,17 @@ SMB         10.129.14.128   445    DEVSMB           notes           READ,WRITE  
 SMB         10.129.14.128   445    DEVSMB           IPC$                            IPC Service (DEVSM)
 ```
 
+**READ INSIDE DOMAIN**
+```
+crackmapexec smb 10.129.14.128 --shares -u '' -p '' -d 'domain'
+```
+
+**READ INSIDE SHAREFOLDER**
+```
+smbclient -U '' \\\\10.10.x.x\\ShareFolder\\
+```
+
+
 #### Enum4Linux-ng - Enumeration
 **NOTE: clone repo first**
 ```shell-session
