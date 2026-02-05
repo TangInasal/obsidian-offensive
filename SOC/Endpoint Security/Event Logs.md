@@ -20,6 +20,7 @@ EvtxECmd.exe -d \path\to\logs --csv \path\to\output --csvf samplelogs.csv --vss
 right click to any column and select `column chooser`
 scroll to right/left and drag `Map Description` on the top
 
+
 ---
 ## Chainsaw
 It's like advanced grep for event logs
@@ -48,3 +49,25 @@ chainsaw.exe search -s <string> -i C:\Windows\System32\winevt\logs -e <event id/
 
 ---
 ### Hunt
+hunt malicious/suspicious patterns via sigma rules
+
+#### with built-in rules
+hunt with built-in rules
+```
+chainsaw.exe hunt C:\Windows\System32\winevt\log
+```
+
+hunt for lateral movement with built-in rules
+```
+chainsaw.exe hunt C:\Windows\System32\winevt\log --lateral-all
+```
+
+#### with sigma rules
+hunt with sigma rules
+```
+chainsaw.exe hunt C:\Windows\System32\winevt\log --rules <path\to\sigma_rules> --mapping <path\to\sigma-mapping.yml>
+```
+
+
+
+
