@@ -68,6 +68,18 @@ hunt with sigma rules
 chainsaw.exe hunt C:\Windows\System32\winevt\log --rules <path\to\sigma_rules> --mapping <path\to\sigma-mapping.yml>
 ```
 
+hunt for lateral movement with sigma rules
+```
+chainsaw.exe hunt C:\Windows\System32\winevt\log --lateral-all --rules <path\to\sigma_rules> --mapping <path\to\sigma-mapping.yml>
+```
 
+hunt and save as csv
+**NOTE: this could trigger windows defender:
+```
+chainsaw.exe hunt C:\Windows\System32\winevt\log --lateral-all --rules <path\to\sigma_rules> --mapping <path\to\sigma-mapping.yml> --csv
+```
 
+#### timeline explorer
+save the output as csv
+open the csv files on `timelineexplorer.exe`
 
