@@ -20,7 +20,7 @@ EvtxECmd.exe -d \path\to\logs --csv \path\to\output --csvf samplelogs.csv --vss
 right click to any column and select `column chooser`
 scroll to right/left and drag `Map Description` on the top
 
-
+---
 ## Chainsaw
 It's like advanced grep for event logs
 
@@ -33,5 +33,6 @@ string search
 chainsaw.exe search -s <string> -i C:\Windows\System32\winevt\logs -e <event id/type>
 ```
 `-s` search for specific string
-`-i` case INsensitive
+`-i` case insensitive
 `-e` for event type or id you are looking for
+
