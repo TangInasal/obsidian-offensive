@@ -28,6 +28,10 @@ It's like advanced grep for event logs
 - Search
 - Hunt
 ### Search
+string search
 ```
-
+chainsaw.exe search -s <string> -i C:\Windows\System32\winevt\logs -e <event id/type>
 ```
+`-s` search for specific string
+`-i` case INsensitive
+`-e` for event type or id you are looking for
