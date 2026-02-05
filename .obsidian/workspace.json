@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CPTS/Footprinting/IMAP & POP3.md",
+                "file": "SOC/Endpoint Security/Event Logs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "IMAP & POP3"
+              "title": "Event Logs"
             }
           }
         ],
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "sql management",
+                "query": "evtxec",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -200,19 +200,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "397fad83e255ef31",
+  "active": "0066d8cb34edd59b",
   "lastOpenFiles": [
-    "CPTS/Footprinting/SNMP.md",
+    "SOC/DFIR/DFIR no logs/Prefetch.md",
+    "SOC/DFIR/DFIR no logs/DFIR no event logs.md",
     "CPTS/Footprinting/IMAP & POP3.md",
-    "CPTS/Footprinting/Windows Remote Management Protocols.md",
+    "CPTS/Getting-Started/Privilege Escalation/PrivEsc via SSH.md",
+    "CPTS/Footprinting/NFS.md",
+    "CPTS/Footprinting/Linux Remote Management Protocols.md",
     "CPTS/Footprinting/FTP.md",
+    "CPTS/Footprinting/SNMP.md",
+    "CPTS/Footprinting/Windows Remote Management Protocols.md",
     "CPTS/Footprinting/SMB.md",
     "Untitled 2.md",
-    "CPTS/Footprinting/Linux Remote Management Protocols.md",
     "CTF writeups/steg/tools.md",
-    "CPTS/Footprinting/NFS.md",
     "CPTS/Footprinting/MSSQL.md",
-    "CPTS/Getting-Started/Privilege Escalation/PrivEsc via SSH.md",
     "pentesting/everything else/protocol login/SSH login.md",
     "CPTS/Enumeration-With-NMAP/Saving-Results.md",
     "CPTS/Footprinting/IPMI.md",
@@ -233,8 +235,6 @@
     "Pasted image 20260113212418.png",
     "CPTS/Footprinting/Enumeration Methodology.md",
     "Pasted image 20260113203521.png",
-    "CPTS/Footprinting/Enumeration Principles.md",
-    "CPTS/Enumeration-With-NMAP/Firewall-IDS&IPS-Evasion.md",
     "CPTS/Footprinting",
     "Pasted image 20260113180709.png",
     "Pasted image 20260113180659.png",
