@@ -36,3 +36,15 @@ chainsaw.exe search -s <string> -i C:\Windows\System32\winevt\logs -e <event id/
 `-i` case insensitive
 `-e` for event type or id you are looking for
 
+```
+chainsaw.exe search -r "string[a-zA-Z]" -i C:\Windows\System32\winevt\logs -e <event id/type>
+```
+`-r` regex and match string
+
+```
+chainsaw.exe search -s <string> -i C:\Windows\System32\winevt\logs -e <event id/type> -o output.txt
+```
+`-o` output file
+
+---
+### Hunt
