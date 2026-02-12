@@ -76,7 +76,7 @@ chainsaw.exe hunt C:\Windows\System32\winevt\log --lateral-all --rules <path\to\
 hunt and save as csv
 **NOTE: this could trigger windows defender:
 ```
-chainsaw.exe hunt C:\Windows\System32\winevt\log --lateral-all --rules <path\to\sigma_rules> --mapping <path\to\sigma-mapping.yml> --csv
+chainsaw.exe hunt C:\Users\Diox\Documents\ctf\HTB\sherlocks\EnduringEcho\C\Windows\System32\winevt\logs\ --sigma sigma\ --mapping mappings\sigma-event-logs-all.yml  --skip-errors --output csv
 ```
 
 #### timeline explorer
