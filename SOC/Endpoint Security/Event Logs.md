@@ -65,7 +65,7 @@ chainsaw.exe hunt C:\Windows\System32\winevt\log --lateral-all
 #### with sigma rules
 hunt with sigma rules
 ```
-chainsaw.exe hunt C:\Windows\System32\winevt\log --rules <path\to\sigma_rules> --mapping <path\to\sigma-mapping.yml>
+chainsaw.exe hunt C:\Users\Diox\Documents\ctf\HTB\sherlocks\EnduringEcho\C\Windows\System32\winevt\logs\ --sigma sigma\rules-threat-hunting\ --mapping mappings\sigma-event-logs-all.yml --skip-errors
 ```
 
 hunt for lateral movement with sigma rules

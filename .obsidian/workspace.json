@@ -8,35 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "12cee157871bdd60",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CPTS/Footprinting/SMB.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SMB"
-            }
-          },
-          {
-            "id": "3ffb09bd8d230d44",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CPTS/Footprinting/FTP.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "FTP"
-            }
-          },
-          {
-            "id": "397fad83e255ef31",
+            "id": "3fa0d04e4e721f3c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -49,8 +21,7 @@
               "title": "Event Logs"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "evtxec",
+                "query": "chainsaw",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -179,9 +150,19 @@
               "icon": "lucide-list",
               "title": "Outline of Cloud Resources"
             }
+          },
+          {
+            "id": "d915c5b1c0a119ea",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -200,18 +181,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0066d8cb34edd59b",
+  "active": "3fa0d04e4e721f3c",
   "lastOpenFiles": [
-    "SOC/DFIR/DFIR no logs/Prefetch.md",
+    "Untitled 2.base",
+    "SOC/Endpoint Security/Event Logs.md",
+    "CPTS/Footprinting/SMB.md",
+    "CPTS/Footprinting/FTP.md",
     "SOC/DFIR/DFIR no logs/DFIR no event logs.md",
+    "SOC/SOC L1 tools.md",
+    "SOC/DFIR/DFIR no logs/Prefetch.md",
     "CPTS/Footprinting/IMAP & POP3.md",
     "CPTS/Getting-Started/Privilege Escalation/PrivEsc via SSH.md",
     "CPTS/Footprinting/NFS.md",
     "CPTS/Footprinting/Linux Remote Management Protocols.md",
-    "CPTS/Footprinting/FTP.md",
     "CPTS/Footprinting/SNMP.md",
     "CPTS/Footprinting/Windows Remote Management Protocols.md",
-    "CPTS/Footprinting/SMB.md",
     "Untitled 2.md",
     "CTF writeups/steg/tools.md",
     "CPTS/Footprinting/MSSQL.md",
@@ -230,10 +214,7 @@
     "BBP",
     "courses/Untitled",
     "CPTS/Footprinting/Cloud Resources.md",
-    "CPTS/Footprinting/Domain Information.md",
-    "CPTS/Footprinting/Staff.md",
     "Pasted image 20260113212418.png",
-    "CPTS/Footprinting/Enumeration Methodology.md",
     "Pasted image 20260113203521.png",
     "CPTS/Footprinting",
     "Pasted image 20260113180709.png",
@@ -247,7 +228,6 @@
     "CPTS/Enumeration-With-NMAP",
     "CPTS/Getting-Started/Transfering Files",
     "CPTS/Getting-Started/Privilege Escalation",
-    "Services",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
