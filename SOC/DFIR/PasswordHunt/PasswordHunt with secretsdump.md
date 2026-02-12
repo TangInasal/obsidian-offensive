@@ -64,3 +64,7 @@ crack user NTLM hash with hashcat
 ```
 hashcat -m 1000 svc_netupd_hash.txt /usr/share/wordlists/rockyou.txt
 ```
+OR with username
+```
+hashcat -m 1000 --username svc_netupd_hash.txt /usr/share/wordlists/rockyou.txt
+```
