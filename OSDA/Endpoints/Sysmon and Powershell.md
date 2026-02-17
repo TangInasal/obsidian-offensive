@@ -2,7 +2,6 @@
 **NOTE:**  refer to [this resource ](CustomPowershellFunctions####Get-SysmonEvent)for context
 
 ---
-
 #### Get-SysmonEvent
 
 **Filter with timeframe**
