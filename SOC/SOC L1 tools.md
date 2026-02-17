@@ -29,7 +29,7 @@
 **Endpoint Security Monitoring**
 [[Wazuh]]
 [[OSQuery]]
-[[SysMon]]
+[[SOC/Endpoint Security/SysMon]]
 [[Sysinternals]]
 [[Event Logs]]
 

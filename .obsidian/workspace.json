@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "forensics/memory/volatility/Primary Commands.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Primary Commands"
             }
           }
         ]
@@ -183,7 +183,10 @@
   },
   "active": "3fa0d04e4e721f3c",
   "lastOpenFiles": [
+    "OSDA/Endpoints/SysMon.md",
     "OSDA/Endpoints/Evtx Collection via Powershell.md",
+    "forensics/memory/volatility/Primary Commands.md",
+    "README.md",
     "SOC/DFIR/DFIR no logs/Prefetch.md",
     "OSDA/Endpoints",
     "SOC/Untitled",
@@ -209,9 +212,6 @@
     "SOC/DFIR/DFIR no logs/LNK Files.md",
     "SOC/DFIR/DFIR no logs/Jumplist.md",
     "SOC/DFIR/DFIR no logs/shellbags.md",
-    "SOC/DFIR/DFIR no logs/thumbcache.md",
-    "SOC/DFIR/DFIR no logs/Windows Registry.md",
-    "SOC/DFIR/PasswordHunt/PasswordHunt with secretsdump.md",
     "SOC/DFIR/PasswordHunt",
     "Untitled 2.base",
     "Pasted image 20260119191840.png",
