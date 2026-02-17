@@ -15,6 +15,7 @@ Remove-Module <Modulename>
 Import-Module <Modulename>
 ```
 
+
 ---
 #### Get-AVInfo
 identify Active AV
@@ -42,3 +43,5 @@ Run cmdlet
 ```
 Get-SysmonEvent
 ```
+
+
