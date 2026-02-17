@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OSDA/Endpoints/Evtx Collection via Powershell.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Evtx Collection via Powershell"
+              "title": "README"
             }
           }
         ]
@@ -183,8 +183,8 @@
   },
   "active": "3fa0d04e4e721f3c",
   "lastOpenFiles": [
-    "SOC/DFIR/DFIR no logs/Prefetch.md",
     "OSDA/Endpoints/Evtx Collection via Powershell.md",
+    "SOC/DFIR/DFIR no logs/Prefetch.md",
     "OSDA/Endpoints",
     "SOC/Untitled",
     "CPTS/Footprinting/Linux Remote Management Protocols.md",
