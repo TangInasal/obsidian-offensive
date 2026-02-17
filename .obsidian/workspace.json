@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "forensics/memory/volatility/Primary Commands.md",
+                "file": "OSDA/Endpoints/Custom Powershell Functions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Primary Commands"
+              "title": "Custom Powershell Functions"
             }
           }
         ]
@@ -183,9 +183,11 @@
   },
   "active": "3fa0d04e4e721f3c",
   "lastOpenFiles": [
-    "OSDA/Endpoints/SysMon.md",
-    "OSDA/Endpoints/Evtx Collection via Powershell.md",
+    "Pasted image 20260217211349.png",
+    "OSDA/Endpoints/Sysmon and Powershell.md",
+    "OSDA/Endpoints/Custom Powershell Functions.md",
     "forensics/memory/volatility/Primary Commands.md",
+    "OSDA/Endpoints/Evtx Collection via Powershell.md",
     "README.md",
     "SOC/DFIR/DFIR no logs/Prefetch.md",
     "OSDA/Endpoints",
@@ -210,8 +212,6 @@
     "SOC/DFIR/DISK/KAPE.md",
     "SOC/DFIR/DISK/Li.md",
     "SOC/DFIR/DFIR no logs/LNK Files.md",
-    "SOC/DFIR/DFIR no logs/Jumplist.md",
-    "SOC/DFIR/DFIR no logs/shellbags.md",
     "SOC/DFIR/PasswordHunt",
     "Untitled 2.base",
     "Pasted image 20260119191840.png",
