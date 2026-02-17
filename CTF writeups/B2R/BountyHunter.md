@@ -5,7 +5,7 @@
 ``sudo nmap -sVC -p- -v -Pn -T5 rhost -oN nmap
 
 **dir enum**  
-``ffuf -u https://rhost/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -ic -c -e .php,.html,.txt,.js
+``ffuf -u https://rhost/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -ic -c -e .php,.html,.txt,.js -mc 200,403,301,302,307
 
 ![[Pasted image 20250505192056.png]]
 
