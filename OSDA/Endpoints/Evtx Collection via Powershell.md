@@ -21,6 +21,8 @@ TimeCreated          Message
 ...
 ```
 
+---
+### Filter event by Time
 Filter Security log by Time and Event ID
 ```powershell
 Get-WinEvent -FilterHashtable @{Logname='Security'; ID=4624; StartTime='2/17/2026 00:00:00'; EndTime='2/17/2026 23:59:59'} | Select-Object TimeCreated, Message -First 10
@@ -39,3 +41,10 @@ TimeCreated          Message
 2/17/2026 5:17:15 PM An account was successfully logged on....
 2/17/2026 5:14:34 PM An account was successfully logged on....
 ```
+
+Filter Logon created overnight via RDP
+```powershell
+Get-WinEvent -FilterHashtable @{LogName='Security'; StartTime="11/29/2021 19:00:00"; EndTime="11/30/2021 07:00:00"; ID=4624} | Where-Object { $_.properties[8].value -eq 10 } | Format-List
+```
+**NOTE:** 
+`-eq 10` = 10 is RDP logon type
