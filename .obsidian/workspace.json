@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OSDA/Endpoints/PowershellCore.md",
+                "file": "CPTS/Getting-Started/Web Enumeration.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PowershellCore"
+              "title": "Web Enumeration"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ssh",
+                "query": "xss",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -181,17 +182,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3fa0d04e4e721f3c",
+  "active": "ca3c5f97a086ea3d",
   "lastOpenFiles": [
-    "OSDA/Endpoints/Sysmon and Powershell.md",
+    "pentesting/web-pentest/web info/scanning/gobuster.md",
+    "forensics/memory/volatility/Primary Commands.md",
+    "forensics/deepfake detection.md",
     "OSDA/Endpoints/PowershellCore.md",
+    "OSDA/Endpoints/Sysmon and Powershell.md",
     "Pasted image 20260217225123.png",
     "Pasted image 20260217223436.png",
     "Pasted image 20260217223204.png",
     "Pasted image 20260217223159.png",
     "OSDA/Endpoints/CustomPowershellFunctions.md",
     "Pasted image 20260217211349.png",
-    "forensics/memory/volatility/Primary Commands.md",
     "OSDA/Endpoints/Evtx Collection via Powershell.md",
     "README.md",
     "SOC/DFIR/DFIR no logs/Prefetch.md",
@@ -215,8 +218,6 @@
     "SOC/DFIR/DISK/Autopsy.md",
     "SOC/DFIR/DISK/FTK Imager.md",
     "SOC/DFIR/DISK/KAPE.md",
-    "SOC/DFIR/DISK/Li.md",
-    "SOC/DFIR/DFIR no logs/LNK Files.md",
     "SOC/DFIR/PasswordHunt",
     "Untitled 2.base",
     "Pasted image 20260119191840.png",

