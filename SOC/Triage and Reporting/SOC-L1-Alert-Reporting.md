@@ -29,7 +29,7 @@ No matter what the agreements are, L2 will eventually receive the ticket from yo
 
 ![[Pasted image 20250904230648.png]]
 
-![[Pasted image 20250904230831.png]]
+![[. Pasted image 20250904230831.png]]
 
 
 ## Communication Cases
