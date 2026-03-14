@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOC/DFIR/tools/thor-util.md",
+                "file": "SOC/DFIR/tools/thor-lite.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "thor-util"
+              "title": "thor-lite"
             }
           }
         ],
@@ -198,8 +198,10 @@
   },
   "active": "776b9337188a88a3",
   "lastOpenFiles": [
-    "SOC/DFIR/tools/thor-lite.md",
+    "CPTS/Footprinting/MySQL.md",
+    "CPTS/Enumeration-With-NMAP/Service Enumeration.md",
     "SOC/DFIR/tools/thor-util.md",
+    "SOC/DFIR/tools/thor-lite.md",
     "OSDA/Endpoints/PowershellCore.md",
     "Untitled 3.base",
     "SOC/DFIR/tools",
@@ -214,7 +216,6 @@
     "SOC/Triage and Reporting/SOC-L1-Alert-Triage.md",
     "SOC/Triage and Reporting/SOC-L1-Alert-Reporting.md",
     "CPTS/Enumeration-With-NMAP/Firewall-IDS&IPS-Evasion.md",
-    "CPTS/Footprinting/MySQL.md",
     "pentesting/everything else/MSSQL/MSSQL open in wild.md",
     "pentesting/post-exploitation/PRIVESC/Linux/1 CHECKLISTS.md",
     "Untitled 6.base",
@@ -239,7 +240,6 @@
     "CPTS/Footprinting/Enumeration Principles.md",
     "CPTS/Footprinting/Cloud Resources.md",
     "pentesting/web-pentest/web info/scanning/FFUF.md",
-    "pentesting/web-pentest/web info/scanning/FFUF CTF.md",
     "Pasted image 20260119191840.png",
     "Pasted image 20260113212418.png",
     "Pasted image 20260113203521.png",
