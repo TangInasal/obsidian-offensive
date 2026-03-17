@@ -41,7 +41,7 @@
 **disk**
 [[Autopsy]]
 [[FTK Imager]]
-[[KAPE]]
+[[SOC/DFIR/DISK/KAPE]]
 **memory**
 [[REDLine]]
 [[Volatility]]

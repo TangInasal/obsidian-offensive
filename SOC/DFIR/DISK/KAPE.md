@@ -1,3 +1,4 @@
+**NOTE: THIS IS AN OLD NOTE, REFER TO [KAPE](../tools/KAPE) NOTES**
 <<<<<<< HEAD
 
 Often used for quick triage and analysis

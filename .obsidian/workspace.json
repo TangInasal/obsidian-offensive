@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOC/DFIR/tools/thor-lite.md",
+                "file": "SOC/DFIR/tools/KAPE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "thor-lite"
+              "title": "KAPE"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mys",
+                "query": "kape",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -198,10 +198,12 @@
   },
   "active": "776b9337188a88a3",
   "lastOpenFiles": [
+    "SOC/DFIR/DISK/KAPE.md",
+    "SOC/DFIR/tools/KAPE.md",
+    "SOC/DFIR/tools/thor-lite.md",
+    "SOC/DFIR/tools/thor-util.md",
     "CPTS/Footprinting/MySQL.md",
     "CPTS/Enumeration-With-NMAP/Service Enumeration.md",
-    "SOC/DFIR/tools/thor-util.md",
-    "SOC/DFIR/tools/thor-lite.md",
     "OSDA/Endpoints/PowershellCore.md",
     "Untitled 3.base",
     "SOC/DFIR/tools",
@@ -238,8 +240,6 @@
     "SOC/Untitled",
     "CPTS/Footprinting/Linux Remote Management Protocols.md",
     "CPTS/Footprinting/Enumeration Principles.md",
-    "CPTS/Footprinting/Cloud Resources.md",
-    "pentesting/web-pentest/web info/scanning/FFUF.md",
     "Pasted image 20260119191840.png",
     "Pasted image 20260113212418.png",
     "Pasted image 20260113203521.png",
