@@ -22,3 +22,10 @@ It will flag events like:
 ```
 chainsaw hunt /path/to/evtx/ -s sigma/rules/ --mapping mappings/sigma-event-logs-all.yml
 ```
+
+
+#### Sa sherlocks
+```
+chainsaw.exe hunt C:\Users\Diox\Documents\ctf\HTB\sherlocks\EnduringEcho\C\Windows\System32\winevt\logs\Security.evtx --sigma sigma\ --mapping mappings\sigma-event-logs-all.yml  --skip-errors --output csv
+```
+gi import dayn ko nis timeline viewer
