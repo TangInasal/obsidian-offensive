@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOC/DFIR/tools/KAPE.md",
+                "file": "SOC/DFIR/DISK/Autopsy.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "KAPE"
+              "title": "Autopsy"
             }
           }
         ],
@@ -198,10 +198,15 @@
   },
   "active": "776b9337188a88a3",
   "lastOpenFiles": [
+    "SOC/DFIR/DISK/Li.md",
+    "SOC/DFIR/DISK/Autopsy.md",
+    "SOC/DFIR/DISK/FTK Imager.md",
     "SOC/DFIR/DISK/KAPE.md",
     "SOC/DFIR/tools/KAPE.md",
-    "SOC/DFIR/tools/thor-lite.md",
     "SOC/DFIR/tools/thor-util.md",
+    "SOC/DFIR/tools/thor-lite.md",
+    "SOC/DFIR/Memory/REDLine.md",
+    "SOC/DFIR/DFIR steps.md",
     "CPTS/Footprinting/MySQL.md",
     "CPTS/Enumeration-With-NMAP/Service Enumeration.md",
     "OSDA/Endpoints/PowershellCore.md",
@@ -233,13 +238,8 @@
     "Pasted image 20260217223159.png",
     "OSDA/Endpoints/CustomPowershellFunctions.md",
     "Pasted image 20260217211349.png",
-    "OSDA/Endpoints/Evtx Collection via Powershell.md",
-    "README.md",
-    "SOC/DFIR/DFIR no logs/Prefetch.md",
     "OSDA/Endpoints",
     "SOC/Untitled",
-    "CPTS/Footprinting/Linux Remote Management Protocols.md",
-    "CPTS/Footprinting/Enumeration Principles.md",
     "Pasted image 20260119191840.png",
     "Pasted image 20260113212418.png",
     "Pasted image 20260113203521.png",
