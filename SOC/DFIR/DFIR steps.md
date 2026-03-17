@@ -2,12 +2,12 @@
 These tools are most effective when used together. Practical IR toolkit workflow:
 
 **1. Collection:** 
-- Deploy [2. KAPE](2.%20KAPE.md) on Windows systems to gather forensic artefacts. 
+- Deploy [1. KAPE](1.%20KAPE.md) on Windows systems to gather forensic artefacts. 
 - On Linux, use targeted collection scripts or Velociraptor artifacts. 
 - Acquire memory using AVML where needed.
 
 **2. Scanning:** 
-- Run [THOR-lite](./tools/thor-lite) (or Loki if licensing is a constraint) against live systems or collected artefacts to identify known malware, attacker tools, and suspicious anomalies.
+- Run [THOR-lite](2.%20thor-lite.md) (or Loki if licensing is a constraint) against live systems or collected artefacts to identify known malware, attacker tools, and suspicious anomalies.
 
 **3. Log Analysis:** 
 - Feed collected event logs through both Chainsaw and Hayabusa. 

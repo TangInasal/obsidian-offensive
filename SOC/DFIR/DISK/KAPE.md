@@ -1,4 +1,4 @@
-**NOTE: THIS IS AN OLD NOTE, REFER TO [2. KAPE](2.%20KAPE.md) NOTES**
+**NOTE: THIS IS AN OLD NOTE, REFER TO [1. KAPE](1.%20KAPE.md) NOTES**
 <<<<<<< HEAD
 
 Often used for quick triage and analysis
