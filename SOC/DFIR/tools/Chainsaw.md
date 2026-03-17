@@ -17,5 +17,8 @@ It will flag events like:
 - Any time you have Windows Event Logs to analyse. 
 - It is the fastest way to get from a pile of `.evtx` files to a list of suspicious events ranked by severity. 
 - Pairs well with log collection tools like KAPE.
-
 ---
+#### Hunt through event logs using Sigma rules
+```
+chainsaw hunt /path/to/evtx/ -s sigma/rules/ --mapping mappings/sigma-event-logs-all.yml
+```

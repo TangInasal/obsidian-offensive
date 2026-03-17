@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOC/DFIR/tools/Chainsaw.md",
+                "file": "SOC/DFIR/tools/Hayabusa.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chainsaw"
+              "title": "Hayabusa"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "veloc",
+                "query": "hayabusa",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -198,9 +198,12 @@
   },
   "active": "776b9337188a88a3",
   "lastOpenFiles": [
-    "SOC/DFIR/tools/Hayabusa.md",
-    "SOC/DFIR/tools/Chainsaw.md",
     "SOC/DFIR/tools/Velociraptor.md",
+    "CTF writeups/forensics/disk/bitlocker 1.md",
+    "CTF writeups/forensics/disk/disko 2.md",
+    "CTF writeups/forensics/disk/Psittaciformes.md",
+    "SOC/DFIR/tools/Chainsaw.md",
+    "SOC/DFIR/tools/Hayabusa.md",
     "SOC/DFIR/tools/KAPE.md",
     "SOC/DFIR/DISK/Autopsy.md",
     "SOC/DFIR/DISK/Li.md",
@@ -230,9 +233,6 @@
     "pentesting/post-exploitation/PRIVESC/Linux/1 CHECKLISTS.md",
     "Untitled 6.base",
     "Untitled 5.base",
-    "CPTS/Getting-Started/Web Enumeration.md",
-    "pentesting/web-pentest/web info/scanning/gobuster.md",
-    "forensics/memory/volatility/Primary Commands.md",
     "Pasted image 20260217225123.png",
     "Pasted image 20260217223436.png",
     "Pasted image 20260217223204.png",
