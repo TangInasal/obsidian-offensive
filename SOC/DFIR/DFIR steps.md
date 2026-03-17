@@ -2,7 +2,7 @@
 These tools are most effective when used together. Practical IR toolkit workflow:
 
 **1. Collection:** 
-- Deploy [KAPE](./tools/KAPE) on Windows systems to gather forensic artefacts. 
+- Deploy [2. KAPE](2.%20KAPE.md) on Windows systems to gather forensic artefacts. 
 - On Linux, use targeted collection scripts or Velociraptor artifacts. 
 - Acquire memory using AVML where needed.
 

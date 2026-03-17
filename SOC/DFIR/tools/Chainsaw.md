@@ -22,8 +22,24 @@ It will flag events like:
 ```
 chainsaw hunt /path/to/evtx/ -s sigma/rules/ --mapping mappings/sigma-event-logs-all.yml
 ```
+#### Search for a specific keyword across all logs 
+```
+chainsaw search "mimikatz" /path/to/evtx/
+```
+#### Search for a specific Event ID
+```
+chainsaw search -e 4624 /path/to/evtx/
+```
+#### Hunt with both Sigma rules and Chainsaw's built-in rules
+```
+chainsaw hunt /path/to/evtx/ -s sigma/rules/ -r rules/ --mapping mappings/sigma-event-logs-all.yml
+```
+#### Output results as JSON for further processing
+```
+chainsaw hunt /path/to/evtx/ -s sigma/rules/ --json --output results.json
+```
 
-
+---
 #### Sa sherlocks
 ```
 chainsaw.exe hunt C:\Users\Diox\Documents\ctf\HTB\sherlocks\EnduringEcho\C\Windows\System32\winevt\logs\Security.evtx --sigma sigma\ --mapping mappings\sigma-event-logs-all.yml  --skip-errors --output csv
