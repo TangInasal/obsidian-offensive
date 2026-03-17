@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOC/DFIR/DISK/Autopsy.md",
+                "file": "SOC/DFIR/tools/Velociraptor.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Autopsy"
+              "title": "Velociraptor"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "kape",
+                "query": "veloc",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -198,11 +198,12 @@
   },
   "active": "776b9337188a88a3",
   "lastOpenFiles": [
-    "SOC/DFIR/DISK/Li.md",
+    "SOC/DFIR/tools/KAPE.md",
+    "SOC/DFIR/tools/Velociraptor.md",
     "SOC/DFIR/DISK/Autopsy.md",
+    "SOC/DFIR/DISK/Li.md",
     "SOC/DFIR/DISK/FTK Imager.md",
     "SOC/DFIR/DISK/KAPE.md",
-    "SOC/DFIR/tools/KAPE.md",
     "SOC/DFIR/tools/thor-util.md",
     "SOC/DFIR/tools/thor-lite.md",
     "SOC/DFIR/Memory/REDLine.md",
@@ -236,7 +237,6 @@
     "Pasted image 20260217223436.png",
     "Pasted image 20260217223204.png",
     "Pasted image 20260217223159.png",
-    "OSDA/Endpoints/CustomPowershellFunctions.md",
     "Pasted image 20260217211349.png",
     "OSDA/Endpoints",
     "SOC/Untitled",
