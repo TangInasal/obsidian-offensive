@@ -34,9 +34,23 @@
               "icon": "lucide-file",
               "title": "2. thor-lite"
             }
+          },
+          {
+            "id": "656c0446a67370f0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SOC/DFIR/Hypervisor/ESXi/LogCollection.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "LogCollection"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -196,8 +210,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d915c5b1c0a119ea",
+  "active": "656c0446a67370f0",
   "lastOpenFiles": [
+    "SOC/DFIR/Hypervisor/ESXi/LogCollection.md",
+    "SOC/DFIR/Hypervisor/ESXi",
+    "SOC/DFIR/Hypervisor",
     "SOC/DFIR/tools/2.1 Loki.md",
     "SOC/DFIR/tools/3. Chainsaw.md",
     "SOC/DFIR/tools/3. Hayabusa.md",
@@ -230,7 +247,6 @@
     "SOC/Triage and Reporting/SOC-L1-Alert-Triage.md",
     "SOC/Triage and Reporting/SOC-L1-Alert-Reporting.md",
     "CPTS/Enumeration-With-NMAP/Firewall-IDS&IPS-Evasion.md",
-    "pentesting/everything else/MSSQL/MSSQL open in wild.md",
     "Untitled 6.base",
     "Untitled 5.base",
     "Pasted image 20260217225123.png",
@@ -238,8 +254,6 @@
     "Pasted image 20260217223204.png",
     "Pasted image 20260217223159.png",
     "Pasted image 20260217211349.png",
-    "OSDA/Endpoints",
-    "SOC/Untitled",
     "Pasted image 20260119191840.png",
     "Pasted image 20260113212418.png",
     "Pasted image 20260113203521.png",
