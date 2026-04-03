@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOC/DFIR/Hypervisor/ESXi/LogCollection.md",
+                "file": "SOC/DFIR/Hypervisor/ESXi/LogCollection_6.5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LogCollection"
+              "title": "LogCollection_6.5"
             }
           }
         ],
@@ -213,6 +213,7 @@
   "active": "656c0446a67370f0",
   "lastOpenFiles": [
     "SOC/DFIR/Hypervisor/ESXi/LogCollection.md",
+    "SOC/DFIR/Hypervisor/ESXi/LogCollection_6.5.md",
     "SOC/DFIR/Hypervisor/ESXi",
     "SOC/DFIR/Hypervisor",
     "SOC/DFIR/tools/2.1 Loki.md",
@@ -246,7 +247,6 @@
     "Untitled.base",
     "SOC/Triage and Reporting/SOC-L1-Alert-Triage.md",
     "SOC/Triage and Reporting/SOC-L1-Alert-Reporting.md",
-    "CPTS/Enumeration-With-NMAP/Firewall-IDS&IPS-Evasion.md",
     "Untitled 6.base",
     "Untitled 5.base",
     "Pasted image 20260217225123.png",
