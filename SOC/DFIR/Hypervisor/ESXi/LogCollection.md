@@ -67,3 +67,30 @@ dd if=/dev/disks/<device> of=/vmfs/volumes/<external_datastore>/esxi_image.dd bs
 ```
 - Target bootbank, scratch, etc. Use external USB/SAS drive attached directly.
 - Or remove physical disks post-shutdown for offline imaging (FTK Imager, dd on Linux with vmfs-fuse).
+
+#### Transfer & Chain of Custody
+
+- Copy everything to external media via:
+    - SCP to air-gapped collection laptop on same switch (direct cable if possible).
+    - USB drive formatted FAT32/exFAT (mounted via esxcli storage filesystem).
+- Hash everything on collection (md5sum or sha256sum).
+- Document: timestamps, commands run, hashes, collector identity.
+---
+#### Key Artifacts to Hunt Post-Collection (offline analysis)
+
+- **hostd.log**: API calls, VM ops, config changes, attacker actions via vSphere/SSH.
+- **shell.log**: Direct shell commands (root access).
+- **vmkernel.log / vmkwarning.log**: Kernel events, suspicious modules, disk/IO anomalies.
+- **auth.log / syslog**: Logins, SSH, sudo.
+- **vibs list + /var/log/esxupdate.log**: Tampered/added VIBs (common persistence).
+- **audit logs** (if enabled): High-fidelity actions.
+- Unusual processes, open VMCI sockets, modified /etc/inetd.conf, rogue cron.
+
+#### Pro Tips from Real ESXi IR
+
+- If attacker touched it, logs may be wiped/rotated — compare with any prior backups or vCenter side.
+- Persistent logging must have been on; otherwise /var/run/log is gone on reboot.
+- For full host image: shutdown cleanly if possible, then image disks.
+- Tools like QELP or DFIR4vSphere module help parsing later — feed the tarballs there.
+
+Do this fast. ESXi logs are volatile by default. Once collected, shut down, image, and analyze offline. 
