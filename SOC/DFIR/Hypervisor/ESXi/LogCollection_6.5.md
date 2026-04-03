@@ -78,3 +78,5 @@ esxcli software acceptance get
 - Analyze with: QELP (Quick ESXi Log Parser), DFIR4vSphere, or grep/timeline on the tars.
 - Hunt: root logins in auth.log → commands in shell.log → VIB installs → hostd API abuse → vmkernel anomalies.
 
+---
+#### [Priority Logs to Collect](./PriorityLogs)

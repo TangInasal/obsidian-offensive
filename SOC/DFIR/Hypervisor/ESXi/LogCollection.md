@@ -94,3 +94,7 @@ dd if=/dev/disks/<device> of=/vmfs/volumes/<external_datastore>/esxi_image.dd bs
 - Tools like QELP or DFIR4vSphere module help parsing later — feed the tarballs there.
 
 Do this fast. ESXi logs are volatile by default. Once collected, shut down, image, and analyze offline. 
+
+
+---
+#### [Priority Logs to Collect](./PriorityLogs)
