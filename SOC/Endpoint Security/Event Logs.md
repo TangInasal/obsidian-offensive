@@ -63,6 +63,11 @@ chainsaw.exe hunt C:\Windows\System32\winevt\log --lateral-all
 ```
 
 #### with sigma rules
+
+```
+chainsaw.exe hunt . --sigma C:\Users\Diox\Documents\tools\dfir\chainsaw\sigma\rules-threat-hunting\ --mapping C:\Users\Diox\Documents\tools\dfir\chainsaw\mappings\sigma-event-logs-all.yml --skip-errors --output csv
+```
+
 hunt with sigma rules
 ```
 chainsaw.exe hunt C:\Users\Diox\Documents\ctf\HTB\sherlocks\EnduringEcho\C\Windows\System32\winevt\logs\ --sigma sigma\rules-threat-hunting\ --mapping mappings\sigma-event-logs-all.yml --skip-errors
