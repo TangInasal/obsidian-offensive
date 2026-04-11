@@ -16,6 +16,10 @@ EvtxECmd.exe -d \path\to\logs --csv \path\to\output --csvf samplelogs.csv --vss
 `--csvf` customize filename of the parsed csv file
 `--vss` parse volume shadow 
 
+sample
+```
+EvtxECmd.exe -d "C:\Users\Diox\Documents\DFIR\path\to\logs" --csv "C:\Users\Diox\Documents\DFIR\path\to\parsed" --vss --csvf AllEvents.csv
+```
 ### TimeLine explorer
 right click to any column and select `column chooser`
 scroll to right/left and drag `Map Description` on the top
