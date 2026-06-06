@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pentesting/web-pentest/exploitation/sqli/sqlmap.md",
+                "file": "SOC/DFIR/tools/1. KAPE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "sqlmap"
+              "title": "1. KAPE"
             }
           }
         ],
@@ -103,7 +103,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -212,6 +213,8 @@
   },
   "active": "656c0446a67370f0",
   "lastOpenFiles": [
+    "Pasted image 20260606194922.png",
+    "pentesting/web-pentest/exploitation/sqli/sqlmap.md",
     "OSDA/Endpoints/CustomPowershellFunctions.md",
     "OSDA/Endpoints/Evtx Collection via Powershell.md",
     "OSDA/Endpoints/PowershellCore.md",
@@ -239,8 +242,6 @@
     "SOC/DFIR/DISK/KAPE.md",
     "SOC/DFIR/tools/thor-util.md",
     "SOC/DFIR/tools/2. thor-lite.md",
-    "SOC/DFIR/Memory/REDLine.md",
-    "SOC/DFIR/DFIR steps.md",
     "Untitled 3.base",
     "SOC/DFIR/tools",
     "Untitled 4.base",
