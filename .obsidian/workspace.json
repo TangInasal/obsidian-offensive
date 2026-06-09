@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -224,7 +224,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0f97d3c846153eaf",
+  "active": "656c0446a67370f0",
   "lastOpenFiles": [
     "SOC/DFIR/tools/4.PLASO_log2timeline.py.md",
     "SOC/DFIR/tools/7.PLASO_psteal.py.md",
