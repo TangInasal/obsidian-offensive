@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OSDA/Endpoints/Sysmon and Powershell.md",
+                "file": "forensics/memory/volatility/Primary Commands.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sysmon and Powershell"
+              "title": "Primary Commands"
             }
           },
           {
@@ -197,8 +197,8 @@
   },
   "active": "3fa0d04e4e721f3c",
   "lastOpenFiles": [
-    "OSDA/Endpoints/Sysmon.md",
     "OSDA/Endpoints/Sysmon and Powershell.md",
+    "OSDA/Endpoints/Sysmon.md",
     "OSDA/Endpoints/CustomPowershellFunctions.md",
     "SOC/Endpoint Security/Event Logs.md",
     "SOC/DFIR/tools/7.PLASO_psteal.py.md",

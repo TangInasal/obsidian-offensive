@@ -43,3 +43,28 @@ show handles (what type the process is executed - e.g file, directory... etc)
 python vol.py -f file.vmem windows.handles
 ```
 
+---
+<h3>PRACTICAL</h3>
+Check processlist
+```
+python3 vol.py -f mem.raw windows.pslist
+```
+
+Check network connections
+```
+python3 vol.py -f mem.raw windows.netscan
+```
+
+Malfind module and code injections
+```
+python3 vol.py -f mem.raw windows.malfind 
+```
+
+Get cmdline commands if u ever found powershell/cmd opened
+```
+python3 vol.py -f mem.raw windows.cmdline
+```
+OR
+```
+python3 vol.py -f mem.raw windows.cmdline | grep -i powershell
+```
