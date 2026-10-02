@@ -32,10 +32,10 @@ Based on the deep forensic parsing of authentication logs, system configurations
 
 ### 1.4 Critical Business Risks & Exposure
 
-| Identified Exposure | Threat Actor Capability | Impact Level |
-| :--- | :--- | :--- |
-| *e.g., Compromised Service Account* | Allows unauthorized lateral movement and privilege escalation across the domain. | High |
-| *e.g., Evasive Memory Injection* | Bypasses disk-based antivirus, allowing hidden code execution. | Critical |
+| Identified Exposure                 | Threat Actor Capability                                                          | Impact Level |
+| :---------------------------------- | :------------------------------------------------------------------------------- | :----------- |
+| *e.g., Compromised Service Account* | Allows unauthorized lateral movement and privilege escalation across the domain. | High         |
+| *e.g., Evasive Memory Injection*    | Bypasses disk-based antivirus, allowing hidden code execution.                   | Critical     |
 
 ---
 
@@ -43,16 +43,16 @@ Based on the deep forensic parsing of authentication logs, system configurations
 
 Every identified anomaly, persistence mechanism, or suspicious log event is mapped below to the standard **MITRE ATT&CK Matrix** to categorize threat actor behavior and operational tactics.
 
-| Tactic | Technique ID | Technique Name | Observed Forensic Evidence / Artifact Source | Threat Impact Level |
-| :--- | :--- | :--- | :--- | :--- |
-| **Initial Access** | T1190 | Exploit Public-Facing Application | Suspicious POST requests targeting vulnerable entry points in Linux web access logs. | High |
-| **Execution** | T1059.001 | Command and Scripting Interpreter: PowerShell | Obfuscated Base64 command strings discovered inside Windows Event ID 4104 logs. | Medium |
-| **Persistence** | T1053.003 | Scheduled Task/Job: Cron Jobs | Unauthorized cron script entries modifying background execution scripts on Linux assets. | High |
-| **Privilege Escalation** | T1548.003 | Abuse Elevation Control Mechanism: Sudo / Sudo Caching | Anomalous root escalations without matching admin ticket requests in Linux audit logs. | Critical |
-| **Defense Evasion** | T1055 | Process Injection | Live volatile memory telemetry indicating unbacked executable code inside a standard system process tree. | Critical |
-| **Credential Access** | T1003.001 | OS Credential Dumping: LSASS Memory | Anomalous process handles requesting full read-access permissions to the LSASS process space. | High |
-| **Lateral Movement** | T1021.002 | Remote Services: SMB/Windows Admin Shares | Lateral authentication hops using Event ID 4624 (Logon Type 3) across multiple staging servers. | High |
-| **Command & Control** | T1071.001 | Application Layer Protocol: Web Protocols | Repetitive beaconing connection footprints cached in volatile network socket memory. | Medium |
+| Tactic                   | Technique ID | Technique Name                                         | Observed Forensic Evidence / Artifact Source                                                              | Threat Impact Level |
+| :----------------------- | :----------- | :----------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :------------------ |
+| **Initial Access**       | T1190        | Exploit Public-Facing Application                      | Suspicious POST requests targeting vulnerable entry points in Linux web access logs.                      | High                |
+| **Execution**            | T1059.001    | Command and Scripting Interpreter: PowerShell          | Obfuscated Base64 command strings discovered inside Windows Event ID 4104 logs.                           | Medium              |
+| **Persistence**          | T1053.003    | Scheduled Task/Job: Cron Jobs                          | Unauthorized cron script entries modifying background execution scripts on Linux assets.                  | High                |
+| **Privilege Escalation** | T1548.003    | Abuse Elevation Control Mechanism: Sudo / Sudo Caching | Anomalous root escalations without matching admin ticket requests in Linux audit logs.                    | Critical            |
+| **Defense Evasion**      | T1055        | Process Injection                                      | Live volatile memory telemetry indicating unbacked executable code inside a standard system process tree. | Critical            |
+| **Credential Access**    | T1003.001    | OS Credential Dumping: LSASS Memory                    | Anomalous process handles requesting full read-access permissions to the LSASS process space.             | High                |
+| **Lateral Movement**     | T1021.002    | Remote Services: SMB/Windows Admin Shares              | Lateral authentication hops using Event ID 4624 (Logon Type 3) across multiple staging servers.           | High                |
+| **Command & Control**    | T1071.001    | Application Layer Protocol: Web Protocols              | Repetitive beaconing connection footprints cached in volatile network socket memory.                      | Medium              |
 
 ---
 
