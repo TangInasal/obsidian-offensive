@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOC/Endpoint Security/Event Logs.md",
+                "file": "SOC/templates/compromise assessment (whitelabel).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Event Logs"
+              "title": "compromise assessment (whitelabel)"
             }
           },
           {
@@ -84,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "svc",
+                "query": "vulners",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -214,6 +214,14 @@
   },
   "active": "b44ed416ee0fdf8d",
   "lastOpenFiles": [
+    "SOC/Endpoint Security/Event Logs.md",
+    "SOC/templates/compromise assessment (whitelabel).md",
+    "SOC/templates",
+    "SOC/DFIR/Untitled.md",
+    "SOC/Endpoint Security/Untitled.md",
+    "forensics/TEST.md",
+    "pentesting/recon/nmap/vulners.md",
+    "SOC/Threat Hunt and Emulation/Threat Emulation/Atomic Red Team.md",
     "OSDA/Endpoints/Evtx Collection via Powershell.md",
     "OSDA/Endpoints/CustomPowershellFunctions.md",
     "SOC/Endpoint Security/Wazuh.md",
@@ -227,7 +235,6 @@
     "forensics/memory/volatility/Primary Commands.md",
     "OSDA/Endpoints/Sysmon and Powershell.md",
     "OSDA/Endpoints/Sysmon.md",
-    "SOC/Endpoint Security/Event Logs.md",
     "SOC/DFIR/tools/7.PLASO_psteal.py.md",
     "SOC/DFIR/tools/1. KAPE.md",
     "SOC/DFIR/tools/3. Hayabusa.md",
@@ -237,21 +244,14 @@
     "SOC/DFIR/tools/6.PLASO_psort.py.md",
     "5..md",
     "6.PLASO_psort.py.md",
-    "SOC/DFIR/tools/3. Chainsaw.md",
     "Pasted image 20260606194922.png",
-    "pentesting/web-pentest/exploitation/sqli/sqlmap.md",
-    "OSDA/Endpoints/PowershellCore.md",
     "Untitled 7.base",
-    "SOC/DFIR/DFIR no logs/DFIR no event logs.md",
-    "pentesting/AI/2 PromptInjection/DirectInjection/Direct Injection.md",
-    "pentesting/AI/2 PromptInjection/DirectInjection/Context Overflow.md",
     "SOC/DFIR/Hypervisor/ESXi",
     "SOC/DFIR/Hypervisor",
     "Untitled 3.base",
     "SOC/DFIR/tools",
     "Untitled 1.base",
     "Untitled.canvas",
-    "Untitled.base",
     "Pasted image 20260217225123.png",
     "Pasted image 20260217223436.png",
     "Pasted image 20260217223204.png",
