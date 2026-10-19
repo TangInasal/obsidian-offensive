@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOC/templates/compromise assessment (whitelabel).md",
+                "file": "SOC/DFIR/DISK/Autopsy.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "compromise assessment (whitelabel)"
+              "title": "Autopsy"
             }
           },
           {
@@ -214,8 +214,8 @@
   },
   "active": "b44ed416ee0fdf8d",
   "lastOpenFiles": [
-    "SOC/Endpoint Security/Event Logs.md",
     "SOC/templates/compromise assessment (whitelabel).md",
+    "SOC/Endpoint Security/Event Logs.md",
     "SOC/templates",
     "SOC/DFIR/Untitled.md",
     "SOC/Endpoint Security/Untitled.md",
