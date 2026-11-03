@@ -18,3 +18,5 @@ before escalating, i have to do the 5Ws (refer to [SOC L1 Alert Reporting](SOC-L
 1. Filter the alerts - sort alerts by status
 2. Sort by severity - sort alerts by severity
 3. Sort by time - start with the oldest alerts and end with the latest ones. 
+
+test
